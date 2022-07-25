@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gamePage));
             this.puzzleImageDisplayPB = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -87,7 +87,6 @@
             this.PB2TestBorder4 = new System.Windows.Forms.Label();
             this.PB2TestBorder2 = new System.Windows.Forms.Label();
             this.PB1TestBorder4 = new System.Windows.Forms.Label();
-            this.menuButtonWhenLBIsNotVisible = new System.Windows.Forms.Button();
             this.PB9Border2 = new System.Windows.Forms.Label();
             this.PB7Border2 = new System.Windows.Forms.Label();
             this.PB8Border2 = new System.Windows.Forms.Label();
@@ -122,8 +121,20 @@
             this.PB8Border4 = new System.Windows.Forms.Label();
             this.PB8Border3 = new System.Windows.Forms.Label();
             this.PB7Border4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.menuListBox = new System.Windows.Forms.ListBox();
             this.menuButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuRotationButton = new System.Windows.Forms.Button();
+            this.backButtonLabel = new System.Windows.Forms.Label();
+            this.backButtonDescriptionLabel = new System.Windows.Forms.Label();
+            this.rotationButton = new System.Windows.Forms.Button();
+            this.menuBackButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
+            this.rotationButtonDescriptionLabel = new System.Windows.Forms.Label();
+            this.rotationButtonLabel = new System.Windows.Forms.Label();
+            this.buttonsLabel = new System.Windows.Forms.Label();
+            this.controlsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -165,21 +176,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(747, 647);
+            this.button1.Location = new System.Drawing.Point(1183, 624);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(795, 1066);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 34);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -621,16 +623,6 @@
             this.PB1TestBorder4.Size = new System.Drawing.Size(10, 191);
             this.PB1TestBorder4.TabIndex = 58;
             // 
-            // menuButtonWhenLBIsNotVisible
-            // 
-            this.menuButtonWhenLBIsNotVisible.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.menuButton;
-            this.menuButtonWhenLBIsNotVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButtonWhenLBIsNotVisible.Location = new System.Drawing.Point(1450, 12);
-            this.menuButtonWhenLBIsNotVisible.Name = "menuButtonWhenLBIsNotVisible";
-            this.menuButtonWhenLBIsNotVisible.Size = new System.Drawing.Size(62, 57);
-            this.menuButtonWhenLBIsNotVisible.TabIndex = 59;
-            this.menuButtonWhenLBIsNotVisible.UseVisualStyleBackColor = true;
-            // 
             // PB9Border2
             // 
             this.PB9Border2.BackColor = System.Drawing.Color.Red;
@@ -903,26 +895,150 @@
             this.PB7Border4.Size = new System.Drawing.Size(10, 191);
             this.PB7Border4.TabIndex = 100;
             // 
-            // listBox1
+            // menuListBox
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(1086, -4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(441, 1379);
-            this.listBox1.TabIndex = 101;
+            this.menuListBox.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.menuListBox.FormattingEnabled = true;
+            this.menuListBox.ItemHeight = 25;
+            this.menuListBox.Location = new System.Drawing.Point(871, 0);
+            this.menuListBox.Name = "menuListBox";
+            this.menuListBox.Size = new System.Drawing.Size(656, 1379);
+            this.menuListBox.TabIndex = 101;
             // 
             // menuButton
             // 
             this.menuButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.menuButton;
             this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButton.Location = new System.Drawing.Point(1320, 80);
+            this.menuButton.Location = new System.Drawing.Point(1450, 12);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(62, 57);
             this.menuButton.TabIndex = 102;
             this.menuButton.UseVisualStyleBackColor = true;
             this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.TabIndex = 103;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 25);
+            this.label2.TabIndex = 104;
+            this.label2.Text = "label2";
+            // 
+            // menuRotationButton
+            // 
+            this.menuRotationButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.clockwiseButton2;
+            this.menuRotationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuRotationButton.Location = new System.Drawing.Point(887, 872);
+            this.menuRotationButton.Name = "menuRotationButton";
+            this.menuRotationButton.Size = new System.Drawing.Size(76, 60);
+            this.menuRotationButton.TabIndex = 105;
+            this.menuRotationButton.UseVisualStyleBackColor = true;
+            // 
+            // backButtonLabel
+            // 
+            this.backButtonLabel.AutoSize = true;
+            this.backButtonLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.backButtonLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.backButtonLabel.Location = new System.Drawing.Point(969, 595);
+            this.backButtonLabel.Name = "backButtonLabel";
+            this.backButtonLabel.Size = new System.Drawing.Size(234, 45);
+            this.backButtonLabel.TabIndex = 106;
+            this.backButtonLabel.Text = " - Back Button";
+            // 
+            // backButtonDescriptionLabel
+            // 
+            this.backButtonDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backButtonDescriptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.backButtonDescriptionLabel.Location = new System.Drawing.Point(887, 661);
+            this.backButtonDescriptionLabel.Name = "backButtonDescriptionLabel";
+            this.backButtonDescriptionLabel.Size = new System.Drawing.Size(623, 199);
+            this.backButtonDescriptionLabel.TabIndex = 107;
+            this.backButtonDescriptionLabel.Text = "With this button you have the ability to put board pieces back into the box. To d" +
+    "o so, click on a board piece, make sure that is highlighted, then press the back" +
+    " button.";
+            // 
+            // rotationButton
+            // 
+            this.rotationButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.clockwiseButton2;
+            this.rotationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rotationButton.Location = new System.Drawing.Point(708, 915);
+            this.rotationButton.Name = "rotationButton";
+            this.rotationButton.Size = new System.Drawing.Size(112, 91);
+            this.rotationButton.TabIndex = 108;
+            this.rotationButton.UseVisualStyleBackColor = true;
+            // 
+            // menuBackButton
+            // 
+            this.menuBackButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.backButton;
+            this.menuBackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuBackButton.Location = new System.Drawing.Point(887, 595);
+            this.menuBackButton.Name = "menuBackButton";
+            this.menuBackButton.Size = new System.Drawing.Size(76, 60);
+            this.menuBackButton.TabIndex = 109;
+            this.menuBackButton.UseVisualStyleBackColor = true;
+            // 
+            // backButton
+            // 
+            this.backButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.backButton;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.backButton.Location = new System.Drawing.Point(708, 812);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(112, 91);
+            this.backButton.TabIndex = 110;
+            this.backButton.UseVisualStyleBackColor = true;
+            // 
+            // rotationButtonDescriptionLabel
+            // 
+            this.rotationButtonDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rotationButtonDescriptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rotationButtonDescriptionLabel.Location = new System.Drawing.Point(887, 932);
+            this.rotationButtonDescriptionLabel.Name = "rotationButtonDescriptionLabel";
+            this.rotationButtonDescriptionLabel.Size = new System.Drawing.Size(623, 287);
+            this.rotationButtonDescriptionLabel.TabIndex = 111;
+            this.rotationButtonDescriptionLabel.Text = resources.GetString("rotationButtonDescriptionLabel.Text");
+            // 
+            // rotationButtonLabel
+            // 
+            this.rotationButtonLabel.AutoSize = true;
+            this.rotationButtonLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rotationButtonLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rotationButtonLabel.Location = new System.Drawing.Point(969, 874);
+            this.rotationButtonLabel.Name = "rotationButtonLabel";
+            this.rotationButtonLabel.Size = new System.Drawing.Size(292, 45);
+            this.rotationButtonLabel.TabIndex = 112;
+            this.rotationButtonLabel.Text = " - Rotation Button";
+            // 
+            // buttonsLabel
+            // 
+            this.buttonsLabel.AutoSize = true;
+            this.buttonsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonsLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonsLabel.Location = new System.Drawing.Point(1086, 510);
+            this.buttonsLabel.Name = "buttonsLabel";
+            this.buttonsLabel.Size = new System.Drawing.Size(205, 65);
+            this.buttonsLabel.TabIndex = 113;
+            this.buttonsLabel.Text = "Buttons";
+            // 
+            // controlsLabel
+            // 
+            this.controlsLabel.AutoSize = true;
+            this.controlsLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.controlsLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.controlsLabel.Location = new System.Drawing.Point(1077, 12);
+            this.controlsLabel.Name = "controlsLabel";
+            this.controlsLabel.Size = new System.Drawing.Size(218, 65);
+            this.controlsLabel.TabIndex = 114;
+            this.controlsLabel.Text = "Controls";
             // 
             // gamePage
             // 
@@ -930,8 +1046,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1524, 1221);
+            this.Controls.Add(this.controlsLabel);
+            this.Controls.Add(this.buttonsLabel);
+            this.Controls.Add(this.rotationButtonLabel);
+            this.Controls.Add(this.rotationButtonDescriptionLabel);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.menuBackButton);
+            this.Controls.Add(this.rotationButton);
+            this.Controls.Add(this.backButtonDescriptionLabel);
+            this.Controls.Add(this.backButtonLabel);
+            this.Controls.Add(this.menuRotationButton);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuButton);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.menuListBox);
             this.Controls.Add(this.PB7Border4);
             this.Controls.Add(this.PB8Border3);
             this.Controls.Add(this.PB8Border4);
@@ -966,7 +1094,6 @@
             this.Controls.Add(this.PB8Border2);
             this.Controls.Add(this.PB7Border2);
             this.Controls.Add(this.PB9Border2);
-            this.Controls.Add(this.menuButtonWhenLBIsNotVisible);
             this.Controls.Add(this.PB1TestBorder4);
             this.Controls.Add(this.PB2TestBorder2);
             this.Controls.Add(this.PB2TestBorder4);
@@ -1022,7 +1149,6 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.puzzleImageDisplayPB);
@@ -1049,6 +1175,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PB3Test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB1Test)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1057,7 +1184,6 @@
         private PictureBox puzzleImageDisplayPB;
         private PictureBox pictureBox2;
         private Button button1;
-        private Button button2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
@@ -1113,7 +1239,6 @@
         private Label PB2TestBorder4;
         private Label PB2TestBorder2;
         private Label PB1TestBorder4;
-        private Button menuButtonWhenLBIsNotVisible;
         private Label PB9Border2;
         private Label PB7Border2;
         private Label PB8Border2;
@@ -1148,7 +1273,19 @@
         private Label PB8Border4;
         private Label PB8Border3;
         private Label PB7Border4;
-        private ListBox listBox1;
+        private ListBox menuListBox;
         private Button menuButton;
+        private Label label1;
+        private Label label2;
+        private Button menuRotationButton;
+        private Label backButtonLabel;
+        private Label backButtonDescriptionLabel;
+        private Button rotationButton;
+        private Button menuBackButton;
+        private Button backButton;
+        private Label rotationButtonDescriptionLabel;
+        private Label rotationButtonLabel;
+        private Label buttonsLabel;
+        private Label controlsLabel;
     }
 }

@@ -63,6 +63,26 @@ namespace Darth_Vader_Puzzle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backButton {
+            get {
+                object obj = ResourceManager.GetObject("backButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clockwiseButton2 {
+            get {
+                object obj = ResourceManager.GetObject("clockwiseButton2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap darthVader {
             get {
                 object obj = ResourceManager.GetObject("darthVader", resourceCulture);

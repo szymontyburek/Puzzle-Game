@@ -57,4 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="rotationButtonDescriptionLabel.Text" xml:space="preserve">
+    <value>With this button you have the ability to rotation pieces both on the board and box section. To do so, click on a board piece, make sure that it is highlighted, then press the rotate button and the picture will rotate 90 degrees.</value>
+  </data>
 </root>
