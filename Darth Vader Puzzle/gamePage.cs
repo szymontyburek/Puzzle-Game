@@ -113,24 +113,24 @@ namespace Darth_Vader_Puzzle
                     }
                 }
             }
-            //use placeShuffleOntoPieces module regarding the first generated number
-            placeShuffleOntoPieces(0, PB1);
-            //use placeShuffleOntoPieces module regarding the second generated number
-            placeShuffleOntoPieces(1, PB2);
-            //use placeShuffleOntoPieces module regarding the third generated number
-            placeShuffleOntoPieces(2, PB3);
-            //use placeShuffleOntoPieces module regarding the fourth generated number
-            placeShuffleOntoPieces(3, PB4);
-            //use placeShuffleOntoPieces module regarding the fifth generated number
-            placeShuffleOntoPieces(4, PB5);
-            //use placeShuffleOntoPieces module regarding the sixth generated number
-            placeShuffleOntoPieces(5, PB6);
-            //use placeShuffleOntoPieces module regarding the seventh generated number
-            placeShuffleOntoPieces(6, PB7);
-            //use placeShuffleOntoPieces module regarding the eigth generated number
-            placeShuffleOntoPieces(7, PB8);
-            //use placeShuffleOntoPieces module regarding the ninth generated number
-            placeShuffleOntoPieces(8, PB9);
+                //use placeShuffleOntoPieces module regarding the first generated number
+                placeShuffleOntoPieces(0, PB1);
+                //use placeShuffleOntoPieces module regarding the second generated number
+                placeShuffleOntoPieces(1, PB2);
+                //use placeShuffleOntoPieces module regarding the third generated number
+                placeShuffleOntoPieces(2, PB3);
+                //use placeShuffleOntoPieces module regarding the fourth generated number
+                placeShuffleOntoPieces(3, PB4);
+                //use placeShuffleOntoPieces module regarding the fifth generated number
+                placeShuffleOntoPieces(4, PB5);
+                //use placeShuffleOntoPieces module regarding the sixth generated number
+                placeShuffleOntoPieces(5, PB6);
+                //use placeShuffleOntoPieces module regarding the seventh generated number
+                placeShuffleOntoPieces(6, PB7);
+                //use placeShuffleOntoPieces module regarding the eigth generated number
+                placeShuffleOntoPieces(7, PB8);
+                //use placeShuffleOntoPieces module regarding the ninth generated number
+                placeShuffleOntoPieces(8, PB9);
         }
         private void placeShuffleOntoPieces(int i, PictureBox PBNum)
         {
@@ -139,63 +139,63 @@ namespace Darth_Vader_Puzzle
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader1.png
-                PBNum.ImageLocation = "darthVader1.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader1.png";
             }
             //if the generated number equals 2
             else if (shufflePuzzlePieces[i] == 2)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader2.png
-                PBNum.ImageLocation = "darthVader2.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader2.png";
             }
             //if the generated number equals 3
             else if (shufflePuzzlePieces[i] == 3)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader3.png
-                PBNum.ImageLocation = "darthVader3.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader3.png";
             }
             //if the generated number equals 4
             else if(shufflePuzzlePieces[i] == 4)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader4.png
-                PBNum.ImageLocation = "darthVader4.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader4.png";
             }
             //if the generated number equals 5
             if (shufflePuzzlePieces[i] == 5)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader5.png
-                PBNum.ImageLocation = "darthVader5.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader5.png";
             }
             //if the generated number equals 6
             else if (shufflePuzzlePieces[i] == 6)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader6.png
-                PBNum.ImageLocation = "darthVader6.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader6.png";
             }
             //if the generated number equals 7
             else if (shufflePuzzlePieces[i] == 7)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader7.png
-                PBNum.ImageLocation = "darthVader7.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader7.png";
             }
             //if the generated number equals 8
             else if (shufflePuzzlePieces[i] == 8)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader8.png
-                PBNum.ImageLocation = "darthVader8.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader8.png";
             }
             //if the generated number equals 9
-            else
+            else if (shufflePuzzlePieces[i] == 9)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVader9.png
-                PBNum.ImageLocation = "darthVader9.png";
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader9.png";
             }
         }
         private void rotationShuffleGenerator(PictureBox PB)
@@ -242,6 +242,7 @@ namespace Darth_Vader_Puzzle
             PB6TestBorder1.Visible = false; PB6TestBorder2.Visible = false; PB6TestBorder3.Visible = false; PB6TestBorder4.Visible = false;
             PB7TestBorder1.Visible = false; PB7TestBorder2.Visible = false; PB7TestBorder3.Visible = false; PB7TestBorder4.Visible = false;
             PB8TestBorder1.Visible = false; PB8TestBorder2.Visible = false; PB8TestBorder3.Visible = false; PB8TestBorder4.Visible = false;
+            PB9TestBorder1.Visible = false; PB9TestBorder2.Visible = false; PB9TestBorder3.Visible = false; PB9TestBorder4.Visible = false;
             PB2Border1.Visible = false; PB2Border2.Visible = false; PB2Border3.Visible = false; PB2Border4.Visible = false;
             PB1Border1.Visible = false; PB1Border2.Visible = false; PB1Border3.Visible = false; PB1Border4.Visible = false;
             PB3Border1.Visible = false; PB3Border2.Visible = false; PB3Border3.Visible = false; PB3Border4.Visible = false;
@@ -250,6 +251,7 @@ namespace Darth_Vader_Puzzle
             PB6Border1.Visible = false; PB6Border2.Visible = false; PB6Border3.Visible = false; PB6Border4.Visible = false;
             PB7Border1.Visible = false; PB7Border2.Visible = false; PB7Border3.Visible = false; PB7Border4.Visible = false;
             PB8Border1.Visible = false; PB8Border2.Visible = false; PB8Border3.Visible = false; PB8Border4.Visible = false;
+            PB9Border1.Visible = false; PB9Border2.Visible = false; PB9Border3.Visible = false; PB9Border4.Visible = false;
         }
         private void clickEventBetweenBoardPieces(Label highlightedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
         {
@@ -282,11 +284,16 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
+            //THE ISSUE IS RIGHT HERE WITH THE GENERATED NUMBERS IN THE ARRAY(THEY ALL SHOW AS 0)
+            foreach(int x in shufflePuzzlePieces)
+            {
+                MessageBox.Show(x.ToString());
+            }
+            //make all the picturebox borders invisible
+            makeAllBordersInvisible();
             //to shuffle the box pieces
             shuffleGenerator();
-            PB1.SizeMode = PictureBoxSizeMode.StretchImage;
-            //picturebox image will equal darthVader1.png
-            PB1.ImageLocation = "darthVader1.png";
+
         }
 
         private void menuButton_Click(object sender, EventArgs e)

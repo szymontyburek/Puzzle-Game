@@ -177,6 +177,7 @@
             // 
             // PB1
             // 
+            this.PB1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB1.Location = new System.Drawing.Point(12, 623);
             this.PB1.Name = "PB1";
             this.PB1.Size = new System.Drawing.Size(209, 191);
