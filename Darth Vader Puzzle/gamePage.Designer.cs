@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.puzzleImageDisplayPB = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PB7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.PB1 = new System.Windows.Forms.PictureBox();
+            this.PB6 = new System.Windows.Forms.PictureBox();
+            this.PB5 = new System.Windows.Forms.PictureBox();
+            this.PB4 = new System.Windows.Forms.PictureBox();
+            this.PB9 = new System.Windows.Forms.PictureBox();
+            this.PB8 = new System.Windows.Forms.PictureBox();
+            this.PB3 = new System.Windows.Forms.PictureBox();
+            this.PB2 = new System.Windows.Forms.PictureBox();
             this.PB5Test = new System.Windows.Forms.PictureBox();
             this.PB4Test = new System.Windows.Forms.PictureBox();
             this.PB6Test = new System.Windows.Forms.PictureBox();
@@ -125,16 +125,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.rotationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.boxLabel = new System.Windows.Forms.Label();
+            this.piecesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB5Test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB4Test)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB6Test)).BeginInit();
@@ -150,19 +152,19 @@
             // 
             this.puzzleImageDisplayPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.darthVader;
             this.puzzleImageDisplayPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.puzzleImageDisplayPB.Location = new System.Drawing.Point(442, 25);
+            this.puzzleImageDisplayPB.Location = new System.Drawing.Point(442, 12);
             this.puzzleImageDisplayPB.Name = "puzzleImageDisplayPB";
             this.puzzleImageDisplayPB.Size = new System.Drawing.Size(638, 585);
             this.puzzleImageDisplayPB.TabIndex = 0;
             this.puzzleImageDisplayPB.TabStop = false;
             // 
-            // pictureBox2
+            // PB7
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(12, 1014);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.PB7.Location = new System.Drawing.Point(12, 1014);
+            this.PB7.Name = "PB7";
+            this.PB7.Size = new System.Drawing.Size(209, 191);
+            this.PB7.TabIndex = 1;
+            this.PB7.TabStop = false;
             // 
             // button1
             // 
@@ -173,69 +175,69 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
+            // PB1
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(12, 623);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.PB1.Location = new System.Drawing.Point(12, 623);
+            this.PB1.Name = "PB1";
+            this.PB1.Size = new System.Drawing.Size(209, 191);
+            this.PB1.TabIndex = 4;
+            this.PB1.TabStop = false;
             // 
-            // pictureBox4
+            // PB6
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(442, 815);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
+            this.PB6.Location = new System.Drawing.Point(442, 815);
+            this.PB6.Name = "PB6";
+            this.PB6.Size = new System.Drawing.Size(209, 191);
+            this.PB6.TabIndex = 5;
+            this.PB6.TabStop = false;
             // 
-            // pictureBox5
+            // PB5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(227, 820);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
+            this.PB5.Location = new System.Drawing.Point(227, 820);
+            this.PB5.Name = "PB5";
+            this.PB5.Size = new System.Drawing.Size(209, 191);
+            this.PB5.TabIndex = 6;
+            this.PB5.TabStop = false;
             // 
-            // pictureBox6
+            // PB4
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(12, 820);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
+            this.PB4.Location = new System.Drawing.Point(12, 820);
+            this.PB4.Name = "PB4";
+            this.PB4.Size = new System.Drawing.Size(209, 191);
+            this.PB4.TabIndex = 7;
+            this.PB4.TabStop = false;
             // 
-            // pictureBox7
+            // PB9
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(442, 1014);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox7.TabIndex = 8;
-            this.pictureBox7.TabStop = false;
+            this.PB9.Location = new System.Drawing.Point(442, 1014);
+            this.PB9.Name = "PB9";
+            this.PB9.Size = new System.Drawing.Size(209, 191);
+            this.PB9.TabIndex = 8;
+            this.PB9.TabStop = false;
             // 
-            // pictureBox8
+            // PB8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(227, 1017);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox8.TabIndex = 9;
-            this.pictureBox8.TabStop = false;
+            this.PB8.Location = new System.Drawing.Point(227, 1017);
+            this.PB8.Name = "PB8";
+            this.PB8.Size = new System.Drawing.Size(209, 191);
+            this.PB8.TabIndex = 9;
+            this.PB8.TabStop = false;
             // 
-            // pictureBox9
+            // PB3
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(442, 623);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
+            this.PB3.Location = new System.Drawing.Point(442, 623);
+            this.PB3.Name = "PB3";
+            this.PB3.Size = new System.Drawing.Size(209, 191);
+            this.PB3.TabIndex = 10;
+            this.PB3.TabStop = false;
             // 
-            // pictureBox10
+            // PB2
             // 
-            this.pictureBox10.Location = new System.Drawing.Point(227, 623);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(209, 191);
-            this.pictureBox10.TabIndex = 11;
-            this.pictureBox10.TabStop = false;
+            this.PB2.Location = new System.Drawing.Point(227, 623);
+            this.PB2.Name = "PB2";
+            this.PB2.Size = new System.Drawing.Size(209, 191);
+            this.PB2.TabIndex = 11;
+            this.PB2.TabStop = false;
             // 
             // PB5Test
             // 
@@ -934,12 +936,36 @@
             this.backButton.TabIndex = 110;
             this.backButton.UseVisualStyleBackColor = true;
             // 
+            // boxLabel
+            // 
+            this.boxLabel.AutoSize = true;
+            this.boxLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boxLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.boxLabel.Location = new System.Drawing.Point(252, 522);
+            this.boxLabel.Name = "boxLabel";
+            this.boxLabel.Size = new System.Drawing.Size(142, 81);
+            this.boxLabel.TabIndex = 111;
+            this.boxLabel.Text = "Box";
+            // 
+            // piecesLabel
+            // 
+            this.piecesLabel.AutoSize = true;
+            this.piecesLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.piecesLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.piecesLabel.Location = new System.Drawing.Point(1086, 522);
+            this.piecesLabel.Name = "piecesLabel";
+            this.piecesLabel.Size = new System.Drawing.Size(208, 81);
+            this.piecesLabel.TabIndex = 112;
+            this.piecesLabel.Text = "Pieces";
+            // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1524, 1221);
+            this.Controls.Add(this.piecesLabel);
+            this.Controls.Add(this.boxLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.rotationButton);
             this.Controls.Add(this.label2);
@@ -1026,30 +1052,30 @@
             this.Controls.Add(this.PB6Test);
             this.Controls.Add(this.PB4Test);
             this.Controls.Add(this.PB5Test);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.PB2);
+            this.Controls.Add(this.PB3);
+            this.Controls.Add(this.PB8);
+            this.Controls.Add(this.PB9);
+            this.Controls.Add(this.PB4);
+            this.Controls.Add(this.PB5);
+            this.Controls.Add(this.PB6);
+            this.Controls.Add(this.PB1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PB7);
             this.Controls.Add(this.puzzleImageDisplayPB);
             this.Name = "gamePage";
             this.Text = "gamePage";
             this.Load += new System.EventHandler(this.gamePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PB2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB5Test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB4Test)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB6Test)).EndInit();
@@ -1067,16 +1093,16 @@
         #endregion
 
         private PictureBox puzzleImageDisplayPB;
-        private PictureBox pictureBox2;
+        private PictureBox PB7;
         private Button button1;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
+        private PictureBox PB1;
+        private PictureBox PB6;
+        private PictureBox PB5;
+        private PictureBox PB4;
+        private PictureBox PB9;
+        private PictureBox PB8;
+        private PictureBox PB3;
+        private PictureBox PB2;
         private PictureBox PB5Test;
         private PictureBox PB4Test;
         private PictureBox PB6Test;
@@ -1163,5 +1189,7 @@
         private Label label2;
         private Button rotationButton;
         private Button backButton;
+        private Label boxLabel;
+        private Label piecesLabel;
     }
 }
