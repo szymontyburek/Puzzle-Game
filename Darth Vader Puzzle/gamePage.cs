@@ -29,7 +29,7 @@ namespace Darth_Vader_Puzzle
             //create a for loop
             for (int i = 0; i < shufflePuzzlePieces.Length; i++)
             {
-                //generate a random number for each array element in the range of 1 - 4
+                //generate a random number for each array element in the range of 1 - 9
                 shufflePuzzlePieces[i] = rand.Next(1, 10);
                 //if i = 1 and the random number generated already matches the previously generated number
                 if (i == 1)
@@ -37,7 +37,7 @@ namespace Darth_Vader_Puzzle
                     //create a while loop so a new number will be generated until it does not match any previously generated number
                     while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0])
                     {
-                        shufflePuzzlePieces[i] = rand.Next(1, 5);
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
                     }
                 }
                 //if i = 2 and the random number generated already matches the previously generated numbers
@@ -46,7 +46,7 @@ namespace Darth_Vader_Puzzle
                     //create a while loop so a new number will be generated until it does not match any previously generated number
                     while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1])
                     {
-                        shufflePuzzlePieces[i] = rand.Next(1, 5);
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
                     }
                 }
                 //if i = 3 and the random number generated already matches the previously generated numbers
@@ -55,10 +55,63 @@ namespace Darth_Vader_Puzzle
                     //create a while loop so a new number will be generated until it does not match any previously generated number
                     while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2])
                     {
-                        shufflePuzzlePieces[i] = rand.Next(1, 5);
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
                     }
                 }
-                //FINISH THE REST OF THIS MODULE
+                //if i = 4 and the random number generated already matches the previously generated numbers
+                else if (i == 4)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
+                //if i = 5 and the random number generated already matches the previously generated numbers
+                else if (i == 5)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3] || shufflePuzzlePieces[i] == shufflePuzzlePieces[4])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
+                //if i = 6 and the random number generated already matches the previously generated numbers
+                else if (i == 6)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3] || shufflePuzzlePieces[i] == shufflePuzzlePieces[4] || shufflePuzzlePieces[i] == shufflePuzzlePieces[5])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
+                //if i = 7 and the random number generated already matches the previously generated numbers
+                else if (i == 7)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3] || shufflePuzzlePieces[i] == shufflePuzzlePieces[4] || shufflePuzzlePieces[i] == shufflePuzzlePieces[5] || shufflePuzzlePieces[i] == shufflePuzzlePieces[6])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
+                //if i = 8 and the random number generated already matches the previously generated numbers
+                else if (i == 8)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3] || shufflePuzzlePieces[i] == shufflePuzzlePieces[4] || shufflePuzzlePieces[i] == shufflePuzzlePieces[5] || shufflePuzzlePieces[i] == shufflePuzzlePieces[6] || shufflePuzzlePieces[i] == shufflePuzzlePieces[7])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
+                //if i = 9 and the random number generated already matches the previously generated numbers
+                else if (i == 9)
+                {
+                    //create a while loop so a new number will be generated until it does not match any previously generated number
+                    while (shufflePuzzlePieces[i] == shufflePuzzlePieces[0] || shufflePuzzlePieces[i] == shufflePuzzlePieces[1] || shufflePuzzlePieces[i] == shufflePuzzlePieces[2] || shufflePuzzlePieces[i] == shufflePuzzlePieces[3] || shufflePuzzlePieces[i] == shufflePuzzlePieces[4] || shufflePuzzlePieces[i] == shufflePuzzlePieces[5] || shufflePuzzlePieces[i] == shufflePuzzlePieces[6] || shufflePuzzlePieces[i] == shufflePuzzlePieces[7] || shufflePuzzlePieces[i] == shufflePuzzlePieces[8])
+                    {
+                        shufflePuzzlePieces[i] = rand.Next(1, 10);
+                    }
+                }
             }
             //use placeShuffleOntoPieces module regarding the first generated number
             placeShuffleOntoPieces(0, PB1);
@@ -229,7 +282,11 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
-   
+            //to shuffle the box pieces
+            shuffleGenerator();
+            PB1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVader1.png
+            PB1.ImageLocation = "darthVader1.png";
         }
 
         private void menuButton_Click(object sender, EventArgs e)
