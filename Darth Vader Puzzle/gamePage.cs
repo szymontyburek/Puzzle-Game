@@ -284,16 +284,10 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
-            //THE ISSUE IS RIGHT HERE WITH THE GENERATED NUMBERS IN THE ARRAY(THEY ALL SHOW AS 0)
-            foreach(int x in shufflePuzzlePieces)
-            {
-                MessageBox.Show(x.ToString());
-            }
             //make all the picturebox borders invisible
             makeAllBordersInvisible();
             //to shuffle the box pieces
             shuffleGenerator();
-
         }
 
         private void menuButton_Click(object sender, EventArgs e)
