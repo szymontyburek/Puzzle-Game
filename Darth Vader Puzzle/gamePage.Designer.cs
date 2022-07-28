@@ -251,6 +251,7 @@
             // 
             // PB5Test
             // 
+            this.PB5Test.BackColor = System.Drawing.Color.Silver;
             this.PB5Test.Location = new System.Drawing.Point(1086, 818);
             this.PB5Test.Name = "PB5Test";
             this.PB5Test.Size = new System.Drawing.Size(209, 191);
@@ -260,6 +261,7 @@
             // 
             // PB4Test
             // 
+            this.PB4Test.BackColor = System.Drawing.Color.Silver;
             this.PB4Test.Location = new System.Drawing.Point(871, 818);
             this.PB4Test.Name = "PB4Test";
             this.PB4Test.Size = new System.Drawing.Size(209, 191);
@@ -269,6 +271,7 @@
             // 
             // PB6Test
             // 
+            this.PB6Test.BackColor = System.Drawing.Color.Silver;
             this.PB6Test.Location = new System.Drawing.Point(1301, 820);
             this.PB6Test.Name = "PB6Test";
             this.PB6Test.Size = new System.Drawing.Size(209, 191);
@@ -278,6 +281,7 @@
             // 
             // PB2Test
             // 
+            this.PB2Test.BackColor = System.Drawing.Color.Silver;
             this.PB2Test.Location = new System.Drawing.Point(1086, 621);
             this.PB2Test.Name = "PB2Test";
             this.PB2Test.Size = new System.Drawing.Size(209, 191);
@@ -287,7 +291,8 @@
             // 
             // PB9Test
             // 
-            this.PB9Test.Location = new System.Drawing.Point(1301, 1017);
+            this.PB9Test.BackColor = System.Drawing.Color.Silver;
+            this.PB9Test.Location = new System.Drawing.Point(1301, 1013);
             this.PB9Test.Name = "PB9Test";
             this.PB9Test.Size = new System.Drawing.Size(209, 191);
             this.PB9Test.TabIndex = 16;
@@ -296,6 +301,7 @@
             // 
             // PB8Test
             // 
+            this.PB8Test.BackColor = System.Drawing.Color.Silver;
             this.PB8Test.Location = new System.Drawing.Point(1086, 1014);
             this.PB8Test.Name = "PB8Test";
             this.PB8Test.Size = new System.Drawing.Size(209, 191);
@@ -305,6 +311,7 @@
             // 
             // PB7Test
             // 
+            this.PB7Test.BackColor = System.Drawing.Color.Silver;
             this.PB7Test.Location = new System.Drawing.Point(871, 1015);
             this.PB7Test.Name = "PB7Test";
             this.PB7Test.Size = new System.Drawing.Size(209, 191);
@@ -314,6 +321,7 @@
             // 
             // PB3Test
             // 
+            this.PB3Test.BackColor = System.Drawing.Color.Silver;
             this.PB3Test.Location = new System.Drawing.Point(1301, 623);
             this.PB3Test.Name = "PB3Test";
             this.PB3Test.Size = new System.Drawing.Size(209, 191);
@@ -323,6 +331,7 @@
             // 
             // PB1Test
             // 
+            this.PB1Test.BackColor = System.Drawing.Color.Silver;
             this.PB1Test.Location = new System.Drawing.Point(871, 621);
             this.PB1Test.Name = "PB1Test";
             this.PB1Test.Size = new System.Drawing.Size(209, 191);
