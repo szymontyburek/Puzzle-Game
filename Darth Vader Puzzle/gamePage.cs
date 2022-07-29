@@ -537,10 +537,7 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB2ClickCounter == 1)
             {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
+                //DONT NEED THIS CODE ON ANY OF THE BOX PIECES
             }
             else if (bordersSet && PB2ClickCounter == 2)
             {
@@ -556,39 +553,9 @@ namespace Darth_Vader_Puzzle
         private void PB1_Click(object sender, EventArgs e)
         {
             //add  1 to clickCounter variable
-            PB6ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB6ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB6ClickCounter == 2)
-            {
-                makeAllBordersInvisible();
-            }
-            //if bordersSet variable is not true, make the border labels appear
-            else if (!bordersSet)
-            {
-                makeBordersVisible(PB6Border1);
-            }
-
-
-
-
-            //add  1 to clickCounter variable
             PB1ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB1ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB1ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB1ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
