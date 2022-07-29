@@ -240,7 +240,7 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB7Border1, PB5Test);
                 clickEvent(PB8Border1, PB5Test);
                 clickEvent(PB9Border1, PB5Test);
-                //in case the user is trying to switch board pieces and the second one they click on is PB5Test
+                //in case the user is trying to switch board pieces and the second one they click on is PB6Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB5Test);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB5Test);
                 clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB5Test);
@@ -986,7 +986,19 @@ namespace Darth_Vader_Puzzle
             if (highlightedPBBorder.Visible)
             {
                 //if there is an image on clickedPB
-                if (clickedPB.ImageLocation != null)
+                if (clickedPB.ImageLocation != null && highlightedPB.ImageLocation == null)
+                {
+                    //mark the imageLocation of the 2 picturebox's into strings
+                    string imageLocation2 = clickedPB.ImageLocation.ToString();
+                    string imageLocation1 = null;
+                    //switch the location of the 2 picturebox's involved
+                    clickedPB.ImageLocation = imageLocation1;
+                    highlightedPB.ImageLocation = imageLocation2;
+                    //stretch the image so it is legible
+                    highlightedPB.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                //if there is an image on clickedPB
+                else if (clickedPB.ImageLocation != null)
                 {
                     //mark the imageLocation of the 2 picturebox's into strings
                     string imageLocation2 = clickedPB.ImageLocation.ToString();
@@ -996,10 +1008,10 @@ namespace Darth_Vader_Puzzle
                     highlightedPB.ImageLocation = imageLocation2;
                 }
                 //if there is not an image on clickedPB
-                if (clickedPB.ImageLocation == null)
+                else if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
                 {
                     //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = "null";
+                    string imageLocation2 = null;
                     string imageLocation1 = highlightedPB.ImageLocation.ToString();
                     //switch the location of the 2 picturebox's involved
                     clickedPB.ImageLocation = imageLocation1;
