@@ -655,7 +655,7 @@ namespace Darth_Vader_Puzzle
             //stretch the imagelayout through code so the rotated images have the same layout as the original
             PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
             //if said image is clicked and the borders are visible on PB2
-            if (pbBorder.Visible && pbBorder == PB2Border1)
+            if (pbBorder.Visible && pbBorder == PB2Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB2 image that has been clicked
                 PBTest.ImageLocation = PB2.ImageLocation;
@@ -665,7 +665,7 @@ namespace Darth_Vader_Puzzle
                 PB2.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB1
-            else if (pbBorder.Visible && pbBorder == PB1Border1)
+            else if (pbBorder.Visible && pbBorder == PB1Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB1 image that has been clicked
                 PBTest.ImageLocation = PB1.ImageLocation;
@@ -675,7 +675,7 @@ namespace Darth_Vader_Puzzle
                 PB1.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB3
-            else if (pbBorder.Visible && pbBorder == PB3Border1)
+            else if (pbBorder.Visible && pbBorder == PB3Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB3 image that has been clicked
                 PBTest.ImageLocation = PB3.ImageLocation;
@@ -685,7 +685,7 @@ namespace Darth_Vader_Puzzle
                 PB3.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB4
-            else if (pbBorder.Visible && pbBorder == PB4Border1)
+            else if (pbBorder.Visible && pbBorder == PB4Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB4 image that has been clicked
                 PBTest.ImageLocation = PB4.ImageLocation;
@@ -697,7 +697,7 @@ namespace Darth_Vader_Puzzle
             //stretch the imagelayout through code so the rotated images have the same layout as the original
             PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
             //if said image is clicked and the borders are visible on PB5
-            if (pbBorder.Visible && pbBorder == PB5Border1)
+            if (pbBorder.Visible && pbBorder == PB5Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB2 image that has been clicked
                 PBTest.ImageLocation = PB5.ImageLocation;
@@ -707,7 +707,7 @@ namespace Darth_Vader_Puzzle
                 PB5.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB6
-            else if (pbBorder.Visible && pbBorder == PB6Border1)
+            else if (pbBorder.Visible && pbBorder == PB6Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB1 image that has been clicked
                 PBTest.ImageLocation = PB6.ImageLocation;
@@ -717,7 +717,7 @@ namespace Darth_Vader_Puzzle
                 PB6.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB3
-            else if (pbBorder.Visible && pbBorder == PB7Border1)
+            else if (pbBorder.Visible && pbBorder == PB7Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB3 image that has been clicked
                 PBTest.ImageLocation = PB7.ImageLocation;
@@ -727,7 +727,7 @@ namespace Darth_Vader_Puzzle
                 PB7.Visible = false;
             }
             //if said image is clicked and the borders are visible on PB8
-            else if (pbBorder.Visible && pbBorder == PB8Border1)
+            else if (pbBorder.Visible && pbBorder == PB8Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB4 image that has been clicked
                 PBTest.ImageLocation = PB8.ImageLocation;
@@ -738,7 +738,7 @@ namespace Darth_Vader_Puzzle
 
             }
             //if said image is clicked and the borders are visible on PB9
-            else if (pbBorder.Visible && pbBorder == PB9Border1)
+            else if (pbBorder.Visible && pbBorder == PB9Border1 && PBTest.ImageLocation == null)
             {
                 //match the blank PB image with the PB4 image that has been clicked
                 PBTest.ImageLocation = PB9.ImageLocation;
