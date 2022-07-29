@@ -22,15 +22,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB6ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB6ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB6ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB6ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -45,15 +38,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB7ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB7ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB7ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB7ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -68,15 +54,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB8ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB8ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB8ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB8ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -443,15 +422,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB9ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB9ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB9ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB9ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -466,15 +438,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB5ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB5ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB5ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB5ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -489,15 +454,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB4ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB4ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB4ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB4ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -512,15 +470,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB3ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB3ClickCounter == 1)
-            {
-                clickEvent(PB2TestBorder1, PB2Test);
-                clickEvent(PB1TestBorder1, PB1Test);
-                clickEvent(PB3TestBorder1, PB3Test);
-                clickEvent(PB4TestBorder1, PB4Test);
-            }
-            else if (bordersSet && PB3ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB3ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -534,12 +485,8 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB2ClickCounter++;
-            //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
-            if (bordersSet && PB2ClickCounter == 1)
-            {
-                //DONT NEED THIS CODE ON ANY OF THE BOX PIECES
-            }
-            else if (bordersSet && PB2ClickCounter == 2)
+            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            if (bordersSet && PB2ClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
