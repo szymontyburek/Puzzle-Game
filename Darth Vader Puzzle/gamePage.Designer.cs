@@ -963,6 +963,7 @@
             this.backButton.Size = new System.Drawing.Size(112, 91);
             this.backButton.TabIndex = 110;
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // boxLabel
             // 

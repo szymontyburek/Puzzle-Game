@@ -379,6 +379,11 @@ namespace Darth_Vader_Puzzle
             }
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            //WORK ON THIS BUTTON UP NEXT
+        }
+
         private void PB9Test_Click(object sender, EventArgs e)
         {
             //add  1 to clickCounter variable
@@ -1027,6 +1032,16 @@ namespace Darth_Vader_Puzzle
             makeAllBordersInvisible();
             //to shuffle the box pieces
             shuffleGenerator();
+            //to mix up the orientation of the puzzle pieces
+            rotationShuffleGenerator(PB1);
+            rotationShuffleGenerator(PB2);
+            rotationShuffleGenerator(PB3);
+            rotationShuffleGenerator(PB4);
+            rotationShuffleGenerator(PB5);
+            rotationShuffleGenerator(PB6);
+            rotationShuffleGenerator(PB7);
+            rotationShuffleGenerator(PB8);
+            rotationShuffleGenerator(PB9);
         }
 
         private void menuButton_Click(object sender, EventArgs e)
