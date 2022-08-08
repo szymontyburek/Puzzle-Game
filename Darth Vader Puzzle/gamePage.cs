@@ -543,7 +543,7 @@ namespace Darth_Vader_Puzzle
             clockwiseRotation(PB3TestBorder1, PB3Test);
             clockwiseRotation(PB4TestBorder1, PB4Test);
             clockwiseRotation(PB5TestBorder1, PB5Test);
-            clockwiseRotation(PB6TestBorder2, PB6Test);
+            clockwiseRotation(PB6TestBorder1, PB6Test);
             clockwiseRotation(PB7TestBorder1, PB7Test);
             clockwiseRotation(PB8TestBorder1, PB8Test);
             clockwiseRotation(PB9TestBorder1, PB9Test);
@@ -1127,7 +1127,7 @@ namespace Darth_Vader_Puzzle
         private void makeAllBordersInvisible()
         {
             //set all clickCounter variables back to zero
-            PB1ClickCounter = 0; PB2ClickCounter = 0; PB3ClickCounter = 0; PB4ClickCounter = 0; PB5ClickCounter = 0; PB6ClickCounter = 0; PB7ClickCounter = 0; PB8ClickCounter = 0; PB9ClickCounter = 0; PB1TestClickCounter = 0; PB2TestClickCounter = 0; PB3TestClickCounter = 0; PB4TestClickCounter = 0; PB5TestClickCounter = 0; PB7TestClickCounter = 0; PB8TestClickCounter = 0; PB9TestClickCounter = 0;
+            PB1ClickCounter = 0; PB2ClickCounter = 0; PB3ClickCounter = 0; PB4ClickCounter = 0; PB5ClickCounter = 0; PB6ClickCounter = 0; PB7ClickCounter = 0; PB8ClickCounter = 0; PB9ClickCounter = 0; PB1TestClickCounter = 0; PB2TestClickCounter = 0; PB3TestClickCounter = 0; PB4TestClickCounter = 0; PB5TestClickCounter = 0; PB6TestClickCounter = 0;  PB7TestClickCounter = 0; PB8TestClickCounter = 0; PB9TestClickCounter = 0;
             //set bordersSet variable back to false
             bordersSet = false;
             PB2TestBorder1.Visible = false; PB2TestBorder2.Visible = false; PB2TestBorder3.Visible = false; PB2TestBorder4.Visible = false;
