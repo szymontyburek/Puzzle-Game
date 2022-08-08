@@ -953,6 +953,7 @@
             this.rotationButton.Size = new System.Drawing.Size(112, 91);
             this.rotationButton.TabIndex = 108;
             this.rotationButton.UseVisualStyleBackColor = true;
+            this.rotationButton.Click += new System.EventHandler(this.rotationButton_Click);
             // 
             // backButton
             // 

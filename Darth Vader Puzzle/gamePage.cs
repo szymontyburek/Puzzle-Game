@@ -384,6 +384,63 @@ namespace Darth_Vader_Puzzle
             //WORK ON THIS BUTTON UP NEXT
         }
 
+        private void clockwiseRotation(Label PBBorder, PictureBox PB)
+        {
+            //if any picturebox is highlighted
+            if (PBBorder.Visible)
+            {
+                //stretch the imagelayout through code so the rotated images have the same layout as the original
+                PB.SizeMode = PictureBoxSizeMode.StretchImage;
+                //if the imageLocation of the picturebox equals rotated90.png
+                if (PB.ImageLocation.EndsWith("Rotated90.png"))
+                {
+                    //replace the Rotated90.png ending with Rotated180.png
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated90.png", "Rotated180.png");
+                }
+                //if the imageLocation of the picturebox equals rotated180.png
+                else if (PB.ImageLocation.EndsWith("Rotated180.png"))
+                {
+                    //replace the Rotated180.png ending with Rotated270.png
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated180.png", "Rotated270.png");
+                }
+                //if the imageLocation of the picturebox equals rotated270.png
+                else if (PB.ImageLocation.EndsWith("Rotated270.png"))
+                {
+                    //replace the Rotated270.png ending with .png
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated270.png", ".png");
+                }
+                else
+                {
+                    //if the imageLocation of the picturebox equals .png
+                    //replace the .png ending with Rotated90.png
+                    PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated90.png");
+                }
+            }
+        }
+        private void rotationButton_Click(object sender, EventArgs e)
+        {
+            //clockwise rotation for the box pieces
+            clockwiseRotation(PB1Border1, PB1);
+            clockwiseRotation(PB2Border1, PB2);
+            clockwiseRotation(PB3Border1, PB3);
+            clockwiseRotation(PB4Border1, PB4);
+            clockwiseRotation(PB5Border1, PB5);
+            clockwiseRotation(PB6Border1, PB6);
+            clockwiseRotation(PB7Border1, PB7);
+            clockwiseRotation(PB8Border1, PB8);
+            clockwiseRotation(PB9Border1, PB9);
+            //clockwise rotation for the board pieces
+            clockwiseRotation(PB1TestBorder1, PB1Test);
+            clockwiseRotation(PB2TestBorder2, PB2Test);
+            clockwiseRotation(PB3TestBorder1, PB3Test);
+            clockwiseRotation(PB4TestBorder1, PB4Test);
+            clockwiseRotation(PB5TestBorder1, PB5Test);
+            clockwiseRotation(PB6TestBorder2, PB6Test);
+            clockwiseRotation(PB7TestBorder1, PB7Test);
+            clockwiseRotation(PB8TestBorder1, PB8Test);
+            clockwiseRotation(PB9TestBorder1, PB9Test);
+        }
+
         private void PB9Test_Click(object sender, EventArgs e)
         {
             //add  1 to clickCounter variable
