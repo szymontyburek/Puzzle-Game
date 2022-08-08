@@ -378,10 +378,118 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB8TestBorder1);
             }
         }
-
+        private void backButtonModule(Label PBTestBorder, PictureBox PBTest, PictureBox PB)
+        {
+            //if a board piece is selected and it has an image on it
+            if (PBTestBorder.Visible && PBTest.ImageLocation != null)
+            {
+                //if the selected board piece and a puzzle piece have the same image(this will be determined by finding out
+                //if their imageLocation property contains the same number(ex: one, two, three, etc..)), regardless of rotation
+                if (PBTest.ImageLocation.Contains("One") && PB.ImageLocation.Contains("One") || PBTest.ImageLocation.Contains("Two") && PB.ImageLocation.Contains("Two") || PBTest.ImageLocation.Contains("Three") && PB.ImageLocation.Contains("Three") || PBTest.ImageLocation.Contains("Four") && PB.ImageLocation.Contains("Four") || PBTest.ImageLocation.Contains("Five") && PB.ImageLocation.Contains("Five") || PBTest.ImageLocation.Contains("Six") && PB.ImageLocation.Contains("Six") || PBTest.ImageLocation.Contains("Seven") && PB.ImageLocation.Contains("Seven") || PBTest.ImageLocation.Contains("Eight") && PB.ImageLocation.Contains("Eight") || PBTest.ImageLocation.Contains("Nine") && PB.ImageLocation.Contains("Nine"))
+                {
+                    //change the puzzle piece imageLocation to the board piece imageLocation so the rotation of the piece will be transferred
+                    PB.ImageLocation = PBTest.ImageLocation;
+                    //make the piece visible
+                    PB.Visible = true;
+                    //make the board piece image blank
+                    PBTest.ImageLocation = null;
+                    //make the border invisible
+                    makeAllBordersInvisible();
+                }
+            }
+        }
         private void backButton_Click(object sender, EventArgs e)
         {
-            //WORK ON THIS BUTTON UP NEXT
+            //enabling the back button to work between the PB1Test picturebox and any of the puzzle pieces
+            backButtonModule(PB1TestBorder1, PB1Test, PB1);
+            backButtonModule(PB1TestBorder1, PB1Test, PB2);
+            backButtonModule(PB1TestBorder1, PB1Test, PB3);
+            backButtonModule(PB1TestBorder1, PB1Test, PB4);
+            backButtonModule(PB1TestBorder1, PB1Test, PB5);
+            backButtonModule(PB1TestBorder1, PB1Test, PB6);
+            backButtonModule(PB1TestBorder1, PB1Test, PB7);
+            backButtonModule(PB1TestBorder1, PB1Test, PB8);
+            backButtonModule(PB1TestBorder1, PB1Test, PB9);
+            //use of the backButtonModule regarding the PB2Test picturebox
+            backButtonModule(PB2TestBorder1, PB2Test, PB1);
+            backButtonModule(PB2TestBorder1, PB2Test, PB2);
+            backButtonModule(PB2TestBorder1, PB2Test, PB3);
+            backButtonModule(PB2TestBorder1, PB2Test, PB4);
+            backButtonModule(PB2TestBorder1, PB2Test, PB5);
+            backButtonModule(PB2TestBorder1, PB2Test, PB6);
+            backButtonModule(PB2TestBorder1, PB2Test, PB7);
+            backButtonModule(PB2TestBorder1, PB2Test, PB8);
+            backButtonModule(PB2TestBorder1, PB2Test, PB9);
+            //use of the backButtonModule regarding the PB3Test picturebox
+            backButtonModule(PB3TestBorder1, PB3Test, PB1);
+            backButtonModule(PB3TestBorder1, PB3Test, PB2);
+            backButtonModule(PB3TestBorder1, PB3Test, PB3);
+            backButtonModule(PB3TestBorder1, PB3Test, PB4);
+            backButtonModule(PB3TestBorder1, PB3Test, PB5);
+            backButtonModule(PB3TestBorder1, PB3Test, PB6);
+            backButtonModule(PB3TestBorder1, PB3Test, PB7);
+            backButtonModule(PB3TestBorder1, PB3Test, PB8);
+            backButtonModule(PB3TestBorder1, PB3Test, PB9);
+            //use of the backButtonModule regarding the PB4Test picturebox
+            backButtonModule(PB4TestBorder1, PB4Test, PB1);
+            backButtonModule(PB4TestBorder1, PB4Test, PB2);
+            backButtonModule(PB4TestBorder1, PB4Test, PB3);
+            backButtonModule(PB4TestBorder1, PB4Test, PB4);
+            backButtonModule(PB4TestBorder1, PB4Test, PB5);
+            backButtonModule(PB4TestBorder1, PB4Test, PB6);
+            backButtonModule(PB4TestBorder1, PB4Test, PB7);
+            backButtonModule(PB4TestBorder1, PB4Test, PB8);
+            backButtonModule(PB4TestBorder1, PB4Test, PB9);
+            //use of the backButtonModule regarding the PB5Test picturebox
+            backButtonModule(PB5TestBorder1, PB5Test, PB1);
+            backButtonModule(PB5TestBorder1, PB5Test, PB2);
+            backButtonModule(PB5TestBorder1, PB5Test, PB3);
+            backButtonModule(PB5TestBorder1, PB5Test, PB4);
+            backButtonModule(PB5TestBorder1, PB5Test, PB5);
+            backButtonModule(PB5TestBorder1, PB5Test, PB6);
+            backButtonModule(PB5TestBorder1, PB5Test, PB7);
+            backButtonModule(PB5TestBorder1, PB5Test, PB8);
+            backButtonModule(PB5TestBorder1, PB5Test, PB9);
+            //use of the backButtonModule regarding the PB6Test picturebox
+            backButtonModule(PB6TestBorder1, PB6Test, PB1);
+            backButtonModule(PB6TestBorder1, PB6Test, PB2);
+            backButtonModule(PB6TestBorder1, PB6Test, PB3);
+            backButtonModule(PB6TestBorder1, PB6Test, PB4);
+            backButtonModule(PB6TestBorder1, PB6Test, PB5);
+            backButtonModule(PB6TestBorder1, PB6Test, PB6);
+            backButtonModule(PB6TestBorder1, PB6Test, PB7);
+            backButtonModule(PB6TestBorder1, PB6Test, PB8);
+            backButtonModule(PB6TestBorder1, PB6Test, PB9);
+            //use of the backButtonModule regarding the PB7Test picturebox
+            backButtonModule(PB7TestBorder1, PB7Test, PB1);
+            backButtonModule(PB7TestBorder1, PB7Test, PB2);
+            backButtonModule(PB7TestBorder1, PB7Test, PB3);
+            backButtonModule(PB7TestBorder1, PB7Test, PB4);
+            backButtonModule(PB7TestBorder1, PB7Test, PB5);
+            backButtonModule(PB7TestBorder1, PB7Test, PB6);
+            backButtonModule(PB7TestBorder1, PB7Test, PB7);
+            backButtonModule(PB7TestBorder1, PB7Test, PB8);
+            backButtonModule(PB7TestBorder1, PB7Test, PB9);
+            //use of the backButtonModule regarding the PB8Test picturebox
+            backButtonModule(PB8TestBorder1, PB8Test, PB1);
+            backButtonModule(PB8TestBorder1, PB8Test, PB2);
+            backButtonModule(PB8TestBorder1, PB8Test, PB3);
+            backButtonModule(PB8TestBorder1, PB8Test, PB4);
+            backButtonModule(PB8TestBorder1, PB8Test, PB5);
+            backButtonModule(PB8TestBorder1, PB8Test, PB6);
+            backButtonModule(PB8TestBorder1, PB8Test, PB7);
+            backButtonModule(PB8TestBorder1, PB8Test, PB8);
+            backButtonModule(PB8TestBorder1, PB8Test, PB9);
+            //use of the backButtonModule regarding the PB9Test picturebox
+            backButtonModule(PB9TestBorder1, PB9Test, PB1);
+            backButtonModule(PB9TestBorder1, PB9Test, PB2);
+            backButtonModule(PB9TestBorder1, PB9Test, PB3);
+            backButtonModule(PB9TestBorder1, PB9Test, PB4);
+            backButtonModule(PB9TestBorder1, PB9Test, PB5);
+            backButtonModule(PB9TestBorder1, PB9Test, PB6);
+            backButtonModule(PB9TestBorder1, PB9Test, PB7);
+            backButtonModule(PB9TestBorder1, PB9Test, PB8);
+            backButtonModule(PB9TestBorder1, PB9Test, PB9);
         }
 
         private void clockwiseRotation(Label PBBorder, PictureBox PB)
@@ -927,69 +1035,68 @@ namespace Darth_Vader_Puzzle
             if (shufflePuzzlePieces[i] == 1)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader1.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader1.png";
+                //picturebox image will equal darthVaderOne.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderOne.png";
             }
             //if the generated number equals 2
             else if (shufflePuzzlePieces[i] == 2)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader2.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader2.png";
+                //picturebox image will equal darthVaderTwo.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderTwo.png";
             }
             //if the generated number equals 3
             else if (shufflePuzzlePieces[i] == 3)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader3.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader3.png";
+                //picturebox image will equal darthVaderThree.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderThree.png";
             }
             //if the generated number equals 4
             else if(shufflePuzzlePieces[i] == 4)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader4.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader4.png";
+                //picturebox image will equal darthVaderFour.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png";
             }
             //if the generated number equals 5
             if (shufflePuzzlePieces[i] == 5)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader5.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader5.png";
+                //picturebox image will equal darthVaderFive.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFive.png";
             }
             //if the generated number equals 6
             else if (shufflePuzzlePieces[i] == 6)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader6.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader6.png";
+                //picturebox image will equal darthVaderSix.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSix.png";
             }
             //if the generated number equals 7
             else if (shufflePuzzlePieces[i] == 7)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader7.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader7.png";
+                //picturebox image will equal darthVaderSeven.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSeven.png";
             }
             //if the generated number equals 8
             else if (shufflePuzzlePieces[i] == 8)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader8.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader8.png";
+                //picturebox image will equal darthVaderEight.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderEight.png";
             }
             //if the generated number equals 9
             else if (shufflePuzzlePieces[i] == 9)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVader9.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader9.png";
+                //picturebox image will equal darthVaderNine.png
+                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderNine.png";
             }
         }
         private void rotationShuffleGenerator(PictureBox PB)
         {
-            //WORK ON THIS MODULE, IT'S ACTING REALLY FUNKY
             //create a random object
             Random rand = new Random();
 

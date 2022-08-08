@@ -272,9 +272,9 @@
             // PB6Test
             // 
             this.PB6Test.BackColor = System.Drawing.Color.Silver;
-            this.PB6Test.Location = new System.Drawing.Point(1301, 820);
+            this.PB6Test.Location = new System.Drawing.Point(1301, 818);
             this.PB6Test.Name = "PB6Test";
-            this.PB6Test.Size = new System.Drawing.Size(209, 191);
+            this.PB6Test.Size = new System.Drawing.Size(209, 190);
             this.PB6Test.TabIndex = 14;
             this.PB6Test.TabStop = false;
             this.PB6Test.Click += new System.EventHandler(this.PB6Test_Click);
@@ -322,7 +322,7 @@
             // PB3Test
             // 
             this.PB3Test.BackColor = System.Drawing.Color.Silver;
-            this.PB3Test.Location = new System.Drawing.Point(1301, 623);
+            this.PB3Test.Location = new System.Drawing.Point(1301, 621);
             this.PB3Test.Name = "PB3Test";
             this.PB3Test.Size = new System.Drawing.Size(209, 191);
             this.PB3Test.TabIndex = 19;
