@@ -20,6 +20,8 @@ namespace Darth_Vader_Puzzle
         int[] shufflePuzzlePieces = new int[9];
         private void PB6_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB6Border1
+            highlightShift(PB6ClickCounter, PB6Border1);
             //add  1 to clickCounter variable
             PB6ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -36,6 +38,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB7_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB7Border1
+            highlightShift(PB7ClickCounter, PB7Border1);
             //add  1 to clickCounter variable
             PB7ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -52,6 +56,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB8_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB8Border1
+            highlightShift(PB8ClickCounter, PB8Border1);
             //add  1 to clickCounter variable
             PB8ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -398,6 +404,41 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
+        private void determinePuzzleProgress()
+        {
+            //if the imageLocaton of the PB1Test picturebox equals darthVaderOne.png
+            if (PB1Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderOne.png")
+            {
+                //if the imageLocation of the PB2Test picturebox equals darthVaderTwo.png
+                if (PB2Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderTwo.png")
+                {
+                    //if the imageLocation of the PB3Test picturebox equals DarthVaderThree.png
+                    if (PB3Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderThree.png")
+                    {
+                        //if the imageLocation of the PB4Test picturebox equals darthVaderFour.png
+                        if (PB4Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png")
+                        {
+                            
+                        }
+                    }
+                }
+            }
+        }
+        private void highlightShift(int PBClickCounter, Label PBBorder)
+        {
+            //this module will be utilized underneath picturebox click events, so keep that in mind
+
+            //if there are borders visible other than the paramater label
+            if (bordersSet && PBClickCounter == 0)
+            {
+                //make all borders invisible
+                makeAllBordersInvisible();
+                //make the parameter border label visible
+                makeBordersVisible(PBBorder);
+                //set bool variable true
+                bordersSet = true;
+            }
+        }
         private void backButton_Click(object sender, EventArgs e)
         {
             //enabling the back button to work between the PB1Test picturebox and any of the puzzle pieces
@@ -590,6 +631,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB9_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB9Border1
+            highlightShift(PB9ClickCounter, PB9Border1);
             //add  1 to clickCounter variable
             PB9ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -606,6 +649,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB5_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB5Border1
+            highlightShift(PB5ClickCounter, PB5Border1);
             //add  1 to clickCounter variable
             PB5ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -622,6 +667,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB4_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB4Border1
+            highlightShift(PB4ClickCounter, PB4Border1);
             //add  1 to clickCounter variable
             PB4ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -638,6 +685,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB3_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB3Border1
+            highlightShift(PB3ClickCounter, PB3Border1);
             //add  1 to clickCounter variable
             PB3ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -653,6 +702,8 @@ namespace Darth_Vader_Puzzle
         }
         private void PB2_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB2Border1
+            highlightShift(PB2ClickCounter, PB2Border1);
             //add  1 to clickCounter variable
             PB2ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -669,6 +720,8 @@ namespace Darth_Vader_Puzzle
 
         private void PB1_Click(object sender, EventArgs e)
         {
+            //call highlightShift module under PB1Border1
+            highlightShift(PB1ClickCounter, PB1Border1);
             //add  1 to clickCounter variable
             PB1ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 

@@ -126,7 +126,7 @@
             this.rotationButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.boxLabel = new System.Windows.Forms.Label();
-            this.piecesLabel = new System.Windows.Forms.Label();
+            this.boardLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).BeginInit();
@@ -977,16 +977,16 @@
             this.boxLabel.TabIndex = 111;
             this.boxLabel.Text = "Box";
             // 
-            // piecesLabel
+            // boardLabel
             // 
-            this.piecesLabel.AutoSize = true;
-            this.piecesLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.piecesLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.piecesLabel.Location = new System.Drawing.Point(1086, 522);
-            this.piecesLabel.Name = "piecesLabel";
-            this.piecesLabel.Size = new System.Drawing.Size(208, 81);
-            this.piecesLabel.TabIndex = 112;
-            this.piecesLabel.Text = "Pieces";
+            this.boardLabel.AutoSize = true;
+            this.boardLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.boardLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.boardLabel.Location = new System.Drawing.Point(1086, 522);
+            this.boardLabel.Name = "boardLabel";
+            this.boardLabel.Size = new System.Drawing.Size(202, 81);
+            this.boardLabel.TabIndex = 112;
+            this.boardLabel.Text = "Board";
             // 
             // gamePage
             // 
@@ -994,7 +994,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1524, 1221);
-            this.Controls.Add(this.piecesLabel);
+            this.Controls.Add(this.boardLabel);
             this.Controls.Add(this.boxLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.rotationButton);
@@ -1220,6 +1220,6 @@
         private Button rotationButton;
         private Button backButton;
         private Label boxLabel;
-        private Label piecesLabel;
+        private Label boardLabel;
     }
 }
