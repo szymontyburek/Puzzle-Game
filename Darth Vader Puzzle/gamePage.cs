@@ -21,7 +21,7 @@ namespace Darth_Vader_Puzzle
         private void PB6_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB6Border1
-            highlightShift(PB6ClickCounter, PB6Border1);
+            highlightShift(PB6ClickCounter);
             //add  1 to clickCounter variable
             PB6ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -39,7 +39,7 @@ namespace Darth_Vader_Puzzle
         private void PB7_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB7Border1
-            highlightShift(PB7ClickCounter, PB7Border1);
+            highlightShift(PB7ClickCounter);
             //add  1 to clickCounter variable
             PB7ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -57,7 +57,7 @@ namespace Darth_Vader_Puzzle
         private void PB8_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB8Border1
-            highlightShift(PB8ClickCounter, PB8Border1);
+            highlightShift(PB8ClickCounter);
             //add  1 to clickCounter variable
             PB8ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -71,7 +71,106 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB8Border1);
             }
         }
+        private void clickEvent2(Label pbBorder, PictureBox PBTest)
+        {
+            //stretch the imagelayout through code so the rotated images have the same layout as the original
+            PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
+            //if said image is clicked and the borders are visible on PB2
+            if (pbBorder.Visible && pbBorder == PB2Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB2 image that has been clicked
+                PBTest.ImageLocation = PB2.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB2 on the pieces because it is on the board
+                PB2.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB1
+            else if (pbBorder.Visible && pbBorder == PB1Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB1 image that has been clicked
+                PBTest.ImageLocation = PB1.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB1 on the pieces because it is on the board
+                PB1.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB3
+            else if (pbBorder.Visible && pbBorder == PB3Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB3 image that has been clicked
+                PBTest.ImageLocation = PB3.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB3 on the pieces because it is on the board
+                PB3.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB4
+            else if (pbBorder.Visible && pbBorder == PB4Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB4 image that has been clicked
+                PBTest.ImageLocation = PB4.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB4 on the pieces because it is on the board
+                PB4.Visible = false;
+            }
+            //stretch the imagelayout through code so the rotated images have the same layout as the original
+            PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
+            //if said image is clicked and the borders are visible on PB5
+            if (pbBorder.Visible && pbBorder == PB5Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB2 image that has been clicked
+                PBTest.ImageLocation = PB5.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB5 on the pieces because it is on the board
+                PB5.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB6
+            else if (pbBorder.Visible && pbBorder == PB6Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB1 image that has been clicked
+                PBTest.ImageLocation = PB6.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB6 on the pieces because it is on the board
+                PB6.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB3
+            else if (pbBorder.Visible && pbBorder == PB7Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB3 image that has been clicked
+                PBTest.ImageLocation = PB7.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB7 on the pieces because it is on the board
+                PB7.Visible = false;
+            }
+            //if said image is clicked and the borders are visible on PB8
+            else if (pbBorder.Visible && pbBorder == PB8Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB4 image that has been clicked
+                PBTest.ImageLocation = PB8.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                //eliminate the option to choose PB8 on the pieces because it is on the board
+                PB8.Visible = false;
 
+            }
+            //if said image is clicked and the borders are visible on PB9
+            else if (pbBorder.Visible && pbBorder == PB9Border1 && PBTest.ImageLocation == null)
+            {
+                //match the blank PB image with the PB4 image that has been clicked
+                PBTest.ImageLocation = PB9.ImageLocation;
+                //make the borders invisible
+                makeAllBordersInvisible();
+                PB1TestBorder4.Visible = true;  PB1TestBorder3.Visible = true; PB1TestBorder2.Visible = true; PB1TestBorder1.Visible = true;
+                //eliminate the option to choose PB9 on the pieces because it is on the board
+                PB9.Visible = false;
+
+            }
+        }
         private void PB1Test_Click(object sender, EventArgs e)
         {
             //add  1 to clickCounter variable
@@ -88,7 +187,7 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB6Border1, PB1Test);
                 clickEvent(PB7Border1, PB1Test);
                 clickEvent(PB8Border1, PB1Test);
-                clickEvent(PB9Border1, PB1Test);
+                clickEvent2(PB9Border1, PB1Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB1Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB1Test);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB1Test);
@@ -418,13 +517,13 @@ namespace Darth_Vader_Puzzle
                         //if the imageLocation of the PB4Test picturebox equals darthVaderFour.png
                         if (PB4Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png")
                         {
-                            
+                           //work on this module 
                         }
                     }
                 }
             }
         }
-        private void highlightShift(int PBClickCounter, Label PBBorder)
+        private void highlightShift(int PBClickCounter)
         {
             //this module will be utilized underneath picturebox click events, so keep that in mind
 
@@ -433,10 +532,6 @@ namespace Darth_Vader_Puzzle
             {
                 //make all borders invisible
                 makeAllBordersInvisible();
-                //make the parameter border label visible
-                makeBordersVisible(PBBorder);
-                //set bool variable true
-                bordersSet = true;
             }
         }
         private void backButton_Click(object sender, EventArgs e)
@@ -592,7 +687,6 @@ namespace Darth_Vader_Puzzle
 
         private void PB9Test_Click(object sender, EventArgs e)
         {
-            //add  1 to clickCounter variable
             PB9TestClickCounter++;
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB9TestClickCounter == 1)
@@ -632,7 +726,7 @@ namespace Darth_Vader_Puzzle
         private void PB9_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB9Border1
-            highlightShift(PB9ClickCounter, PB9Border1);
+            highlightShift(PB9ClickCounter);
             //add  1 to clickCounter variable
             PB9ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -650,7 +744,7 @@ namespace Darth_Vader_Puzzle
         private void PB5_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB5Border1
-            highlightShift(PB5ClickCounter, PB5Border1);
+            highlightShift(PB5ClickCounter);
             //add  1 to clickCounter variable
             PB5ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -668,7 +762,7 @@ namespace Darth_Vader_Puzzle
         private void PB4_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB4Border1
-            highlightShift(PB4ClickCounter, PB4Border1);
+            highlightShift(PB4ClickCounter);
             //add  1 to clickCounter variable
             PB4ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -686,7 +780,7 @@ namespace Darth_Vader_Puzzle
         private void PB3_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB3Border1
-            highlightShift(PB3ClickCounter, PB3Border1);
+            highlightShift(PB3ClickCounter);
             //add  1 to clickCounter variable
             PB3ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -703,7 +797,7 @@ namespace Darth_Vader_Puzzle
         private void PB2_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB2Border1
-            highlightShift(PB2ClickCounter, PB2Border1);
+            highlightShift(PB2ClickCounter);
             //add  1 to clickCounter variable
             PB2ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -721,7 +815,7 @@ namespace Darth_Vader_Puzzle
         private void PB1_Click(object sender, EventArgs e)
         {
             //call highlightShift module under PB1Border1
-            highlightShift(PB1ClickCounter, PB1Border1);
+            highlightShift(PB1ClickCounter);
             //add  1 to clickCounter variable
             PB1ClickCounter++;
             //if bordersSet bool variable is true and the picturebox has been clicked on 
@@ -1241,6 +1335,48 @@ namespace Darth_Vader_Puzzle
                 }
                 //make the borders invisible
                 makeAllBordersInvisible();
+            }
+        }
+        private void clickEventBetweenBoardPieces2(Label highlightedPBBorder, Label clickedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
+        {
+            //if clickedPB is clicked and the borders are visible on highlightedPB
+            if (highlightedPBBorder.Visible)
+            {
+                //if there is an image on clickedPB
+                if (clickedPB.ImageLocation != null && highlightedPB.ImageLocation == null)
+                {
+                    //mark the imageLocation of the 2 picturebox's into strings
+                    string imageLocation2 = clickedPB.ImageLocation.ToString();
+                    string imageLocation1 = null;
+                    //switch the location of the 2 picturebox's involved
+                    clickedPB.ImageLocation = imageLocation1;
+                    highlightedPB.ImageLocation = imageLocation2;
+                    //stretch the image so it is legible
+                    highlightedPB.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                //if there is an image on clickedPB
+                else if (clickedPB.ImageLocation != null)
+                {
+                    //mark the imageLocation of the 2 picturebox's into strings
+                    string imageLocation2 = clickedPB.ImageLocation.ToString();
+                    string imageLocation1 = highlightedPB.ImageLocation.ToString();
+                    //switch the location of the 2 picturebox's involved
+                    clickedPB.ImageLocation = imageLocation1;
+                    highlightedPB.ImageLocation = imageLocation2;
+                }
+                //if there is not an image on clickedPB
+                else if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
+                {
+                    //mark the imageLocation of the 2 picturebox's into strings
+                    string imageLocation2 = null;
+                    string imageLocation1 = highlightedPB.ImageLocation.ToString();
+                    //switch the location of the 2 picturebox's involved
+                    clickedPB.ImageLocation = imageLocation1;
+                    highlightedPB.ImageLocation = imageLocation2;
+                }
+                //make the borders invisible
+                makeAllBordersInvisible();
+                makeBordersVisible(clickedPBBorder);
             }
         }
         private void gamePage_Load(object sender, EventArgs e)
