@@ -71,7 +71,7 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB8Border1);
             }
         }
-        private void clickEvent2(Label pbBorder, PictureBox PBTest)
+        private void clickEvent2(Label pbBorder, PictureBox PBTest, Label PBTestBorder)
         {
             //stretch the imagelayout through code so the rotated images have the same layout as the original
             PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -165,11 +165,10 @@ namespace Darth_Vader_Puzzle
                 PBTest.ImageLocation = PB9.ImageLocation;
                 //make the borders invisible
                 makeAllBordersInvisible();
-                PB1TestBorder4.Visible = true;  PB1TestBorder3.Visible = true; PB1TestBorder2.Visible = true; PB1TestBorder1.Visible = true;
                 //eliminate the option to choose PB9 on the pieces because it is on the board
                 PB9.Visible = false;
-
             }
+            makeBordersVisible(PBTestBorder);
         }
         private void PB1Test_Click(object sender, EventArgs e)
         {
@@ -187,17 +186,17 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB6Border1, PB1Test);
                 clickEvent(PB7Border1, PB1Test);
                 clickEvent(PB8Border1, PB1Test);
-                clickEvent2(PB9Border1, PB1Test);
+                clickEvent2(PB9Border1, PB1Test, PB3TestBorder2);
                 //in case the user is trying to switch board pieces and the second one they click on is PB1Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB1Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB1Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB1Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB1Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB1Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB1Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB1Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB1Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB1Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB1Test, PB1TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB1Test, PB1TestBorder1);
             }
             else if (bordersSet && PB1TestClickCounter == 2)
             {
@@ -226,18 +225,17 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB6Border1, PB2Test);
                 clickEvent(PB7Border1, PB2Test);
                 clickEvent(PB8Border1, PB2Test);
-                clickEvent(PB9Border1, PB2Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB4Test, PB1Test);
+                clickEvent2(PB9Border1, PB2Test, PB2TestBorder2);
                 //in case the user is trying to switch board pieces and the second one they click on is PB2Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB2Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB2Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB2Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB2Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB2Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB2Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB2Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB2Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB2Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB2Test, PB2TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB2Test, PB2TestBorder1);
             }
             else if (bordersSet && PB2TestClickCounter == 2)
             {
@@ -268,15 +266,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB3Test);
                 clickEvent(PB9Border1, PB3Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB3Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB3Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB3Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB3Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB3Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB3Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB3Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB3Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB3Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB3Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB3Test, PB3TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB3Test, PB3TestBorder1);
             }
             else if (bordersSet && PB3TestClickCounter == 2)
             {
@@ -307,15 +305,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB4Test);
                 clickEvent(PB9Border1, PB4Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB4Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB4Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB4Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB4Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB4Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB4Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB4Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB4Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB4Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB4Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB4Test, PB4TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB4Test, PB4TestBorder1);
             }
             else if (bordersSet && PB4TestClickCounter == 2)
             {
@@ -346,15 +344,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB5Test);
                 clickEvent(PB9Border1, PB5Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB6Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB5Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB5Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB5Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB5Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB5Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB5Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB5Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB5Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB5Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB5Test, PB5TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB5Test, PB5TestBorder1);
             }
             else if (bordersSet && PB5TestClickCounter == 2)
             {
@@ -385,15 +383,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB6Test);
                 clickEvent(PB9Border1, PB6Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB6Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB6Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB6Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB6Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB6Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB6Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB6Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB6Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB6Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB6Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB6Test, PB6TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB6Test, PB6TestBorder1);
             }
             else if (bordersSet && PB6TestClickCounter == 2)
             {
@@ -424,15 +422,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB7Test);
                 clickEvent(PB9Border1, PB7Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB7Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB7Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB7Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB7Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB7Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB7Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB7Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB7Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB7Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB7Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB7Test, PB7TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB7Test, PB7TestBorder1);
             }
             else if (bordersSet && PB7TestClickCounter == 2)
             {
@@ -463,15 +461,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB8Test);
                 clickEvent(PB9Border1, PB8Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB8Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB8Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB8Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB8Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB8Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB8Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB8Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB8Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB8Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB8Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB8Test, PB8TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB8Test, PB8TestBorder1);
             }
             else if (bordersSet && PB8TestClickCounter == 2)
             {
@@ -702,15 +700,15 @@ namespace Darth_Vader_Puzzle
                 clickEvent(PB8Border1, PB9Test);
                 clickEvent(PB9Border1, PB9Test);
                 //in case the user is trying to switch board pieces and the second one they click on is PB9Test
-                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB9Test);
-                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB9Test);
-                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB9Test);
-                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB9Test);
-                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB9Test);
-                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB9Test);
-                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB9Test);
-                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB9Test);
-                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB9Test);
+                clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB3TestBorder1, PB3Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB4TestBorder1, PB4Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB5TestBorder1, PB5Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB6TestBorder1, PB6Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB9Test, PB9TestBorder1);
+                clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB9Test, PB9TestBorder1);
             }
             else if (bordersSet && PB9TestClickCounter == 2)
             {
@@ -847,14 +845,15 @@ namespace Darth_Vader_Puzzle
             //if pbBorder = PB1TestBorder1, make all the PB1TestBorder labels visible
             else if (pbBorder == PB1TestBorder1 && !bordersSet)
             {
-                PB1TestBorder1.Visible = true; PB1TestBorder2.Visible = true; PB1TestBorder3.Visible = true; PB1TestBorder4.Visible = true;
+                PB1TestBorder1.Visible = true;  PB1TestBorder2.Visible = true; PB1TestBorder3.Visible = true; PB1TestBorder4.Visible = true;
                 //mark the bool variable true so only one piece can be selected at a time
                 bordersSet = true;
             }
             //if pbBorder = PB3TestBorder1, make all the PB3TestBorder labels visible
-            else if (pbBorder == PB3TestBorder1 && !bordersSet)
+            else if (pbBorder == PB3TestBorder2 && !bordersSet)
             {
-                PB3TestBorder1.Visible = true; PB3TestBorder2.Visible = true; PB3TestBorder3.Visible = true; PB3TestBorder4.Visible = true;
+                //work on this below, PB3TestBorder1 isn't visible!!!!!! if you're confused, place PB9 onto PB1Test and you'll know
+                PB2TestBorder1.Visible = true; PB3TestBorder3.Visible = true; PB3TestBorder4.Visible = true;
                 //mark the bool variable true so only one piece can be selected at a time
                 bordersSet = true;
             }
@@ -1052,7 +1051,6 @@ namespace Darth_Vader_Puzzle
                 makeAllBordersInvisible();
                 //eliminate the option to choose PB8 on the pieces because it is on the board
                 PB8.Visible = false;
-
             }
             //if said image is clicked and the borders are visible on PB9
             else if (pbBorder.Visible && pbBorder == PB9Border1 && PBTest.ImageLocation == null)
@@ -1296,35 +1294,12 @@ namespace Darth_Vader_Puzzle
             PB8Border1.Visible = false; PB8Border2.Visible = false; PB8Border3.Visible = false; PB8Border4.Visible = false;
             PB9Border1.Visible = false; PB9Border2.Visible = false; PB9Border3.Visible = false; PB9Border4.Visible = false;
         }
-        private void clickEventBetweenBoardPieces(Label highlightedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
+        private void clickEventBetweenBoardPieces(Label highlightedPBBorder, PictureBox highlightedPB, PictureBox clickedPB, Label clickedPBBorder)
         {
             //if clickedPB is clicked and the borders are visible on highlightedPB
             if (highlightedPBBorder.Visible)
             {
-                //if there is an image on clickedPB
-                if (clickedPB.ImageLocation != null && highlightedPB.ImageLocation == null)
-                {
-                    //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = clickedPB.ImageLocation.ToString();
-                    string imageLocation1 = null;
-                    //switch the location of the 2 picturebox's involved
-                    clickedPB.ImageLocation = imageLocation1;
-                    highlightedPB.ImageLocation = imageLocation2;
-                    //stretch the image so it is legible
-                    highlightedPB.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                //if there is an image on clickedPB
-                else if (clickedPB.ImageLocation != null)
-                {
-                    //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = clickedPB.ImageLocation.ToString();
-                    string imageLocation1 = highlightedPB.ImageLocation.ToString();
-                    //switch the location of the 2 picturebox's involved
-                    clickedPB.ImageLocation = imageLocation1;
-                    highlightedPB.ImageLocation = imageLocation2;
-                }
-                //if there is not an image on clickedPB
-                else if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
+                if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
                 {
                     //mark the imageLocation of the 2 picturebox's into strings
                     string imageLocation2 = null;
@@ -1332,40 +1307,19 @@ namespace Darth_Vader_Puzzle
                     //switch the location of the 2 picturebox's involved
                     clickedPB.ImageLocation = imageLocation1;
                     highlightedPB.ImageLocation = imageLocation2;
+                    //unhighlight the 'highlightedPB'
+                    makeAllBordersInvisible();
+                    //make the 'clickedPB' borders visible
+                    makeBordersVisible(clickedPBBorder);
                 }
-                //make the borders invisible
-                makeAllBordersInvisible();
             }
         }
-        private void clickEventBetweenBoardPieces2(Label highlightedPBBorder, Label clickedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
+        private void clickEventBetweenBoardPieces2(Label highlightedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
         {
             //if clickedPB is clicked and the borders are visible on highlightedPB
             if (highlightedPBBorder.Visible)
             {
-                //if there is an image on clickedPB
-                if (clickedPB.ImageLocation != null && highlightedPB.ImageLocation == null)
-                {
-                    //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = clickedPB.ImageLocation.ToString();
-                    string imageLocation1 = null;
-                    //switch the location of the 2 picturebox's involved
-                    clickedPB.ImageLocation = imageLocation1;
-                    highlightedPB.ImageLocation = imageLocation2;
-                    //stretch the image so it is legible
-                    highlightedPB.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                //if there is an image on clickedPB
-                else if (clickedPB.ImageLocation != null)
-                {
-                    //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = clickedPB.ImageLocation.ToString();
-                    string imageLocation1 = highlightedPB.ImageLocation.ToString();
-                    //switch the location of the 2 picturebox's involved
-                    clickedPB.ImageLocation = imageLocation1;
-                    highlightedPB.ImageLocation = imageLocation2;
-                }
-                //if there is not an image on clickedPB
-                else if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
+                if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
                 {
                     //mark the imageLocation of the 2 picturebox's into strings
                     string imageLocation2 = null;
@@ -1373,10 +1327,9 @@ namespace Darth_Vader_Puzzle
                     //switch the location of the 2 picturebox's involved
                     clickedPB.ImageLocation = imageLocation1;
                     highlightedPB.ImageLocation = imageLocation2;
+                    //unhighlight the 'highlightedPB'
+                    makeAllBordersInvisible();
                 }
-                //make the borders invisible
-                makeAllBordersInvisible();
-                makeBordersVisible(clickedPBBorder);
             }
         }
         private void gamePage_Load(object sender, EventArgs e)
