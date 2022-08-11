@@ -71,7 +71,7 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB8Border1);
             }
         }
-        private void clickEvent2(Label pbBorder, PictureBox PBTest, Label PBTestBorder)
+        private void clickEvent(Label pbBorder, PictureBox PBTest, Label PBTestBorder)
         {
             //stretch the imagelayout through code so the rotated images have the same layout as the original
             PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -177,16 +177,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB1TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB1Test);
-                clickEvent(PB1Border1, PB1Test);
-                clickEvent(PB3Border1, PB1Test);
-                clickEvent(PB4Border1, PB1Test);
-                clickEvent(PB5Border1, PB1Test);
-                clickEvent(PB6Border1, PB1Test);
-                clickEvent(PB7Border1, PB1Test);
-                clickEvent(PB8Border1, PB1Test);
-                clickEvent2(PB9Border1, PB1Test, PB3TestBorder2);
+                //put the image around the highlighted picturebox onto the PB1Test picturebox
+                clickEvent(PB2Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB1Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB3Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB4Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB5Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB6Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB7Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB8Border1, PB1Test, PB1TestBorder1);
+                clickEvent(PB9Border1, PB1Test, PB1TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB1Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB1Test, PB1TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB1Test, PB1TestBorder1);
@@ -216,16 +216,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB2TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB2Test);
-                clickEvent(PB1Border1, PB2Test);
-                clickEvent(PB3Border1, PB2Test);
-                clickEvent(PB4Border1, PB2Test);
-                clickEvent(PB5Border1, PB2Test);
-                clickEvent(PB6Border1, PB2Test);
-                clickEvent(PB7Border1, PB2Test);
-                clickEvent(PB8Border1, PB2Test);
-                clickEvent2(PB9Border1, PB2Test, PB2TestBorder2);
+                //put the image around the highlighted picturebox onto the PB2Test picturebox
+                clickEvent(PB2Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB1Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB3Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB4Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB5Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB6Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB7Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB8Border1, PB2Test, PB2TestBorder1);
+                clickEvent(PB9Border1, PB2Test, PB2TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB2Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB2Test, PB2TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB2Test, PB2TestBorder1);
@@ -255,16 +255,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB3TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB3Test);
-                clickEvent(PB1Border1, PB3Test);
-                clickEvent(PB3Border1, PB3Test);
-                clickEvent(PB4Border1, PB3Test);
-                clickEvent(PB5Border1, PB3Test);
-                clickEvent(PB6Border1, PB3Test);
-                clickEvent(PB7Border1, PB3Test);
-                clickEvent(PB8Border1, PB3Test);
-                clickEvent(PB9Border1, PB3Test);
+                //put the image around the highlighted picturebox onto the PB3Test picturebox
+                clickEvent(PB2Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB1Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB3Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB4Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB5Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB6Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB7Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB8Border1, PB3Test, PB3TestBorder1);
+                clickEvent(PB9Border1, PB3Test, PB3TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB3Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB3Test, PB3TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB3Test, PB3TestBorder1);
@@ -294,16 +294,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB4TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB4Test);
-                clickEvent(PB1Border1, PB4Test);
-                clickEvent(PB3Border1, PB4Test);
-                clickEvent(PB4Border1, PB4Test);
-                clickEvent(PB5Border1, PB4Test);
-                clickEvent(PB6Border1, PB4Test);
-                clickEvent(PB7Border1, PB4Test);
-                clickEvent(PB8Border1, PB4Test);
-                clickEvent(PB9Border1, PB4Test);
+                //put the image around the highlighted picturebox onto the PB4Test picturebox
+                clickEvent(PB2Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB1Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB3Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB4Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB5Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB6Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB7Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB8Border1, PB4Test, PB4TestBorder1);
+                clickEvent(PB9Border1, PB4Test, PB4TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB4Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB4Test, PB4TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB4Test, PB4TestBorder1);
@@ -333,16 +333,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB5TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB5Test);
-                clickEvent(PB1Border1, PB5Test);
-                clickEvent(PB3Border1, PB5Test);
-                clickEvent(PB4Border1, PB5Test);
-                clickEvent(PB5Border1, PB5Test);
-                clickEvent(PB6Border1, PB5Test);
-                clickEvent(PB7Border1, PB5Test);
-                clickEvent(PB8Border1, PB5Test);
-                clickEvent(PB9Border1, PB5Test);
+                //put the image around the highlighted picturebox onto the PB5Test picturebox
+                clickEvent(PB2Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB1Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB3Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB4Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB5Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB6Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB7Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB8Border1, PB5Test, PB5TestBorder1);
+                clickEvent(PB9Border1, PB5Test, PB5TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB6Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB5Test, PB5TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB5Test, PB5TestBorder1);
@@ -372,16 +372,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB6TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB6Test);
-                clickEvent(PB1Border1, PB6Test);
-                clickEvent(PB3Border1, PB6Test);
-                clickEvent(PB4Border1, PB6Test);
-                clickEvent(PB5Border1, PB6Test);
-                clickEvent(PB6Border1, PB6Test);
-                clickEvent(PB7Border1, PB6Test);
-                clickEvent(PB8Border1, PB6Test);
-                clickEvent(PB9Border1, PB6Test);
+                //put the image around the highlighted picturebox onto the PB6Test picturebox
+                clickEvent(PB2Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB1Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB3Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB4Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB5Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB6Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB7Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB8Border1, PB6Test, PB6TestBorder1);
+                clickEvent(PB9Border1, PB6Test, PB6TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB6Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB6Test, PB6TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB6Test, PB6TestBorder1);
@@ -411,16 +411,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB7TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB7Test);
-                clickEvent(PB1Border1, PB7Test);
-                clickEvent(PB3Border1, PB7Test);
-                clickEvent(PB4Border1, PB7Test);
-                clickEvent(PB5Border1, PB7Test);
-                clickEvent(PB6Border1, PB7Test);
-                clickEvent(PB7Border1, PB7Test);
-                clickEvent(PB8Border1, PB7Test);
-                clickEvent(PB9Border1, PB7Test);
+                //put the image around the highlighted picturebox onto the PB7Test picturebox
+                clickEvent(PB2Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB1Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB3Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB4Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB5Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB6Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB7Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB8Border1, PB7Test, PB7TestBorder1);
+                clickEvent(PB9Border1, PB7Test, PB7TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB7Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB7Test, PB7TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB7Test, PB7TestBorder1);
@@ -450,16 +450,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB8TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB8Test);
-                clickEvent(PB1Border1, PB8Test);
-                clickEvent(PB3Border1, PB8Test);
-                clickEvent(PB4Border1, PB8Test);
-                clickEvent(PB5Border1, PB8Test);
-                clickEvent(PB6Border1, PB8Test);
-                clickEvent(PB7Border1, PB8Test);
-                clickEvent(PB8Border1, PB8Test);
-                clickEvent(PB9Border1, PB8Test);
+                //put the image around the highlighted picturebox onto the PB8Test picturebox
+                clickEvent(PB2Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB1Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB3Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB4Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB5Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB6Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB7Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB8Border1, PB8Test, PB8TestBorder1);
+                clickEvent(PB9Border1, PB8Test, PB8TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB8Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB8Test, PB8TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB8Test, PB8TestBorder1);
@@ -689,16 +689,16 @@ namespace Darth_Vader_Puzzle
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB9TestClickCounter == 1)
             {
-                //put the image around the highlighted picturebox onto the picturebox that was clicked last
-                clickEvent(PB2Border1, PB9Test);
-                clickEvent(PB1Border1, PB9Test);
-                clickEvent(PB3Border1, PB9Test);
-                clickEvent(PB4Border1, PB9Test);
-                clickEvent(PB5Border1, PB9Test);
-                clickEvent(PB6Border1, PB9Test);
-                clickEvent(PB7Border1, PB9Test);
-                clickEvent(PB8Border1, PB9Test);
-                clickEvent(PB9Border1, PB9Test);
+                //put the image around the highlighted picturebox onto the PB9Test picturebox
+                clickEvent(PB2Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB1Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB3Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB4Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB5Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB6Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB7Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB8Border1, PB9Test, PB9TestBorder1);
+                clickEvent(PB9Border1, PB9Test, PB9TestBorder1);
                 //in case the user is trying to switch board pieces and the second one they click on is PB9Test
                 clickEventBetweenBoardPieces(PB1TestBorder1, PB1Test, PB9Test, PB9TestBorder1);
                 clickEventBetweenBoardPieces(PB2TestBorder1, PB2Test, PB9Test, PB9TestBorder1);
@@ -709,10 +709,6 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB7TestBorder1, PB7Test, PB9Test, PB9TestBorder1);
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB9Test, PB9TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB9Test, PB9TestBorder1);
-            }
-            else if (bordersSet && PB9TestClickCounter == 2)
-            {
-                makeAllBordersInvisible();
             }
             //if bordersSet variable is not true, make the border labels appear
             else if (!bordersSet)
@@ -727,13 +723,8 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB9ClickCounter);
             //add  1 to clickCounter variable
             PB9ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
-            if (bordersSet && PB9ClickCounter == 2)
-            {
-                makeAllBordersInvisible();
-            }
             //if bordersSet variable is not true, make the border labels appear
-            else if (!bordersSet)
+            if (!bordersSet)
             {
                 makeBordersVisible(PB9Border1);
             }
@@ -745,13 +736,8 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB5ClickCounter);
             //add  1 to clickCounter variable
             PB5ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
-            if (bordersSet && PB5ClickCounter == 2)
-            {
-                makeAllBordersInvisible();
-            }
             //if bordersSet variable is not true, make the border labels appear
-            else if (!bordersSet)
+            if (!bordersSet)
             {
                 makeBordersVisible(PB5Border1);
             }
@@ -850,10 +836,9 @@ namespace Darth_Vader_Puzzle
                 bordersSet = true;
             }
             //if pbBorder = PB3TestBorder1, make all the PB3TestBorder labels visible
-            else if (pbBorder == PB3TestBorder2 && !bordersSet)
+            else if (pbBorder == PB3TestBorder1 && !bordersSet)
             {
-                //work on this below, PB3TestBorder1 isn't visible!!!!!! if you're confused, place PB9 onto PB1Test and you'll know
-                PB2TestBorder1.Visible = true; PB3TestBorder3.Visible = true; PB3TestBorder4.Visible = true;
+                PB3TestBorder1.Visible = true; PB3TestBorder2.Visible = true; PB3TestBorder3.Visible = true; PB3TestBorder4.Visible = true;
                 //mark the bool variable true so only one piece can be selected at a time
                 bordersSet = true;
             }
@@ -966,104 +951,7 @@ namespace Darth_Vader_Puzzle
                 bordersSet = true;
             }
         }
-        private void clickEvent(Label pbBorder, PictureBox PBTest)
-        {
-            //stretch the imagelayout through code so the rotated images have the same layout as the original
-            PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if said image is clicked and the borders are visible on PB2
-            if (pbBorder.Visible && pbBorder == PB2Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB2 image that has been clicked
-                PBTest.ImageLocation = PB2.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB2 on the pieces because it is on the board
-                PB2.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB1
-            else if (pbBorder.Visible && pbBorder == PB1Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB1 image that has been clicked
-                PBTest.ImageLocation = PB1.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB1 on the pieces because it is on the board
-                PB1.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB3
-            else if (pbBorder.Visible && pbBorder == PB3Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB3 image that has been clicked
-                PBTest.ImageLocation = PB3.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB3 on the pieces because it is on the board
-                PB3.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB4
-            else if (pbBorder.Visible && pbBorder == PB4Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB4 image that has been clicked
-                PBTest.ImageLocation = PB4.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB4 on the pieces because it is on the board
-                PB4.Visible = false;
-            }
-            //stretch the imagelayout through code so the rotated images have the same layout as the original
-            PBTest.SizeMode = PictureBoxSizeMode.StretchImage;
-            //if said image is clicked and the borders are visible on PB5
-            if (pbBorder.Visible && pbBorder == PB5Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB2 image that has been clicked
-                PBTest.ImageLocation = PB5.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB5 on the pieces because it is on the board
-                PB5.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB6
-            else if (pbBorder.Visible && pbBorder == PB6Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB1 image that has been clicked
-                PBTest.ImageLocation = PB6.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB6 on the pieces because it is on the board
-                PB6.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB3
-            else if (pbBorder.Visible && pbBorder == PB7Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB3 image that has been clicked
-                PBTest.ImageLocation = PB7.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB7 on the pieces because it is on the board
-                PB7.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB8
-            else if (pbBorder.Visible && pbBorder == PB8Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB4 image that has been clicked
-                PBTest.ImageLocation = PB8.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB8 on the pieces because it is on the board
-                PB8.Visible = false;
-            }
-            //if said image is clicked and the borders are visible on PB9
-            else if (pbBorder.Visible && pbBorder == PB9Border1 && PBTest.ImageLocation == null)
-            {
-                //match the blank PB image with the PB4 image that has been clicked
-                PBTest.ImageLocation = PB9.ImageLocation;
-                //make the borders invisible
-                makeAllBordersInvisible();
-                //eliminate the option to choose PB9 on the pieces because it is on the board
-                PB9.Visible = false;
-
-            }
-        }
+       
         private void shuffleGenerator()
         {
             //create a random object
@@ -1311,24 +1199,6 @@ namespace Darth_Vader_Puzzle
                     makeAllBordersInvisible();
                     //make the 'clickedPB' borders visible
                     makeBordersVisible(clickedPBBorder);
-                }
-            }
-        }
-        private void clickEventBetweenBoardPieces2(Label highlightedPBBorder, PictureBox highlightedPB, PictureBox clickedPB)
-        {
-            //if clickedPB is clicked and the borders are visible on highlightedPB
-            if (highlightedPBBorder.Visible)
-            {
-                if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
-                {
-                    //mark the imageLocation of the 2 picturebox's into strings
-                    string imageLocation2 = null;
-                    string imageLocation1 = highlightedPB.ImageLocation.ToString();
-                    //switch the location of the 2 picturebox's involved
-                    clickedPB.ImageLocation = imageLocation1;
-                    highlightedPB.ImageLocation = imageLocation2;
-                    //unhighlight the 'highlightedPB'
-                    makeAllBordersInvisible();
                 }
             }
         }
