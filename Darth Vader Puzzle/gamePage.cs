@@ -24,7 +24,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB6ClickCounter);
             //add  1 to clickCounter variable
             PB6ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             if (bordersSet && PB6ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -42,7 +42,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB7ClickCounter);
             //add  1 to clickCounter variable
             PB7ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it  
             if (bordersSet && PB7ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -60,7 +60,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB8ClickCounter);
             //add  1 to clickCounter variable
             PB8ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             if (bordersSet && PB8ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -198,6 +198,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB1Test, PB1TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB1Test, PB1TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB1TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -237,6 +238,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB2Test, PB2TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB2Test, PB2TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB2TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -276,6 +278,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB3Test, PB3TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB3Test, PB3TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB3TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -315,6 +318,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB4Test, PB4TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB4Test, PB4TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB4TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -354,6 +358,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB5Test, PB5TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB5Test, PB5TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB5TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -393,6 +398,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB6Test, PB6TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB6Test, PB6TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB6TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -432,6 +438,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB7Test, PB7TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB7Test, PB7TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB7TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -471,6 +478,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB8Test, PB8TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB8Test, PB8TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB8TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -710,6 +718,11 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB9Test, PB9TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB9Test, PB9TestBorder1);
             }
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
+            else if (bordersSet && PB9TestClickCounter == 2)
+            {
+                makeAllBordersInvisible();
+            }
             //if bordersSet variable is not true, make the border labels appear
             else if (!bordersSet)
             {
@@ -723,8 +736,13 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB9ClickCounter);
             //add  1 to clickCounter variable
             PB9ClickCounter++;
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
+            if (bordersSet && PB9ClickCounter == 2)
+            {
+                makeAllBordersInvisible();
+            }
             //if bordersSet variable is not true, make the border labels appear
-            if (!bordersSet)
+            else if (!bordersSet)
             {
                 makeBordersVisible(PB9Border1);
             }
@@ -736,8 +754,13 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB5ClickCounter);
             //add  1 to clickCounter variable
             PB5ClickCounter++;
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it
+            if (bordersSet && PB5ClickCounter == 2)
+            {
+                makeAllBordersInvisible();
+            }
             //if bordersSet variable is not true, make the border labels appear
-            if (!bordersSet)
+            else if (!bordersSet)
             {
                 makeBordersVisible(PB5Border1);
             }
@@ -749,7 +772,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB4ClickCounter);
             //add  1 to clickCounter variable
             PB4ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it
             if (bordersSet && PB4ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -767,7 +790,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB3ClickCounter);
             //add  1 to clickCounter variable
             PB3ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             if (bordersSet && PB3ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -784,7 +807,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB2ClickCounter);
             //add  1 to clickCounter variable
             PB2ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             if (bordersSet && PB2ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -802,7 +825,7 @@ namespace Darth_Vader_Puzzle
             highlightShift(PB1ClickCounter);
             //add  1 to clickCounter variable
             PB1ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on 
+            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             if (bordersSet && PB1ClickCounter == 2)
             {
                 makeAllBordersInvisible();
@@ -1187,6 +1210,7 @@ namespace Darth_Vader_Puzzle
             //if clickedPB is clicked and the borders are visible on highlightedPB
             if (highlightedPBBorder.Visible)
             {
+                //if the highlighted picturebox has an image and the one that was just clicked on does not
                 if (clickedPB.ImageLocation == null && highlightedPB.ImageLocation != null)
                 {
                     //mark the imageLocation of the 2 picturebox's into strings
@@ -1198,6 +1222,14 @@ namespace Darth_Vader_Puzzle
                     //unhighlight the 'highlightedPB'
                     makeAllBordersInvisible();
                     //make the 'clickedPB' borders visible
+                    makeBordersVisible(clickedPBBorder);
+                }
+                //if both the highlighted and previously clicked picturebox have images on them
+                else
+                {
+                    //unhighlight 'highlightedPB'
+                    makeAllBordersInvisible();
+                    //highlight clickedPB
                     makeBordersVisible(clickedPBBorder);
                 }
             }
