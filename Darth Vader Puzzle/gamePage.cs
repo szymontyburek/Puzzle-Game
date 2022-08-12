@@ -174,6 +174,7 @@ namespace Darth_Vader_Puzzle
         {
             //add  1 to clickCounter variable
             PB1TestClickCounter++;
+
             //if bordersSet variable is true, which means that one of the testPB's are selected, use the clickEvent module to put an image onto the testPB
             if (bordersSet && PB1TestClickCounter == 1)
             {
@@ -199,7 +200,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB1Test, PB1TestBorder1);
             }
             //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
-            else if (bordersSet && PB1TestClickCounter == 2)
+            if (bordersSet && PB1TestClickCounter == 2)
             {
                 makeAllBordersInvisible();
             }
@@ -208,6 +209,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB1TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB2Test_Click(object sender, EventArgs e)
@@ -248,6 +251,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB2TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB3Test_Click(object sender, EventArgs e)
@@ -288,6 +293,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB3TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB4Test_Click(object sender, EventArgs e)
@@ -328,6 +335,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB4TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB5Test_Click(object sender, EventArgs e)
@@ -368,6 +377,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB5TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB6Test_Click(object sender, EventArgs e)
@@ -408,6 +419,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB6TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB7Test_Click(object sender, EventArgs e)
@@ -448,6 +461,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB7TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB8Test_Click(object sender, EventArgs e)
@@ -488,6 +503,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB8TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
         private void backButtonModule(Label PBTestBorder, PictureBox PBTest, PictureBox PB)
         {
@@ -523,7 +540,29 @@ namespace Darth_Vader_Puzzle
                         //if the imageLocation of the PB4Test picturebox equals darthVaderFour.png
                         if (PB4Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png")
                         {
-                           //work on this module 
+                            //if the imageLocation of the PB5Test picturebox equals darthVaderFive.png
+                            if (PB5Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFive.png")
+                            {
+                                //if the imageLocation of the PB6Test picturebox equals darthVaderSix.png
+                                if (PB6Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSix.png")
+                                {
+                                    //if the imageLocation of the PB7Test picturebox equals darthVaderSeven.png
+                                    if (PB7Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSeven.png")
+                                    {
+                                        //if the imageLocation of the PB8Test picturebox equals darthVaderEight.png
+                                        if (PB8Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderEight.png")
+                                        {
+                                            //if the imageLocation of the PB9Test picturebox equals darthVaderNine.png
+                                            if (PB9Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderNine.png")
+                                            {
+                                                //unhighlight any picturebox's that may be highlighted
+                                                makeAllBordersInvisible();
+                                                MessageBox.Show("Hurray");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -689,6 +728,8 @@ namespace Darth_Vader_Puzzle
             clockwiseRotation(PB7TestBorder1, PB7Test);
             clockwiseRotation(PB8TestBorder1, PB8Test);
             clockwiseRotation(PB9TestBorder1, PB9Test);
+            //in case the last piece is finished by rotating it when it's already on the board
+            determinePuzzleProgress();
         }
 
         private void PB9Test_Click(object sender, EventArgs e)
@@ -718,6 +759,7 @@ namespace Darth_Vader_Puzzle
                 clickEventBetweenBoardPieces(PB8TestBorder1, PB8Test, PB9Test, PB9TestBorder1);
                 clickEventBetweenBoardPieces(PB9TestBorder1, PB9Test, PB9Test, PB9TestBorder1);
             }
+
             //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
             else if (bordersSet && PB9TestClickCounter == 2)
             {
@@ -728,6 +770,8 @@ namespace Darth_Vader_Puzzle
             {
                 makeBordersVisible(PB9TestBorder1);
             }
+            //in case this is the last piece required to finish the puzzle
+            determinePuzzleProgress();
         }
 
         private void PB9_Click(object sender, EventArgs e)
