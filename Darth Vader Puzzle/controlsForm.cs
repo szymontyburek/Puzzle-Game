@@ -21,5 +21,25 @@ namespace Darth_Vader_Puzzle
         {
 
         }
+
+        private void newGameLL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //hide this form
+            this.Hide();
+            //open the gamePage form
+            gamePage game = new gamePage();
+            game.ShowDialog();
+        }
+
+        private void continueGameLL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //close the current form to keep game progress
+            this.Close();
+        }
+
+        private void controlsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

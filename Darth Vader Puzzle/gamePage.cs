@@ -1282,7 +1282,7 @@ namespace Darth_Vader_Puzzle
         private void gamePage_Load(object sender, EventArgs e)
         {
             //play ROTS Soundtrack
-            SoundPlayer ROTS = new SoundPlayer();
+            SoundPlayer ROTS = new SoundPlayer("C:/Users/szymo/Desktop/C/Darth Vader Puzzle/gamePageWAVTrack.wav");
             ROTS.PlayLooping();
             //make all the picturebox borders invisible
             makeAllBordersInvisible();
@@ -1302,7 +1302,9 @@ namespace Darth_Vader_Puzzle
 
         private void menuButton_Click(object sender, EventArgs e)
         {
-
+            //open controlsForm
+            controlsForm controls = new controlsForm();
+            controls.ShowDialog();
         }
     }
 }

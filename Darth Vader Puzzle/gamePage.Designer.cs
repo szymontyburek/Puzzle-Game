@@ -919,7 +919,7 @@
             // 
             this.menuButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.menuButton;
             this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButton.Location = new System.Drawing.Point(1450, 12);
+            this.menuButton.Location = new System.Drawing.Point(12, 12);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(62, 57);
             this.menuButton.TabIndex = 102;
