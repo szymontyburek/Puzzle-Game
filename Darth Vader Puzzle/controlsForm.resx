@@ -57,9 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="instructionsDescriptionLabel.Text" xml:space="preserve">
-    <value>You must put together an exact replica of the Darth Vader image supplied using the pieces available in the box. To move the pieces onto the board, you must click on a piece in the box, which in turn will highlight it. Then, to move it onto the board, click where you'd like it to go. You have multiple abilities to make this process go easier. For example, you can unhighlight a puzzle piece by clicking on it a second time. You can also move pieces on the board as well. Good luck!</value>
-  </data>
   <data name="rotationButtonDescriptionLabel.Text" xml:space="preserve">
     <value>With this button you have the ability to rotation pieces both on the board and box section. To do so, click on a board piece, make sure that it is highlighted, then press the rotate button and the picture will rotate 90 degrees.</value>
   </data>

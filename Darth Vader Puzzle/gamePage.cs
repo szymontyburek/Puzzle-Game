@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -557,7 +558,7 @@ namespace Darth_Vader_Puzzle
                                             {
                                                 //unhighlight any picturebox's that may be highlighted
                                                 makeAllBordersInvisible();
-                                                MessageBox.Show("Hurray");
+                                                //open congragulations form
                                             }
                                         }
                                     }
@@ -1280,6 +1281,9 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
+            //play ROTS Soundtrack
+            SoundPlayer ROTS = new SoundPlayer();
+            ROTS.PlayLooping();
             //make all the picturebox borders invisible
             makeAllBordersInvisible();
             //to shuffle the box pieces

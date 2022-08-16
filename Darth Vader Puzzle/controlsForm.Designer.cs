@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlsForm));
             this.instructionsLabel = new System.Windows.Forms.Label();
-            this.instructionsDescriptionLabel = new System.Windows.Forms.Label();
             this.buttonsLabel = new System.Windows.Forms.Label();
             this.menuBackButton = new System.Windows.Forms.Button();
             this.backButtonLabel = new System.Windows.Forms.Label();
@@ -39,6 +38,8 @@
             this.rotationButtonLabel = new System.Windows.Forms.Label();
             this.rotationButtonDescriptionLabel = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // instructionsLabel
@@ -52,17 +53,6 @@
             this.instructionsLabel.Size = new System.Drawing.Size(443, 96);
             this.instructionsLabel.TabIndex = 115;
             this.instructionsLabel.Text = "Instructions";
-            // 
-            // instructionsDescriptionLabel
-            // 
-            this.instructionsDescriptionLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.instructionsDescriptionLabel.Font = new System.Drawing.Font("Times New Roman", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instructionsDescriptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.instructionsDescriptionLabel.Location = new System.Drawing.Point(-3, 121);
-            this.instructionsDescriptionLabel.Name = "instructionsDescriptionLabel";
-            this.instructionsDescriptionLabel.Size = new System.Drawing.Size(1500, 436);
-            this.instructionsDescriptionLabel.TabIndex = 116;
-            this.instructionsDescriptionLabel.Text = resources.GetString("instructionsDescriptionLabel.Text");
             // 
             // buttonsLabel
             // 
@@ -155,11 +145,21 @@
             this.menuButton.UseVisualStyleBackColor = true;
             this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(135, 171);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 75);
+            this.pictureBox1.TabIndex = 125;
+            this.pictureBox1.TabStop = false;
+            // 
             // controlsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1659, 1474);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.rotationButtonDescriptionLabel);
             this.Controls.Add(this.rotationButtonLabel);
@@ -168,10 +168,10 @@
             this.Controls.Add(this.backButtonLabel);
             this.Controls.Add(this.menuBackButton);
             this.Controls.Add(this.buttonsLabel);
-            this.Controls.Add(this.instructionsDescriptionLabel);
             this.Controls.Add(this.instructionsLabel);
             this.Name = "controlsForm";
             this.Text = "controlsForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +179,6 @@
 
         #endregion
         private Label instructionsLabel;
-        private Label instructionsDescriptionLabel;
         private Label buttonsLabel;
         private Button menuBackButton;
         private Label backButtonLabel;
@@ -188,5 +187,6 @@
         private Label rotationButtonLabel;
         private Label rotationButtonDescriptionLabel;
         private Button menuButton;
+        private PictureBox pictureBox1;
     }
 }
