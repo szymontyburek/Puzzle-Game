@@ -120,7 +120,6 @@
             this.PB8Border4 = new System.Windows.Forms.Label();
             this.PB8Border3 = new System.Windows.Forms.Label();
             this.PB7Border4 = new System.Windows.Forms.Label();
-            this.menuButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rotationButton = new System.Windows.Forms.Button();
@@ -915,17 +914,6 @@
             this.PB7Border4.Size = new System.Drawing.Size(10, 191);
             this.PB7Border4.TabIndex = 100;
             // 
-            // menuButton
-            // 
-            this.menuButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.menuButton;
-            this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuButton.Location = new System.Drawing.Point(12, 12);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(62, 57);
-            this.menuButton.TabIndex = 102;
-            this.menuButton.UseVisualStyleBackColor = true;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1000,7 +988,6 @@
             this.Controls.Add(this.rotationButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuButton);
             this.Controls.Add(this.PB7Border4);
             this.Controls.Add(this.PB8Border3);
             this.Controls.Add(this.PB8Border4);
@@ -1214,7 +1201,6 @@
         private Label PB8Border4;
         private Label PB8Border3;
         private Label PB7Border4;
-        private Button menuButton;
         private Label label1;
         private Label label2;
         private Button rotationButton;

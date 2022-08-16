@@ -558,7 +558,11 @@ namespace Darth_Vader_Puzzle
                                             {
                                                 //unhighlight any picturebox's that may be highlighted
                                                 makeAllBordersInvisible();
+                                                //hide this form
+                                                this.Hide();
                                                 //open congragulations form
+                                                congragulationsForm congrats = new congragulationsForm();  
+                                                congrats.ShowDialog();
                                             }
                                         }
                                     }
@@ -1302,9 +1306,6 @@ namespace Darth_Vader_Puzzle
 
         private void menuButton_Click(object sender, EventArgs e)
         {
-            //open controlsForm
-            controlsForm controls = new controlsForm();
-            controls.ShowDialog();
         }
     }
 }
