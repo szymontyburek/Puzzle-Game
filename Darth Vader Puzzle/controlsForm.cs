@@ -39,7 +39,11 @@ namespace Darth_Vader_Puzzle
 
         private void controlsForm_Load(object sender, EventArgs e)
         {
-
+            //set and stretch down arrow gif image to DAPB1/2/3
+            DAPB1.SizeMode = PictureBoxSizeMode.StretchImage; DAPB2.SizeMode = PictureBoxSizeMode.StretchImage; DAPB3.SizeMode = PictureBoxSizeMode.StretchImage;
+            DAPB1.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
+            DAPB2.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
+            DAPB3.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
         }
     }
 }

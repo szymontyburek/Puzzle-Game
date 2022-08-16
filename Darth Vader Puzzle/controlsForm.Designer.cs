@@ -50,9 +50,15 @@
             this.newGameLL = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.continueGameLL = new System.Windows.Forms.LinkLabel();
+            this.DAPB1 = new System.Windows.Forms.PictureBox();
+            this.DAPB2 = new System.Windows.Forms.PictureBox();
+            this.DAPB3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB3)).BeginInit();
             this.SuspendLayout();
             // 
             // instructionsLabel
@@ -288,12 +294,39 @@
             this.continueGameLL.Text = "here";
             this.continueGameLL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.continueGameLL_LinkClicked);
             // 
+            // DAPB1
+            // 
+            this.DAPB1.Location = new System.Drawing.Point(155, 258);
+            this.DAPB1.Name = "DAPB1";
+            this.DAPB1.Size = new System.Drawing.Size(68, 75);
+            this.DAPB1.TabIndex = 138;
+            this.DAPB1.TabStop = false;
+            // 
+            // DAPB2
+            // 
+            this.DAPB2.Location = new System.Drawing.Point(780, 258);
+            this.DAPB2.Name = "DAPB2";
+            this.DAPB2.Size = new System.Drawing.Size(68, 75);
+            this.DAPB2.TabIndex = 139;
+            this.DAPB2.TabStop = false;
+            // 
+            // DAPB3
+            // 
+            this.DAPB3.Location = new System.Drawing.Point(1544, 258);
+            this.DAPB3.Name = "DAPB3";
+            this.DAPB3.Size = new System.Drawing.Size(68, 75);
+            this.DAPB3.TabIndex = 140;
+            this.DAPB3.TabStop = false;
+            // 
             // controlsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1768, 1343);
+            this.Controls.Add(this.DAPB3);
+            this.Controls.Add(this.DAPB2);
+            this.Controls.Add(this.DAPB1);
             this.Controls.Add(this.continueGameLL);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.newGameLL);
@@ -321,6 +354,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DAPB3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +384,8 @@
         private LinkLabel newGameLL;
         private Label label8;
         private LinkLabel continueGameLL;
+        private PictureBox DAPB1;
+        private PictureBox DAPB2;
+        private PictureBox DAPB3;
     }
 }
