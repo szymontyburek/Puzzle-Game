@@ -13,6 +13,7 @@ namespace Darth_Vader_Puzzle
 {
     public partial class gamePage : Form
     {
+        string newDirectory;
         //bool variable to signify that borders have been set
         private bool bordersSet = false;
         //8 counter variables that will count the clicks of each PB, so a double click will unhighlight the PB
@@ -1135,41 +1136,41 @@ namespace Darth_Vader_Puzzle
                 placeShuffleOntoPieces(8, PB9);
         }
         private void placeShuffleOntoPieces(int i, PictureBox PBNum)
-        {
+        {          
             //if the generated number equals 1
             if (shufflePuzzlePieces[i] == 1)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderOne.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderOne.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderOne.png";
             }
             //if the generated number equals 2
             else if (shufflePuzzlePieces[i] == 2)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderTwo.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderTwo.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderTwo.png";
             }
             //if the generated number equals 3
             else if (shufflePuzzlePieces[i] == 3)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderThree.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderThree.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderThree.png";
             }
             //if the generated number equals 4
             else if(shufflePuzzlePieces[i] == 4)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderFour.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderFour.png";
             }
             //if the generated number equals 5
             if (shufflePuzzlePieces[i] == 5)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderFive.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFive.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderFive.png";
             }
             //if the generated number equals 6
             else if (shufflePuzzlePieces[i] == 6)
@@ -1285,6 +1286,14 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+
+
             //play ROTS Soundtrack
             SoundPlayer ROTS = new SoundPlayer("C:/Users/szymo/Desktop/C/Darth Vader Puzzle/gamePageWAVTrack.wav");
             ROTS.PlayLooping();
