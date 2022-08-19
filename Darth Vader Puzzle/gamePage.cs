@@ -531,31 +531,31 @@ namespace Darth_Vader_Puzzle
         private void determinePuzzleProgress()
         {
             //if the imageLocaton of the PB1Test picturebox equals darthVaderOne.png
-            if (PB1Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderOne.png")
+            if (PB1Test.ImageLocation == newDirectory + "darthVaderOne.png")
             {
                 //if the imageLocation of the PB2Test picturebox equals darthVaderTwo.png
-                if (PB2Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderTwo.png")
+                if (PB2Test.ImageLocation == newDirectory + "darthVaderTwo.png")
                 {
                     //if the imageLocation of the PB3Test picturebox equals DarthVaderThree.png
-                    if (PB3Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderThree.png")
+                    if (PB3Test.ImageLocation == newDirectory + "darthVaderThree.png")
                     {
                         //if the imageLocation of the PB4Test picturebox equals darthVaderFour.png
-                        if (PB4Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFour.png")
+                        if (PB4Test.ImageLocation == newDirectory + "darthVaderFour.png")
                         {
                             //if the imageLocation of the PB5Test picturebox equals darthVaderFive.png
-                            if (PB5Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderFive.png")
+                            if (PB5Test.ImageLocation == newDirectory + "darthVaderFive.png")
                             {
                                 //if the imageLocation of the PB6Test picturebox equals darthVaderSix.png
-                                if (PB6Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSix.png")
+                                if (PB6Test.ImageLocation == newDirectory + "darthVaderSix.png")
                                 {
                                     //if the imageLocation of the PB7Test picturebox equals darthVaderSeven.png
-                                    if (PB7Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSeven.png")
+                                    if (PB7Test.ImageLocation == newDirectory + "darthVaderSeven.png")
                                     {
                                         //if the imageLocation of the PB8Test picturebox equals darthVaderEight.png
-                                        if (PB8Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderEight.png")
+                                        if (PB8Test.ImageLocation == newDirectory + "darthVaderEight.png")
                                         {
                                             //if the imageLocation of the PB9Test picturebox equals darthVaderNine.png
-                                            if (PB9Test.ImageLocation == "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderNine.png")
+                                            if (PB9Test.ImageLocation == newDirectory + "darthVaderNine.png")
                                             {
                                                 //unhighlight any picturebox's that may be highlighted
                                                 makeAllBordersInvisible();
@@ -1177,28 +1177,28 @@ namespace Darth_Vader_Puzzle
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderSix.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSix.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderSix.png";
             }
             //if the generated number equals 7
             else if (shufflePuzzlePieces[i] == 7)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderSeven.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderSeven.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderSeven.png"; 
             }
             //if the generated number equals 8
             else if (shufflePuzzlePieces[i] == 8)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderEight.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderEight.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderEight.png";
             }
             //if the generated number equals 9
             else if (shufflePuzzlePieces[i] == 9)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderNine.png
-                PBNum.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVaderNine.png";
+                PBNum.ImageLocation = newDirectory + "darthVaderNine.png";
             }
         }
         private void rotationShuffleGenerator(PictureBox PB)
@@ -1295,7 +1295,7 @@ namespace Darth_Vader_Puzzle
 
 
             //play ROTS Soundtrack
-            SoundPlayer ROTS = new SoundPlayer("C:/Users/szymo/Desktop/C/Darth Vader Puzzle/gamePageWAVTrack.wav");
+            SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
             ROTS.PlayLooping();
             //make all the picturebox borders invisible
             makeAllBordersInvisible();

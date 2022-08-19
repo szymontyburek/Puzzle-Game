@@ -13,6 +13,7 @@ namespace Darth_Vader_Puzzle
 {
     public partial class congragulationsForm : Form
     {
+        string newDirectory;
         public congragulationsForm()
         {
             InitializeComponent();
@@ -33,11 +34,21 @@ namespace Darth_Vader_Puzzle
 
         private void congragulationsForm_Load(object sender, EventArgs e)
         {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+
+
+
+
             //stretch and set the gif for the PB
             dvGifPB.SizeMode = PictureBoxSizeMode.StretchImage;
-            dvGifPB.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/darthVader.gif";
+            dvGifPB.ImageLocation = newDirectory + "darthVader.gif";
             //play imperial march
-            SoundPlayer outro = new SoundPlayer("C:/Users/szymo/Desktop/C/Darth Vader Puzzle/congragulationsFormWAVTrack.wav");
+            SoundPlayer outro = new SoundPlayer(newDirectory + "congragulationsFormWAVTrack.wav");
             outro.PlayLooping();
         }
     }

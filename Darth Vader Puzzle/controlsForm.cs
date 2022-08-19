@@ -12,6 +12,7 @@ namespace Darth_Vader_Puzzle
 {
     public partial class controlsForm : Form
     {
+        string newDirectory;
         public controlsForm()
         {
             InitializeComponent();
@@ -39,11 +40,22 @@ namespace Darth_Vader_Puzzle
 
         private void controlsForm_Load(object sender, EventArgs e)
         {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+
+
+
+
+
             //set and stretch down arrow gif image to DAPB1/2/3
             DAPB1.SizeMode = PictureBoxSizeMode.StretchImage; DAPB2.SizeMode = PictureBoxSizeMode.StretchImage; DAPB3.SizeMode = PictureBoxSizeMode.StretchImage;
-            DAPB1.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
-            DAPB2.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
-            DAPB3.ImageLocation = "C:/Users/szymo/Desktop/C/Darth Vader Puzzle/downArrow.gif";
+            DAPB1.ImageLocation = newDirectory + "downArrow.gif";
+            DAPB2.ImageLocation = newDirectory + "downArrow.gif";
+            DAPB3.ImageLocation = newDirectory + "downArrow.gif";
         }
     }
 }
