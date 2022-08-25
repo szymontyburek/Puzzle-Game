@@ -126,6 +126,7 @@
             this.backButton = new System.Windows.Forms.Button();
             this.boxLabel = new System.Windows.Forms.Label();
             this.boardLabel = new System.Windows.Forms.Label();
+            this.needHelpLL = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).BeginInit();
@@ -936,7 +937,7 @@
             // 
             this.rotationButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.clockwiseButton2;
             this.rotationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rotationButton.Location = new System.Drawing.Point(708, 915);
+            this.rotationButton.Location = new System.Drawing.Point(708, 688);
             this.rotationButton.Name = "rotationButton";
             this.rotationButton.Size = new System.Drawing.Size(112, 91);
             this.rotationButton.TabIndex = 108;
@@ -947,7 +948,7 @@
             // 
             this.backButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.backButton;
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backButton.Location = new System.Drawing.Point(708, 812);
+            this.backButton.Location = new System.Drawing.Point(708, 1060);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(112, 91);
             this.backButton.TabIndex = 110;
@@ -976,12 +977,27 @@
             this.boardLabel.TabIndex = 112;
             this.boardLabel.Text = "Board";
             // 
+            // needHelpLL
+            // 
+            this.needHelpLL.AutoSize = true;
+            this.needHelpLL.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.needHelpLL.LinkColor = System.Drawing.Color.Red;
+            this.needHelpLL.Location = new System.Drawing.Point(8, 8);
+            this.needHelpLL.Name = "needHelpLL";
+            this.needHelpLL.Size = new System.Drawing.Size(264, 60);
+            this.needHelpLL.TabIndex = 113;
+            this.needHelpLL.TabStop = true;
+            this.needHelpLL.Text = "Need Help?";
+            this.needHelpLL.VisitedLinkColor = System.Drawing.Color.Red;
+            this.needHelpLL.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.needHelpLL_LinkClicked);
+            // 
             // gamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1524, 1221);
+            this.Controls.Add(this.needHelpLL);
             this.Controls.Add(this.boardLabel);
             this.Controls.Add(this.boxLabel);
             this.Controls.Add(this.backButton);
@@ -1207,5 +1223,6 @@
         private Button backButton;
         private Label boxLabel;
         private Label boardLabel;
+        private LinkLabel needHelpLL;
     }
 }

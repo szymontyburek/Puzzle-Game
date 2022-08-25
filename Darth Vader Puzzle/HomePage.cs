@@ -32,8 +32,11 @@ namespace Darth_Vader_Puzzle
         {
             //hide this form
             this.Hide();
-            //open the controlsPage form
+            //create an instance of controlsForm
             controlsForm controls = new controlsForm();
+            //make the startedAGame bool variable on the controlsForm false
+            controls.startedAGame = false;
+            //open controlsForm
             controls.ShowDialog();
         }
 

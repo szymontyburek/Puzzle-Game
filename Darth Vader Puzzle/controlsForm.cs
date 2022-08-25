@@ -12,6 +12,10 @@ namespace Darth_Vader_Puzzle
 {
     public partial class controlsForm : Form
     {
+        //bool variable that'll determine whether to open gamePage to start a new game or to just close the controlsForm to continue the
+        //game that has already begun
+        public bool startedAGame;
+
         string newDirectory;
         public controlsForm()
         {
@@ -25,11 +29,19 @@ namespace Darth_Vader_Puzzle
 
         private void newGameLL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //hide this form
-            this.Hide();
-            //open the gamePage form
-            gamePage game = new gamePage();
-            game.ShowDialog();
+            if (startedAGame)
+            {
+                //close the form
+                this.Close();
+            }
+            else
+            {
+                //hide the form
+                this.Hide();
+                //open gamePage
+                gamePage game = new gamePage();
+                game.ShowDialog();
+            }
         }
 
         private void continueGameLL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -46,16 +58,6 @@ namespace Darth_Vader_Puzzle
             //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
             newDirectory = currentDirectory.Replace("\\", "/");
             newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
-
-
-
-
-
-            //set and stretch down arrow gif image to DAPB1/2/3
-            DAPB1.SizeMode = PictureBoxSizeMode.StretchImage; DAPB2.SizeMode = PictureBoxSizeMode.StretchImage; DAPB3.SizeMode = PictureBoxSizeMode.StretchImage;
-            DAPB1.ImageLocation = newDirectory + "downArrow.gif";
-            DAPB2.ImageLocation = newDirectory + "downArrow.gif";
-            DAPB3.ImageLocation = newDirectory + "downArrow.gif";
         }
     }
 }

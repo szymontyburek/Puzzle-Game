@@ -27,6 +27,8 @@ namespace Darth_Vader_Puzzle
 
         private void playAgainButton_Click(object sender, EventArgs e)
         {
+            //hide this form
+            this.Hide();
             //open gamePageForm
             gamePage game = new gamePage();
             game.ShowDialog();

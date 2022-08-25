@@ -712,6 +712,17 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
+
+        private void needHelpLL_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //create an instance of controlsForm
+            controlsForm controls = new controlsForm();
+            //make the startedAGame bool variable on the controlsForm false
+            controls.startedAGame = true;
+            //open controlsForm
+            controls.ShowDialog();
+        }
+
         private void rotationButton_Click(object sender, EventArgs e)
         {
             //clockwise rotation for the box pieces
