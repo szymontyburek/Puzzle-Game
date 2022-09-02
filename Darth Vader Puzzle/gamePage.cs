@@ -13,6 +13,7 @@ namespace Darth_Vader_Puzzle
 {
     public partial class gamePage : Form
     {
+        //so the code related to this variable only has to written once and not every time it needs to be used
         string newDirectory;
         //bool variable to signify that borders have been set
         private bool bordersSet = false;
@@ -1127,89 +1128,185 @@ namespace Darth_Vader_Puzzle
                     }
                 }
             }
-                //use placeShuffleOntoPieces module regarding the first generated number
-                placeShuffleOntoPieces(0, PB1);
-                //use placeShuffleOntoPieces module regarding the second generated number
-                placeShuffleOntoPieces(1, PB2);
-                //use placeShuffleOntoPieces module regarding the third generated number
-                placeShuffleOntoPieces(2, PB3);
-                //use placeShuffleOntoPieces module regarding the fourth generated number
-                placeShuffleOntoPieces(3, PB4);
-                //use placeShuffleOntoPieces module regarding the fifth generated number
-                placeShuffleOntoPieces(4, PB5);
-                //use placeShuffleOntoPieces module regarding the sixth generated number
-                placeShuffleOntoPieces(5, PB6);
-                //use placeShuffleOntoPieces module regarding the seventh generated number
-                placeShuffleOntoPieces(6, PB7);
-                //use placeShuffleOntoPieces module regarding the eigth generated number
-                placeShuffleOntoPieces(7, PB8);
-                //use placeShuffleOntoPieces module regarding the ninth generated number
-                placeShuffleOntoPieces(8, PB9);
+            //the use of this modules will connect the random number generated to an image and a picturebox
+            placeShuffleOntoPieces(0, PB1);
+            placeShuffleOntoPieces(1, PB2);
+            placeShuffleOntoPieces(2, PB3);
+            placeShuffleOntoPieces(3, PB4);
+            placeShuffleOntoPieces(4, PB5);
+            placeShuffleOntoPieces(5, PB6);
+            placeShuffleOntoPieces(6, PB7);
+            placeShuffleOntoPieces(7, PB8);
+            placeShuffleOntoPieces(8, PB9);
+
+
+            PB1.Image.Save(newDirectory + "PB1.png");
+            var filePath = newDirectory + "PB1.png";
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+
+
+            Bitmap bitmap1;
+            bitmap1 = (Bitmap)Bitmap.FromFile("PB2.jpg");
+
+            bitmap1.RotateFlip(RotateFlipType.Rotate90FlipY);
+            PB1.Image = bitmap1;
+
+        }
+
+        private void absoluteReset()
+        {
+            //in the case everything gets scrambled, delete all progress and input this code at the bottom of the shuffleGenerator module
+
+
+            //This is bitmap code to cut a given image into 9 pieces
+            //source of the code is on this stackOverflow post: https://stackoverflow.com/questions/13625891/cut-an-image-into-9-pieces-c-sharp
+            Image img = Image.FromFile(newDirectory + "darthVader.jpg"); // a.png has 312X312 width and height
+            int widthThird = (int)((double)img.Width / 3.0 + 0.5);
+            int heightThird = (int)((double)img.Height / 3.0 + 0.5);
+            Bitmap[,] bmps = new Bitmap[3, 3];
+            for (int x = 0; x < 3; x++)
+                for (int j = 0; j < 3; j++)
+                {
+                    bmps[x, j] = new Bitmap(widthThird, heightThird);
+                    Graphics g = Graphics.FromImage(bmps[x, j]);
+                    g.DrawImage(img, new Rectangle(0, 0, widthThird, heightThird), new Rectangle(j * widthThird, x * heightThird, widthThird, heightThird), GraphicsUnit.Pixel);
+                    g.Dispose();
+                }
+
+
+            //SETTING THE SLICED PICTUREBOX'S TO EACH PB
+            PB1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderOne.png
+            PB1.Image = bmps[0, 0];
+            PB2.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderTwo.png
+            PB2.Image = bmps[0, 1];
+            PB3.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderThree.png
+            PB3.Image = bmps[0, 2];
+            PB4.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderFour.png
+            PB4.Image = bmps[1, 0];
+            PB5.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderFive.png
+            PB5.Image = bmps[1, 1];
+            PB6.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderSix.png
+            PB6.Image = bmps[1, 2];
+            PB7.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderSeven.png
+            PB7.Image = bmps[2, 0];
+            PB8.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderEight.png
+            PB8.Image = bmps[2, 1];
+            PB9.SizeMode = PictureBoxSizeMode.StretchImage;
+            //picturebox image will equal darthVaderNine.png
+            PB9.Image = bmps[2, 2];
+
+
+
+            //ADDING AN IMAGE TO THE FOLDER
+            PB1.Image.Save(newDirectory + "PB1.png");
+
+
+            //ROTATING AN IMAGE
+            Bitmap bitmap1;
+            bitmap1 = (Bitmap)Bitmap.FromFile("PB1.png");
+            bitmap1.RotateFlip(RotateFlipType.Rotate90FlipY);
+            PB1.Image = bitmap1;
+
+            //DELETING AN IMAGE FROM THE FOLDER
+            var filePath = newDirectory + "PB1.png";
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
         }
         private void placeShuffleOntoPieces(int i, PictureBox PBNum)
-        {          
+        {
+            //This is bitmap code to cut a given image into 9 pieces
+            //source of the code is on this stackOverflow post: https://stackoverflow.com/questions/13625891/cut-an-image-into-9-pieces-c-sharp
+            Image img = Image.FromFile(newDirectory + "darthVader.jpg"); // a.png has 312X312 width and height
+            int widthThird = (int)((double)img.Width / 3.0 + 0.5);
+            int heightThird = (int)((double)img.Height / 3.0 + 0.5);
+            Bitmap[,] bmps = new Bitmap[3, 3];
+            for (int x = 0; x < 3; x++)
+                for (int j = 0; j < 3; j++)
+                {
+                    bmps[x, j] = new Bitmap(widthThird, heightThird);
+                    Graphics g = Graphics.FromImage(bmps[x, j]);
+                    g.DrawImage(img, new Rectangle(0, 0, widthThird, heightThird), new Rectangle(j * widthThird, x * heightThird, widthThird, heightThird), GraphicsUnit.Pixel);
+                    g.Dispose();
+                }
+
+
             //if the generated number equals 1
             if (shufflePuzzlePieces[i] == 1)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderOne.png
-                PBNum.ImageLocation = newDirectory + "darthVaderOne.png";
+                PBNum.Image = bmps[0, 0];
+                //save the image FromFile to darthVaderOne.png
+                PBNum.Image.Save("darthVaderOne.png");
             }
             //if the generated number equals 2
             else if (shufflePuzzlePieces[i] == 2)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderTwo.png
-                PBNum.ImageLocation = newDirectory + "darthVaderTwo.png";
+                PBNum.Image = bmps[0, 1];
             }
             //if the generated number equals 3
             else if (shufflePuzzlePieces[i] == 3)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderThree.png
-                PBNum.ImageLocation = newDirectory + "darthVaderThree.png";
+                PBNum.Image = bmps[0, 2];
             }
             //if the generated number equals 4
-            else if(shufflePuzzlePieces[i] == 4)
+            else if (shufflePuzzlePieces[i] == 4)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderFour.png
-                PBNum.ImageLocation = newDirectory + "darthVaderFour.png";
+                PBNum.Image = bmps[1, 0];
             }
             //if the generated number equals 5
             if (shufflePuzzlePieces[i] == 5)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderFive.png
-                PBNum.ImageLocation = newDirectory + "darthVaderFive.png";
+                PBNum.Image = bmps[1, 1];
             }
             //if the generated number equals 6
             else if (shufflePuzzlePieces[i] == 6)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderSix.png
-                PBNum.ImageLocation = newDirectory + "darthVaderSix.png";
+                PBNum.Image = bmps[1, 2];
             }
             //if the generated number equals 7
             else if (shufflePuzzlePieces[i] == 7)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderSeven.png
-                PBNum.ImageLocation = newDirectory + "darthVaderSeven.png"; 
+                PBNum.Image = bmps[2, 0];
             }
             //if the generated number equals 8
             else if (shufflePuzzlePieces[i] == 8)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderEight.png
-                PBNum.ImageLocation = newDirectory + "darthVaderEight.png";
+                PBNum.Image = bmps[2, 1];
             }
             //if the generated number equals 9
             else if (shufflePuzzlePieces[i] == 9)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
                 //picturebox image will equal darthVaderNine.png
-                PBNum.ImageLocation = newDirectory + "darthVaderNine.png";
+                PBNum.Image = bmps[2, 2];
             }
         }
         private void rotationShuffleGenerator(PictureBox PB)
@@ -1220,7 +1317,7 @@ namespace Darth_Vader_Puzzle
             int i = rand.Next(0, 4);
             if (i == 0)
             {
-                //change PB.ImageLocation ending from .png to Rotated90.png to rotate the image 90 degrees
+                //change PB.ImageLocation ending from .png to Rotated180.png to rotate the image 180 degrees
                 PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated90.png");
             }
             //if the current element in the array got a 2
@@ -1305,6 +1402,7 @@ namespace Darth_Vader_Puzzle
             newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
 
 
+
             //play ROTS Soundtrack
             SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
             ROTS.PlayLooping();
@@ -1313,15 +1411,15 @@ namespace Darth_Vader_Puzzle
             //to shuffle the box pieces
             shuffleGenerator();
             //to mix up the orientation of the puzzle pieces
-            rotationShuffleGenerator(PB1);
-            rotationShuffleGenerator(PB2);
-            rotationShuffleGenerator(PB3);
-            rotationShuffleGenerator(PB4);
-            rotationShuffleGenerator(PB5);
-            rotationShuffleGenerator(PB6);
-            rotationShuffleGenerator(PB7);
-            rotationShuffleGenerator(PB8);
-            rotationShuffleGenerator(PB9);
+            //rotationShuffleGenerator(PB1);
+            //rotationShuffleGenerator(PB2);
+            //rotationShuffleGenerator(PB3);
+            //rotationShuffleGenerator(PB4);
+            //rotationShuffleGenerator(PB5);
+            //rotationShuffleGenerator(PB6);
+            //rotationShuffleGenerator(PB7);
+            //rotationShuffleGenerator(PB8);
+            //rotationShuffleGenerator(PB9);
         }
 
         private void menuButton_Click(object sender, EventArgs e)

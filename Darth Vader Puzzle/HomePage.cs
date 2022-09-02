@@ -12,6 +12,9 @@ namespace Darth_Vader_Puzzle
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            gamePage game = new gamePage();
+            game.ShowDialog();
+
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
             string currentDirectory = Environment.CurrentDirectory;
