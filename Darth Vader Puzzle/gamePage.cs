@@ -533,32 +533,24 @@ namespace Darth_Vader_Puzzle
         }
         private void determinePuzzleProgress()
         {
-            //if the imageLocaton of the PB1Test picturebox equals darthVaderOne.png
-            if (PB1Test.ImageLocation == newDirectory + "darthVaderOne.png")
+            //THIS MODULE TESTS IF THE PB'S ARE ALL IN THE CORRECT SPOT AND ORIENTATION EVERY TIME A PUZZLE PIECE IS PLACED
+            if (PB1Test.ImageLocation == newDirectory + characterChosen + "One.jpg")
             {
-                //if the imageLocation of the PB2Test picturebox equals darthVaderTwo.png
-                if (PB2Test.ImageLocation == newDirectory + "darthVaderTwo.png")
+                if (PB2Test.ImageLocation == newDirectory + characterChosen + "Two.jpg")
                 {
-                    //if the imageLocation of the PB3Test picturebox equals DarthVaderThree.png
-                    if (PB3Test.ImageLocation == newDirectory + "darthVaderThree.png")
+                    if (PB3Test.ImageLocation == newDirectory + characterChosen + "Three.jpg")
                     {
-                        //if the imageLocation of the PB4Test picturebox equals darthVaderFour.png
-                        if (PB4Test.ImageLocation == newDirectory + "darthVaderFour.png")
+                        if (PB4Test.ImageLocation == newDirectory + characterChosen + "Four.jpg")
                         {
-                            //if the imageLocation of the PB5Test picturebox equals darthVaderFive.png
-                            if (PB5Test.ImageLocation == newDirectory + "darthVaderFive.png")
+                            if (PB5Test.ImageLocation == newDirectory + characterChosen + "Five.jpg")
                             {
-                                //if the imageLocation of the PB6Test picturebox equals darthVaderSix.png
-                                if (PB6Test.ImageLocation == newDirectory + "darthVaderSix.png")
+                                if (PB6Test.ImageLocation == newDirectory + characterChosen + "Six.jpg")
                                 {
-                                    //if the imageLocation of the PB7Test picturebox equals darthVaderSeven.png
-                                    if (PB7Test.ImageLocation == newDirectory + "darthVaderSeven.png")
+                                    if (PB7Test.ImageLocation == newDirectory + characterChosen + "Seven.jpg")
                                     {
-                                        //if the imageLocation of the PB8Test picturebox equals darthVaderEight.png
-                                        if (PB8Test.ImageLocation == newDirectory + "darthVaderEight.png")
+                                        if (PB8Test.ImageLocation == newDirectory + characterChosen + "Eight.jpg")
                                         {
-                                            //if the imageLocation of the PB9Test picturebox equals darthVaderNine.png
-                                            if (PB9Test.ImageLocation == newDirectory + "darthVaderNine.png")
+                                            if (PB9Test.ImageLocation == newDirectory + characterChosen + "Nine.jpg")
                                             {
                                                 //unhighlight any picturebox's that may be highlighted
                                                 makeAllBordersInvisible();
@@ -689,29 +681,29 @@ namespace Darth_Vader_Puzzle
             {
                 //stretch the imagelayout through code so the rotated images have the same layout as the original
                 PB.SizeMode = PictureBoxSizeMode.StretchImage;
-                //if the imageLocation of the picturebox equals rotated90.png
-                if (PB.ImageLocation.EndsWith("Rotated90.png"))
+                //if the imageLocation of the picturebox equals rotated90.jpg
+                if (PB.ImageLocation.EndsWith("Rotated90.jpg"))
                 {
-                    //replace the Rotated90.png ending with Rotated180.png
-                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated90.png", "Rotated180.png");
+                    //replace the Rotated90.jpg ending with Rotated180.jpg
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated90.jpg", "Rotated180.jpg");
                 }
-                //if the imageLocation of the picturebox equals rotated180.png
-                else if (PB.ImageLocation.EndsWith("Rotated180.png"))
+                //if the imageLocation of the picturebox equals rotated180.jpg
+                else if (PB.ImageLocation.EndsWith("Rotated180.jpg"))
                 {
-                    //replace the Rotated180.png ending with Rotated270.png
-                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated180.png", "Rotated270.png");
+                    //replace the Rotated180.jpg ending with Rotated270.jpg
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated180.jpg", "Rotated270.jpg");
                 }
-                //if the imageLocation of the picturebox equals rotated270.png
-                else if (PB.ImageLocation.EndsWith("Rotated270.png"))
+                //if the imageLocation of the picturebox equals rotated270.jpg
+                else if (PB.ImageLocation.EndsWith("Rotated270.jpg"))
                 {
-                    //replace the Rotated270.png ending with .png
-                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated270.png", ".png");
+                    //replace the Rotated270.jpg ending with .jpg
+                    PB.ImageLocation = PB.ImageLocation.Replace("Rotated270.jpg", ".jpg");
                 }
                 else
                 {
-                    //if the imageLocation of the picturebox equals .png
-                    //replace the .png ending with Rotated90.png
-                    PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated90.png");
+                    //if the imageLocation of the picturebox equals .jpg
+                    //replace the .jpg ending with Rotated90.jpg
+                    PB.ImageLocation = PB.ImageLocation.Replace(".jpg", "Rotated90.jpg");
                 }
             }
         }
@@ -1147,64 +1139,64 @@ namespace Darth_Vader_Puzzle
             if (shufflePuzzlePieces[i] == 1)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderOne.png
-                PBNum.ImageLocation = newDirectory + "darthVaderOne.png";
+                //picturebox image will equal characterChosen + "One.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "One.jpg";
             }
             //if the generated number equals 2
             else if (shufflePuzzlePieces[i] == 2)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderTwo.png
-                PBNum.ImageLocation = newDirectory + "darthVaderTwo.png";
+                //picturebox image will equal characterChosen + "Two.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Two.jpg";
             }
             //if the generated number equals 3
             else if (shufflePuzzlePieces[i] == 3)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderThree.png
-                PBNum.ImageLocation = newDirectory + "darthVaderThree.png";
+                //picturebox image will equal characterChosen + "Three.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Three.jpg";
             }
             //if the generated number equals 4
             else if (shufflePuzzlePieces[i] == 4)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderFour.png
-                PBNum.ImageLocation = newDirectory + "darthVaderFour.png";
+                //picturebox image will equal characterChosen + "Four.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Four.jpg";
             }
             //if the generated number equals 5
             if (shufflePuzzlePieces[i] == 5)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderFive.png
-                PBNum.ImageLocation = newDirectory + "darthVaderFive.png";
+                //picturebox image will equal characterChosen + "Five.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Five.jpg";
             }
             //if the generated number equals 6
             else if (shufflePuzzlePieces[i] == 6)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderSix.png
-                PBNum.ImageLocation = newDirectory + "darthVaderSix.png";
+                //picturebox image will equal characterChosen + "Six.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Six.jpg";
             }
             //if the generated number equals 7
             else if (shufflePuzzlePieces[i] == 7)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderSeven.png
-                PBNum.ImageLocation = newDirectory + "darthVaderSeven.png";
+                //picturebox image will equal characterChosen + "Seven.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Seven.jpg";
             }
             //if the generated number equals 8
             else if (shufflePuzzlePieces[i] == 8)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderEight.png
-                PBNum.ImageLocation = newDirectory + "darthVaderEight.png";
+                //picturebox image will equal characterChosen + "Eight.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Eight.jpg";
             }
             //if the generated number equals 9
             else if (shufflePuzzlePieces[i] == 9)
             {
                 PBNum.SizeMode = PictureBoxSizeMode.StretchImage;
-                //picturebox image will equal darthVaderNine.png
-                PBNum.ImageLocation = newDirectory + "darthVaderNine.png";
+                //picturebox image will equal characterChosen + "Nine.jpg"
+                PBNum.ImageLocation = newDirectory + characterChosen + "Nine.jpg";
             }
         }
         private void rotationShuffleGenerator(PictureBox PB)
@@ -1215,20 +1207,20 @@ namespace Darth_Vader_Puzzle
             int i = rand.Next(0, 4);
             if (i == 0)
             {
-                //change PB.ImageLocation ending from .png to Rotated180.png to rotate the image 180 degrees
-                PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated90.png");
+                //change PB.ImageLocation ending from .jpg to Rotated180.jpg to rotate the image 180 degrees
+                PB.ImageLocation = PB.ImageLocation.Replace(".jpg", "Rotated90.jpg");
             }
             //if the current element in the array got a 2
             else if (i == 1)
             {
-                //change PB.ImageLocation ending from .png to Rotated180.png to rotate the image 180 degrees
-                PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated180.png");
+                //change PB.ImageLocation ending from .jpg to Rotated180.jpg to rotate the image 180 degrees
+                PB.ImageLocation = PB.ImageLocation.Replace(".jpg", "Rotated180.jpg");
             }
             //if the current element in the array got a 3
             else if (i == 2)
             {
-                //change PB.ImageLocation ending from .png to Rotated270.png to rotate the image 270 degrees
-                PB.ImageLocation = PB.ImageLocation.Replace(".png", "Rotated270.png");
+                //change PB.ImageLocation ending from .jpg to Rotated270.jpg to rotate the image 270 degrees
+                PB.ImageLocation = PB.ImageLocation.Replace(".jpg", "Rotated270.jpg");
             }
             else
             {
@@ -1296,7 +1288,7 @@ namespace Darth_Vader_Puzzle
             //source of the code is on this stackOverflow post: https://stackoverflow.com/questions/13625891/cut-an-image-into-9-pieces-c-sharp
 
 
-            Image img = Image.FromFile(newDirectory + characterChosen + ".jpg"); // a.png has 312X312 width and height
+            Image img = Image.FromFile(newDirectory + characterChosen + ".jpg");
             int widthThird = (int)((double)img.Width / 3.0 + 0.5);
             int heightThird = (int)((double)img.Height / 3.0 + 0.5);
             Bitmap[,] bmps = new Bitmap[3, 3];
@@ -1332,15 +1324,15 @@ namespace Darth_Vader_Puzzle
 
 
             //Adding each picturebox image to the folder directory
-            PB1.Image.Save(newDirectory + characterChosen + ".png");
-            PB2.Image.Save(newDirectory + "darthVaderTwo.png");
-            PB3.Image.Save(newDirectory + "darthVaderThree.png");
-            PB4.Image.Save(newDirectory + "darthVaderFour.png");
-            PB5.Image.Save(newDirectory + "darthVaderFive.png");
-            PB6.Image.Save(newDirectory + "darthVaderSix.png");
-            PB7.Image.Save(newDirectory + "darthVaderSeven.png");
-            PB8.Image.Save(newDirectory + "darthVaderEight.png");
-            PB9.Image.Save(newDirectory + "darthVaderNine.png");
+            PB1.Image.Save(newDirectory + characterChosen + "One.jpg");
+            PB2.Image.Save(newDirectory + characterChosen + "Two.jpg");
+            PB3.Image.Save(newDirectory + characterChosen + "Three.jpg");
+            PB4.Image.Save(newDirectory + characterChosen + "Four.jpg");
+            PB5.Image.Save(newDirectory + characterChosen + "Five.jpg");
+            PB6.Image.Save(newDirectory + characterChosen + "Six.jpg");
+            PB7.Image.Save(newDirectory + characterChosen + "Seven.jpg");
+            PB8.Image.Save(newDirectory + characterChosen + "Eight.jpg");
+            PB9.Image.Save(newDirectory + characterChosen + "Nine.jpg");
 
 
             //Rotate PB1 - PB9 90, 180, and 270, then save each rotated image to the folder directory
@@ -1389,31 +1381,31 @@ namespace Darth_Vader_Puzzle
                 //create a bitmap variable
                 Bitmap bitmap1;
                 //write the filepath for the image that needs to be rotated
-                bitmap1 = (Bitmap)Bitmap.FromFile(newDirectory + "darthVader" + num + ".png");
+                bitmap1 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + ".jpg");
                 //rotate the image 90 degrees
                 bitmap1.RotateFlip(RotateFlipType.Rotate90FlipY);
                 //save the rotated image
-                bitmap1.Save(newDirectory + "darthVader" + num + "Rotated90.png");
+                bitmap1.Save(newDirectory + characterChosen + num + "Rotated90.jpg");
 
                 //GOING FROM 90 DEGREE ORIENTATION TO 180 DEGREE ORIENTATION
                 //create a bitmap variable
                 Bitmap bitmap2;
                 //write the filepath for the image that needs to be rotated
-                bitmap2 = (Bitmap)Bitmap.FromFile(newDirectory + "darthVader" + num + "Rotated90.png");
+                bitmap2 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + "Rotated90.jpg");
                 //rotate the image 90 degrees
                 bitmap2.RotateFlip(RotateFlipType.Rotate90FlipY);
                 //save the rotated image
-                bitmap2.Save(newDirectory + "darthVader" + num + "Rotated180.png");
+                bitmap2.Save(newDirectory + characterChosen + num + "Rotated180.jpg");
 
                 //GOING FROM 180 DEGREE ORIENTATION TO 270 DEGREE ORIENTATION
                 //create a bitmap variable
                 Bitmap bitmap3;
                 //write the filepath for the image that needs to be rotated
-                bitmap3 = (Bitmap)Bitmap.FromFile(newDirectory + "darthVader" + num + "Rotated180.png");
+                bitmap3 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + "Rotated180.jpg");
                 //rotate the image 90 degrees
                 bitmap3.RotateFlip(RotateFlipType.Rotate90FlipY);
                 //save the rotated image
-                bitmap3.Save(newDirectory + "darthVader" + num + "Rotated270.png");
+                bitmap3.Save(newDirectory + characterChosen + num + "Rotated270.jpg");
             }
         }
         private void gamePage_Load(object sender, EventArgs e)

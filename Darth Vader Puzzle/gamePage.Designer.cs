@@ -150,7 +150,6 @@
             // 
             // puzzleImageDisplayPB
             // 
-            this.puzzleImageDisplayPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.darthVader;
             this.puzzleImageDisplayPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.puzzleImageDisplayPB.Location = new System.Drawing.Point(442, 12);
             this.puzzleImageDisplayPB.Name = "puzzleImageDisplayPB";
@@ -1124,8 +1123,6 @@
         }
 
         #endregion
-
-        private PictureBox puzzleImageDisplayPB;
         private PictureBox PB7;
         private Button button1;
         private PictureBox PB1;
@@ -1224,5 +1221,6 @@
         private Label boxLabel;
         private Label boardLabel;
         private LinkLabel needHelpLL;
+        public PictureBox puzzleImageDisplayPB;
     }
 }

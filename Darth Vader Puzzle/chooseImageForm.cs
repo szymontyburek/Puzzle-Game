@@ -12,6 +12,8 @@ namespace Darth_Vader_Puzzle
 {
     public partial class chooseImageForm : Form
     {
+        //for characterChosen variable on gamePage form
+        private string character;
         public chooseImageForm()
         {
             InitializeComponent();
@@ -23,18 +25,30 @@ namespace Darth_Vader_Puzzle
         }
         private void openGamePage(string character)
         {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            string newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+
             //create instance of gamePage form
             gamePage game = new gamePage();
             //make the characterChosen variable on the gamePage form equal the character that was chosen
             game.characterChosen = character;
+            //set the puzzle image of the character chosen for the user to look at as a reference
+            game.puzzleImageDisplayPB.SizeMode = PictureBoxSizeMode.StretchImage;
+            game.puzzleImageDisplayPB.ImageLocation = newDirectory + character + ".jpg";
+            //hide this form
+            this.Hide();
             //open gamePage
             game.ShowDialog();
         }
         private void darthVaderRB_CheckedChanged(object sender, EventArgs e)
         {
-            openGamePage("darthVader");
+
         }
-        private void deleteAllAddedFilePaths(string characterChosen)
+        private void deleteAllAddedFilePaths(string character)
         {
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
@@ -42,7 +56,6 @@ namespace Darth_Vader_Puzzle
             //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
             string newDirectory = currentDirectory.Replace("\\", "/");
             newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
-            //WORD ON THIS MODULE HERE
 
             //for loop comes into use in filepath directory later in this module
             for (int i = 1; i < 10; i++)
@@ -88,11 +101,11 @@ namespace Darth_Vader_Puzzle
 
                 //deleting all images that are preexisting in the folder from previous playing of the program
                 //make 4 different filepath for each possible rotation the images can be in(ex: 90, 180, 270)
-                var filePath1 = newDirectory + characterChosen + num +  ".jpg";
-                var filePath2 = newDirectory + characterChosen + num + "Rotated90.jpg";
-                var filePath3 = newDirectory + characterChosen + num + "Rotated180.jpg";
-                var filePath4 = newDirectory + characterChosen + num + "Rotated270.jpg";
-                //if the filepath exists, delete it
+                var filePath1 = newDirectory + character + num + ".jpg";
+                var filePath2 = newDirectory + character + num + "Rotated90.jpg";
+                var filePath3 = newDirectory + character + num + "Rotated180.jpg";
+                var filePath4 = newDirectory + character + num + "Rotated270.jpg";
+                //if any of the filepath exists, delete it
                 if (File.Exists(filePath1))
                 {
                     File.Delete(filePath1);
@@ -111,28 +124,61 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
-            private void chooseImageForm_Load(object sender, EventArgs e)
-            {
-                //delete any preexisting cut up or rotated images present in the folder from previous runs of the program
-                deleteAllAddedFilePaths("darthVader");
-                deleteAllAddedFilePaths("spiderman");
-                deleteAllAddedFilePaths("batman");
-                deleteAllAddedFilePaths("flash");
-            }
+        private void chooseImageForm_Load(object sender, EventArgs e)
+        {
+            //delete any added file paths from previous plays of the program
+            deleteAllAddedFilePaths("batman");
+            deleteAllAddedFilePaths("darthVader");
+            deleteAllAddedFilePaths("flash");
+            deleteAllAddedFilePaths("spiderman");
+        }
 
         private void spidermanRB_CheckedChanged(object sender, EventArgs e)
         {
-            openGamePage("spiderman");
+
         }
 
         private void batmanRB_CheckedChanged(object sender, EventArgs e)
         {
-            openGamePage("batman");
+
         }
 
         private void flashRB_CheckedChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void darthVaderCB_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //open gamePage form and make the characterChosen variable on that form equal "darthVader"
+            openGamePage("darthVader");
+        }
+
+        private void spidermanCB_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void spidermanPB_Click(object sender, EventArgs e)
+        {
+            //open gamePage form and make the characterChosen variable on that form equal "spiderman"
+            openGamePage("spiderman");
+        }
+
+        private void batmanPB_Click(object sender, EventArgs e)
+        {
+            //open gamePage form and make the characterChosen variable on that form equal "batman"
+            openGamePage("batman");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            //open gamePage form and make the characterChosen variable on that form equal "flash"
             openGamePage("flash");
         }
     }
-    }
+}
