@@ -50,6 +50,7 @@
             this.flashRB.TabIndex = 3;
             this.flashRB.TabStop = true;
             this.flashRB.UseVisualStyleBackColor = true;
+            this.flashRB.CheckedChanged += new System.EventHandler(this.flashRB_CheckedChanged);
             // 
             // choosePuzzleImageLabel
             // 
@@ -72,6 +73,7 @@
             this.batmanRB.TabIndex = 5;
             this.batmanRB.TabStop = true;
             this.batmanRB.UseVisualStyleBackColor = true;
+            this.batmanRB.CheckedChanged += new System.EventHandler(this.batmanRB_CheckedChanged);
             // 
             // darthVaderRB
             // 
@@ -95,6 +97,7 @@
             this.spidermanRB.TabIndex = 7;
             this.spidermanRB.TabStop = true;
             this.spidermanRB.UseVisualStyleBackColor = true;
+            this.spidermanRB.CheckedChanged += new System.EventHandler(this.spidermanRB_CheckedChanged);
             // 
             // chooseImageForm
             // 
@@ -109,6 +112,7 @@
             this.Controls.Add(this.flashRB);
             this.Name = "chooseImageForm";
             this.Text = "chooseImageForm";
+            this.Load += new System.EventHandler(this.chooseImageForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

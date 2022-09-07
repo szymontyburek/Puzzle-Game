@@ -1141,18 +1141,6 @@ namespace Darth_Vader_Puzzle
             placeShuffleOntoPieces(7, PB8);
             placeShuffleOntoPieces(8, PB9);
         }
-
-        private void deleteAllAddedFilePaths()
-        {
-
-
-            //DELETING AN IMAGE FROM THE FOLDER
-            var filePath = newDirectory + "PB1.png";
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-        }
         private void placeShuffleOntoPieces(int i, PictureBox PBNum)
         {
             //if the generated number equals 1
@@ -1344,7 +1332,7 @@ namespace Darth_Vader_Puzzle
 
 
             //Adding each picturebox image to the folder directory
-            PB1.Image.Save(newDirectory + "darthVaderOne.png");
+            PB1.Image.Save(newDirectory + characterChosen + ".png");
             PB2.Image.Save(newDirectory + "darthVaderTwo.png");
             PB3.Image.Save(newDirectory + "darthVaderThree.png");
             PB4.Image.Save(newDirectory + "darthVaderFour.png");
