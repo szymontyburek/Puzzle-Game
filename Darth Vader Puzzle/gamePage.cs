@@ -13,6 +13,8 @@ namespace Darth_Vader_Puzzle
 {
     public partial class gamePage : Form
     {
+        //variable to represent the character chosen on the previous form
+        public string characterChosen;
         //so the code related to this variable only has to written once and not every time it needs to be used
         string newDirectory;
         //bool variable to signify that borders have been set
@@ -1300,14 +1302,13 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
-        private void setImagesWithRotations()
+        private void setImagesAfterCuttingAndRotating()
         {
             //This is bitmap code to cut a given image into 9 pieces
             //source of the code is on this stackOverflow post: https://stackoverflow.com/questions/13625891/cut-an-image-into-9-pieces-c-sharp
 
-            //instance of the chooseImage Form
-            chooseImageForm choose = new chooseImageForm();
-            Image img = Image.FromFile(choose.filePath); // a.png has 312X312 width and height
+
+            Image img = Image.FromFile(newDirectory + characterChosen + ".jpg"); // a.png has 312X312 width and height
             int widthThird = (int)((double)img.Width / 3.0 + 0.5);
             int heightThird = (int)((double)img.Height / 3.0 + 0.5);
             Bitmap[,] bmps = new Bitmap[3, 3];
@@ -1437,7 +1438,7 @@ namespace Darth_Vader_Puzzle
             newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
 
             //to cut the image into 9 pieces, and rotated by 90, 180, and 270 degrees and saving all of it to folder
-            setImagesWithRotations();
+            setImagesAfterCuttingAndRotating();
 
             //play ROTS Soundtrack
             SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
@@ -1447,15 +1448,15 @@ namespace Darth_Vader_Puzzle
             //to shuffle the box pieces
             shuffleGenerator();
             //to mix up the orientation of the puzzle pieces
-            //rotationShuffleGenerator(PB1);
-            //rotationShuffleGenerator(PB2);
-            //rotationShuffleGenerator(PB3);
-            //rotationShuffleGenerator(PB4);
-            //rotationShuffleGenerator(PB5);
-            //rotationShuffleGenerator(PB6);
-            //rotationShuffleGenerator(PB7);
-            //rotationShuffleGenerator(PB8);
-            //rotationShuffleGenerator(PB9);
+            rotationShuffleGenerator(PB1);
+            rotationShuffleGenerator(PB2);
+            rotationShuffleGenerator(PB3);
+            rotationShuffleGenerator(PB4);
+            rotationShuffleGenerator(PB5);
+            rotationShuffleGenerator(PB6);
+            rotationShuffleGenerator(PB7);
+            rotationShuffleGenerator(PB8);
+            rotationShuffleGenerator(PB9);
         }
 
         private void menuButton_Click(object sender, EventArgs e)

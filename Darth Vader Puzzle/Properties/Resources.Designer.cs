@@ -73,6 +73,16 @@ namespace Darth_Vader_Puzzle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap batman {
+            get {
+                object obj = ResourceManager.GetObject("batman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clockwiseButton2 {
             get {
                 object obj = ResourceManager.GetObject("clockwiseButton2", resourceCulture);
@@ -96,6 +106,16 @@ namespace Darth_Vader_Puzzle.Properties {
         internal static System.Drawing.Bitmap darthVader1 {
             get {
                 object obj = ResourceManager.GetObject("darthVader1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash {
+            get {
+                object obj = ResourceManager.GetObject("flash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +166,56 @@ namespace Darth_Vader_Puzzle.Properties {
         internal static System.Drawing.Bitmap menuButton {
             get {
                 object obj = ResourceManager.GetObject("menuButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman {
+            get {
+                object obj = ResourceManager.GetObject("spiderman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman1 {
+            get {
+                object obj = ResourceManager.GetObject("spiderman1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman2 {
+            get {
+                object obj = ResourceManager.GetObject("spiderman2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman3 {
+            get {
+                object obj = ResourceManager.GetObject("spiderman3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman4 {
+            get {
+                object obj = ResourceManager.GetObject("spiderman4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

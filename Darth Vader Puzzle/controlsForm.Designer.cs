@@ -88,7 +88,7 @@
             // 
             this.menuBackButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.backButton;
             this.menuBackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuBackButton.Location = new System.Drawing.Point(12, 658);
+            this.menuBackButton.Location = new System.Drawing.Point(22, 860);
             this.menuBackButton.Name = "menuBackButton";
             this.menuBackButton.Size = new System.Drawing.Size(76, 57);
             this.menuBackButton.TabIndex = 118;
@@ -100,7 +100,7 @@
             this.backButtonLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backButtonLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.backButtonLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backButtonLabel.Location = new System.Drawing.Point(94, 658);
+            this.backButtonLabel.Location = new System.Drawing.Point(104, 863);
             this.backButtonLabel.Name = "backButtonLabel";
             this.backButtonLabel.Size = new System.Drawing.Size(291, 54);
             this.backButtonLabel.TabIndex = 119;
@@ -111,9 +111,9 @@
             this.backButtonDescriptionLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.backButtonDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.backButtonDescriptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backButtonDescriptionLabel.Location = new System.Drawing.Point(12, 718);
+            this.backButtonDescriptionLabel.Location = new System.Drawing.Point(12, 920);
             this.backButtonDescriptionLabel.Name = "backButtonDescriptionLabel";
-            this.backButtonDescriptionLabel.Size = new System.Drawing.Size(1744, 160);
+            this.backButtonDescriptionLabel.Size = new System.Drawing.Size(1744, 157);
             this.backButtonDescriptionLabel.TabIndex = 120;
             this.backButtonDescriptionLabel.Text = "Click on a board piece, make sure that is highlighted, then press the back button" +
     " to put it back into the box.";
@@ -122,7 +122,7 @@
             // 
             this.menuRotationButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.clockwiseButton2;
             this.menuRotationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuRotationButton.Location = new System.Drawing.Point(12, 854);
+            this.menuRotationButton.Location = new System.Drawing.Point(22, 655);
             this.menuRotationButton.Name = "menuRotationButton";
             this.menuRotationButton.Size = new System.Drawing.Size(76, 60);
             this.menuRotationButton.TabIndex = 121;
@@ -134,7 +134,7 @@
             this.rotationButtonLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rotationButtonLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.rotationButtonLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rotationButtonLabel.Location = new System.Drawing.Point(94, 860);
+            this.rotationButtonLabel.Location = new System.Drawing.Point(104, 661);
             this.rotationButtonLabel.Name = "rotationButtonLabel";
             this.rotationButtonLabel.Size = new System.Drawing.Size(364, 54);
             this.rotationButtonLabel.TabIndex = 122;
@@ -145,7 +145,7 @@
             this.rotationButtonDescriptionLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rotationButtonDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rotationButtonDescriptionLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rotationButtonDescriptionLabel.Location = new System.Drawing.Point(12, 917);
+            this.rotationButtonDescriptionLabel.Location = new System.Drawing.Point(12, 718);
             this.rotationButtonDescriptionLabel.Name = "rotationButtonDescriptionLabel";
             this.rotationButtonDescriptionLabel.Size = new System.Drawing.Size(1744, 133);
             this.rotationButtonDescriptionLabel.TabIndex = 123;

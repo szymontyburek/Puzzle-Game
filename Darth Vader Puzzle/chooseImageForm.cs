@@ -19,13 +19,14 @@ namespace Darth_Vader_Puzzle
 
         private void browseButton_Click(object sender, EventArgs e)
         {
-            //create an instance of openFileDialog
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            //open computer files
-            openFileDialog1.ShowDialog();
-            string filePath = openFileDialog1.FileName;
-            //open gamePage
+            
+        }
+
+        private void darthVaderRB_CheckedChanged(object sender, EventArgs e)
+        {
+            //create instance of gamePage form
             gamePage game = new gamePage();
+            game.characterChosen = "darthVader";
             game.ShowDialog();
         }
     }
