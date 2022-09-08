@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Darth_Vader_Puzzle
 {
     public partial class chooseImageForm : Form
-    {
+    { 
         //for characterChosen variable on gamePage form
         private string character;
         public chooseImageForm()
@@ -124,6 +124,7 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
+
         private void chooseImageForm_Load(object sender, EventArgs e)
         {
             //delete any added file paths from previous plays of the program
@@ -132,7 +133,19 @@ namespace Darth_Vader_Puzzle
             deleteAllAddedFilePaths("flash");
             deleteAllAddedFilePaths("spiderman");
         }
-
+        private void hightlightPB(PictureBox PB)
+        {
+            if (PB.BorderStyle == BorderStyle.None)
+            {
+                //hightlight the border of spidermanPB
+                PB.BorderStyle = BorderStyle.Fixed3D;
+            }
+            else if (PB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                //unhighlight the border of spidermanPB
+                PB.BorderStyle = BorderStyle.None;
+            }
+        }
         private void spidermanRB_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -152,10 +165,27 @@ namespace Darth_Vader_Puzzle
         {
 
         }
+        private void unhighlightAllPBs()
+        {
+            spidermanPB.BorderStyle = BorderStyle.None;
+            flashPB.BorderStyle = BorderStyle.None;
+            batmanPB.BorderStyle = BorderStyle.None;
+            darthVaderPB.BorderStyle = BorderStyle.None;
+        }
+ 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //open gamePage form and make the characterChosen variable on that form equal "darthVader"
-            openGamePage("darthVader");
+            //if no other picturebox's are highlighted
+            if(spidermanPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
+            {
+                hightlightPB(darthVaderPB);
+            }
+            else
+            {
+                unhighlightAllPBs();
+                hightlightPB(darthVaderPB);
+            }
+            
         }
 
         private void spidermanCB_CheckedChanged(object sender, EventArgs e)
@@ -165,20 +195,65 @@ namespace Darth_Vader_Puzzle
 
         private void spidermanPB_Click(object sender, EventArgs e)
         {
-            //open gamePage form and make the characterChosen variable on that form equal "spiderman"
-            openGamePage("spiderman");
+            //if no other picturebox's are highlighted
+            if (darthVaderPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
+            {
+                hightlightPB(spidermanPB);
+            }
+            else
+            {
+                unhighlightAllPBs();
+                hightlightPB(spidermanPB);
+            }
+            
         }
 
         private void batmanPB_Click(object sender, EventArgs e)
         {
-            //open gamePage form and make the characterChosen variable on that form equal "batman"
-            openGamePage("batman");
+            //if no other picturebox's are highlighted
+            if (spidermanPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && darthVaderPB.BorderStyle == BorderStyle.None)
+            {
+                hightlightPB(batmanPB);
+            }
+            else
+            {
+                unhighlightAllPBs();
+                hightlightPB(batmanPB);
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            //open gamePage form and make the characterChosen variable on that form equal "flash"
-            openGamePage("flash");
+            //if no other picturebox's are highlighted
+            if (spidermanPB.BorderStyle == BorderStyle.None && darthVaderPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
+            {
+                hightlightPB(flashPB);
+            }
+            else
+            {
+                unhighlightAllPBs();
+                hightlightPB(flashPB);
+            }
+        }
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            //open gamePage form and make the characterChosen variable on that form equal the character chosen on this form
+            if(darthVaderPB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                openGamePage("darthVader");
+            }
+            else if(batmanPB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                openGamePage("batman");
+            }
+            else if(flashPB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                openGamePage("flash");
+            }
+            else if(spidermanPB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                openGamePage("spiderman");
+            }
         }
     }
 }

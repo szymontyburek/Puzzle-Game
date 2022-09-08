@@ -1302,7 +1302,7 @@ namespace Darth_Vader_Puzzle
                 }
 
 
-            //SETTING THE SLICED PICTUREBOX'S TO EACH PB
+            //SETTING THE SLICED PICTUREBOX'S TO SAVE THEM INTO THE FOLDER DIRECTORY
             PB1.Image = bmps[0, 0];
 
             PB2.Image = bmps[0, 1];
@@ -1407,6 +1407,8 @@ namespace Darth_Vader_Puzzle
                 //save the rotated image
                 bitmap3.Save(newDirectory + characterChosen + num + "Rotated270.jpg");
             }
+
+            //CHANGING THE IMAGE SOURCE FOR THE PICTUREBOX'S FROM IMAGE TO IMAGELOCATION FOR THE GAME TO WORK SMOOTHLY
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
@@ -1420,9 +1422,24 @@ namespace Darth_Vader_Puzzle
             //to cut the image into 9 pieces, and rotated by 90, 180, and 270 degrees and saving all of it to folder
             setImagesAfterCuttingAndRotating();
 
-            //play ROTS Soundtrack
-            SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
-            ROTS.PlayLooping();
+            //play Soundtrack depending on what characterChosen equals
+            if(characterChosen == "darthVader")
+            {
+                SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
+                ROTS.PlayLooping();
+            }
+            else if(characterChosen == "spiderman")
+            {
+
+            }
+            else if (characterChosen == "batman")
+            {
+
+            }
+            else if (characterChosen == "flash")
+            {
+
+            }
             //make all the picturebox borders invisible
             makeAllBordersInvisible();
             //to shuffle the box pieces
