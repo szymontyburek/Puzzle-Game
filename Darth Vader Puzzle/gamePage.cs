@@ -76,6 +76,14 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB8Border1);
             }
         }
+        private void experimentalClickEvent(PictureBox PB, PictureBox PBTest)
+        {
+            if(PB.BorderStyle == BorderStyle.Fixed3D && PBTest.BorderStyle == BorderStyle.None)
+            {
+                PBTest.ImageLocation = PB.ImageLocation;
+                PB.Visible = false;
+            }
+        }
         private void clickEvent(Label pbBorder, PictureBox PBTest, Label PBTestBorder)
         {
             //stretch the imagelayout through code so the rotated images have the same layout as the original
@@ -185,7 +193,7 @@ namespace Darth_Vader_Puzzle
             {
                 //put the image around the highlighted picturebox onto the PB1Test picturebox
                 clickEvent(PB2Border1, PB1Test, PB1TestBorder1);
-                clickEvent(PB1Border1, PB1Test, PB1TestBorder1);
+                experimentalClickEvent(PB1, PB1Test);
                 clickEvent(PB3Border1, PB1Test, PB1TestBorder1);
                 clickEvent(PB4Border1, PB1Test, PB1TestBorder1);
                 clickEvent(PB5Border1, PB1Test, PB1TestBorder1);
@@ -874,23 +882,23 @@ namespace Darth_Vader_Puzzle
                 makeBordersVisible(PB2Border1);
             }
         }
-
+        private void hightlightPB(PictureBox PB)
+        {
+            if (PB.BorderStyle == BorderStyle.None)
+            {
+                //hightlight the border of spidermanPB
+                PB.BorderStyle = BorderStyle.Fixed3D;
+            }
+            else if (PB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                //unhighlight the border of spidermanPB
+                PB.BorderStyle = BorderStyle.None;
+            }
+        }
         private void PB1_Click(object sender, EventArgs e)
         {
-            //call highlightShift module under PB1Border1
-            highlightShift(PB1ClickCounter);
-            //add  1 to clickCounter variable
-            PB1ClickCounter++;
-            //if bordersSet bool variable is true and the picturebox has been clicked on twice, unhighlight it 
-            if (bordersSet && PB1ClickCounter == 2)
-            {
-                makeAllBordersInvisible();
-            }
-            //if bordersSet variable is not true, make the border labels appear
-            else if (!bordersSet)
-            {
-                makeBordersVisible(PB1Border1);
-            }
+            //highlight or unhighlight the PB depending on the Borderstyle
+            hightlightPB(PB1);
         }
         public gamePage()
         {
@@ -1383,7 +1391,7 @@ namespace Darth_Vader_Puzzle
                 //write the filepath for the image that needs to be rotated
                 bitmap1 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + ".jpg");
                 //rotate the image 90 degrees
-                bitmap1.RotateFlip(RotateFlipType.Rotate90FlipY);
+                bitmap1.RotateFlip(RotateFlipType.Rotate90FlipNone);
                 //save the rotated image
                 bitmap1.Save(newDirectory + characterChosen + num + "Rotated90.jpg");
 
@@ -1391,9 +1399,9 @@ namespace Darth_Vader_Puzzle
                 //create a bitmap variable
                 Bitmap bitmap2;
                 //write the filepath for the image that needs to be rotated
-                bitmap2 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + "Rotated90.jpg");
+                bitmap2 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + ".jpg");
                 //rotate the image 90 degrees
-                bitmap2.RotateFlip(RotateFlipType.Rotate90FlipY);
+                bitmap2.RotateFlip(RotateFlipType.Rotate180FlipNone); //FIGURE THIS OUT, ROTATION IS NOT CORRECT
                 //save the rotated image
                 bitmap2.Save(newDirectory + characterChosen + num + "Rotated180.jpg");
 
@@ -1401,17 +1409,16 @@ namespace Darth_Vader_Puzzle
                 //create a bitmap variable
                 Bitmap bitmap3;
                 //write the filepath for the image that needs to be rotated
-                bitmap3 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + "Rotated180.jpg");
+                bitmap3 = (Bitmap)Bitmap.FromFile(newDirectory + characterChosen + num + ".jpg");
                 //rotate the image 90 degrees
-                bitmap3.RotateFlip(RotateFlipType.Rotate90FlipY);
+                bitmap3.RotateFlip(RotateFlipType.Rotate270FlipNone);
                 //save the rotated image
                 bitmap3.Save(newDirectory + characterChosen + num + "Rotated270.jpg");
             }
-
-            //CHANGING THE IMAGE SOURCE FOR THE PICTUREBOX'S FROM IMAGE TO IMAGELOCATION FOR THE GAME TO WORK SMOOTHLY
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
+
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
             string currentDirectory = Environment.CurrentDirectory;
