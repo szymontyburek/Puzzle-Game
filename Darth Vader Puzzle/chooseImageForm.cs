@@ -127,6 +127,10 @@ namespace Darth_Vader_Puzzle
 
         private void chooseImageForm_Load(object sender, EventArgs e)
         {
+            gamePage game = new gamePage();
+            game.characterChosen = "flash";
+            game.ShowDialog();
+
             //delete any added file paths from previous plays of the program
             deleteAllAddedFilePaths("batman");
             deleteAllAddedFilePaths("darthVader");
