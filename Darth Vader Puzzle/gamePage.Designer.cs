@@ -149,6 +149,8 @@
             this.PB8.Click += new System.EventHandler(this.PB8_Click);
             this.PB8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseDown);
             this.PB8.MouseEnter += new System.EventHandler(this.PB8_MouseEnter);
+            this.PB8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseMove);
+            this.PB8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseUp);
             this.PB8.Move += new System.EventHandler(this.PB8_Move);
             // 
             // PB2
@@ -328,7 +330,6 @@
             // 
             // PB3
             // 
-            this.PB3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PB3.Location = new System.Drawing.Point(442, 625);
             this.PB3.Name = "PB3";
             this.PB3.Size = new System.Drawing.Size(209, 191);

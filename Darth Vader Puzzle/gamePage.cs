@@ -15,6 +15,9 @@ namespace Darth_Vader_Puzzle
     public partial class gamePage : Form
     {
         //variables for moving picturebox's with the click and drag of the mouse
+        private bool _moving;
+        private Point _startLocation;
+        //variables for moving picturebox's with the click and drag of the mouse
         private int _xPos;
         private int _yPos;
         private bool _dragging;
@@ -731,19 +734,19 @@ namespace Darth_Vader_Puzzle
         private void PB8_Move(object sender, EventArgs e)
         {
             //this event will occur, when you perform drag operation
-            PB8.DoDragDrop(PB8, DragDropEffects.Copy);
+            //PB8.DoDragDrop(PB8, DragDropEffects.Copy);
         }
         private void PB8Test_DragEnter(object sender, DragEventArgs e)
         {
             //this event will fire when you drag the mouse over this picturebox
-            e.Effect = e.AllowedEffect;
+            //e.Effect = e.AllowedEffect;
         }
 
         private void PB8Test_DragDrop(object sender, DragEventArgs e)
         {
             //this event will fire when you leave the mouse button, after you drag over it
-            PB8Test.SizeMode = PictureBoxSizeMode.StretchImage;
-            PB8Test.ImageLocation = PB8.ImageLocation;
+            //PB8Test.SizeMode = PictureBoxSizeMode.StretchImage;
+            //PB8Test.ImageLocation = PB8.ImageLocation;
         }
 
         private void PB8_MouseDown(object sender, MouseEventArgs e)
@@ -751,11 +754,31 @@ namespace Darth_Vader_Puzzle
             //WHEN ALL ELSE FAILS, THIS WORKS WITH DRAGGING
             //this event will occur, when you perform drag operation
             //PB8.DoDragDrop(PB8, DragDropEffects.Copy);
+
+            //Register the start of the moving operation
+            _moving = true;
+            //remember the start location of the mouse.
+            _startLocation = e.Location;
         }
 
         private void PB8_MouseEnter(object sender, EventArgs e)
         {
             PB8.BorderStyle = BorderStyle.Fixed3D;
+        }
+        private void PB8_MouseUp(object sender, MouseEventArgs e)
+        {
+            //Register the end of the moving operation
+            _moving = false;
+        }
+
+        private void PB8_MouseMove(object sender, MouseEventArgs e)
+        {
+            //This makes the picture box move together with the mouse pointer.
+            if (_moving)
+            {
+                PB8.Left += e.Location.X - _startLocation.X;
+                PB8.Top += e.Location.Y - _startLocation.Y;
+            }
         }
     }
 }
