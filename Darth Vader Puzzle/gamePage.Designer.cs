@@ -175,6 +175,7 @@
             this.PB5Test.Click += new System.EventHandler(this.PB5Test_Click);
             this.PB5Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB5Test_DragDrop);
             this.PB5Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB5Test_DragEnter);
+            this.PB5Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB5Test_MouseMove);
             // 
             // PB4Test
             // 
@@ -187,6 +188,7 @@
             this.PB4Test.Click += new System.EventHandler(this.PB4Test_Click);
             this.PB4Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB4Test_DragDrop);
             this.PB4Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB4Test_DragEnter);
+            this.PB4Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB4Test_MouseMove);
             // 
             // PB6Test
             // 
@@ -199,6 +201,7 @@
             this.PB6Test.Click += new System.EventHandler(this.PB6Test_Click);
             this.PB6Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB6Test_DragDrop);
             this.PB6Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB6Test_DragEnter);
+            this.PB6Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB6Test_MouseMove);
             // 
             // PB2Test
             // 
@@ -211,6 +214,7 @@
             this.PB2Test.Click += new System.EventHandler(this.PB2Test_Click);
             this.PB2Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB2Test_DragDrop);
             this.PB2Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB2Test_DragEnter);
+            this.PB2Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB2Test_MouseMove);
             // 
             // PB9Test
             // 
@@ -223,6 +227,7 @@
             this.PB9Test.Click += new System.EventHandler(this.PB9Test_Click);
             this.PB9Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB9Test_DragDrop);
             this.PB9Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB9Test_DragEnter);
+            this.PB9Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB9Test_MouseMove);
             // 
             // PB8Test
             // 
@@ -235,6 +240,7 @@
             this.PB8Test.Click += new System.EventHandler(this.PB8Test_Click);
             this.PB8Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB8Test_DragDrop);
             this.PB8Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB8Test_DragEnter);
+            this.PB8Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB8Test_MouseMove);
             // 
             // PB7Test
             // 
@@ -247,6 +253,7 @@
             this.PB7Test.Click += new System.EventHandler(this.PB7Test_Click);
             this.PB7Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB7Test_DragDrop);
             this.PB7Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB7Test_DragEnter);
+            this.PB7Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB7Test_MouseMove);
             // 
             // PB3Test
             // 
@@ -259,6 +266,7 @@
             this.PB3Test.Click += new System.EventHandler(this.PB3Test_Click);
             this.PB3Test.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB3Test_DragDrop);
             this.PB3Test.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB3Test_DragEnter);
+            this.PB3Test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB3Test_MouseMove);
             // 
             // PB1Test
             // 
