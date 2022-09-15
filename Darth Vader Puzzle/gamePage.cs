@@ -14,6 +14,8 @@ namespace Darth_Vader_Puzzle
 {
     public partial class gamePage : Form
     {
+        //variable for return method DoDragDrop
+        PictureBox DoDragDropSourcePB;
         //variables for moving picturebox's with the click and drag of the mouse
         private bool _moving;
         private Point _startLocation;
@@ -678,7 +680,7 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
-            //double buffer the form(smoothness of mouse click and drag of PB's is improved)
+            //to prevent flickering when PB's are moved with the mouse
             this.DoubleBuffered = true;
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
@@ -723,62 +725,208 @@ namespace Darth_Vader_Puzzle
             rotationShuffleGenerator(PB8);
             rotationShuffleGenerator(PB9);
 
+            //make allowDrop true on all PBTest picturebox's
+            PB1Test.AllowDrop = true;
+            PB2Test.AllowDrop = true;
+            PB3Test.AllowDrop = true;
+            PB4Test.AllowDrop = true;
+            PB5Test.AllowDrop = true;
+            PB6Test.AllowDrop = true;
+            PB7Test.AllowDrop = true;
             PB8Test.AllowDrop = true;
-            mouseClickAndDrag(PB8);
-           
-        }
+            PB9Test.AllowDrop = true;
 
-        private void menuButton_Click(object sender, EventArgs e)
-        {
+            PB8.AllowDrop = true;
+
+
         }
-        private void PB8_Move(object sender, EventArgs e)
+        private PictureBox DoDragDrop(PictureBox PB)
         {
             //this event will occur, when you perform drag operation
-            //PB8.DoDragDrop(PB8, DragDropEffects.Copy);
+            PB.DoDragDrop(PB, DragDropEffects.Copy);
+            return PB;
+        }
+        private void DragDropEvent(PictureBox sourcePB, PictureBox targetPB)
+        {
+            //this event will fire when you leave the mouse button, after you drag over it
+
+            //if targetPB is blank
+            if(targetPB.ImageLocation == null)
+            {
+                //fix the PictureBoxSizeMode
+                targetPB.SizeMode = PictureBoxSizeMode.StretchImage;
+                //Transfer ImageLocation
+                targetPB.ImageLocation = sourcePB.ImageLocation;
+                //Make the sourcePB imageLocation null
+                sourcePB.ImageLocation = null;
+                //make the sourcePB backColor gray like the null board pieces
+                sourcePB.BackColor = Color.Silver;
+                //unhighlight the sourcePB
+                sourcePB.BorderStyle = BorderStyle.None;
+            }
+        }
+        private void MouseMoveEventHandler(PictureBox PB)
+        {
+            //highlight the picturebox when the mouse hovers over it
+            PB.BorderStyle = BorderStyle.Fixed3D;
+            //for use under DragDrop event handler
+            DoDragDropSourcePB = DoDragDrop(PB);
         }
         private void PB8Test_DragEnter(object sender, DragEventArgs e)
         {
             //this event will fire when you drag the mouse over this picturebox
-            //e.Effect = e.AllowedEffect;
-        }
+            e.Effect = e.AllowedEffect;
 
+        }
         private void PB8Test_DragDrop(object sender, DragEventArgs e)
         {
-            //this event will fire when you leave the mouse button, after you drag over it
-            //PB8Test.SizeMode = PictureBoxSizeMode.StretchImage;
-            //PB8Test.ImageLocation = PB8.ImageLocation;
+            //use the DragDropEvent method between PB8Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB8Test);
+        }
+        private void PB8_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB8);
         }
 
-        private void PB8_MouseDown(object sender, MouseEventArgs e)
+        private void PB1_MouseMove(object sender, MouseEventArgs e)
         {
-            //WHEN ALL ELSE FAILS, THIS WORKS WITH DRAGGING
-            //this event will occur, when you perform drag operation
-            //PB8.DoDragDrop(PB8, DragDropEffects.Copy);
-
-            //Register the start of the moving operation
-            _moving = true;
-            //remember the start location of the mouse.
-            _startLocation = e.Location;
+            MouseMoveEventHandler(PB1);
         }
 
-        private void PB8_MouseEnter(object sender, EventArgs e)
+        private void PB2_MouseMove(object sender, MouseEventArgs e)
         {
-            PB8.BorderStyle = BorderStyle.Fixed3D;
-        }
-        private void PB8_MouseUp(object sender, MouseEventArgs e)
-        {
-            //Register the end of the moving operation
-            _moving = false;
+            MouseMoveEventHandler(PB2);
         }
 
-        private void PB8_MouseMove(object sender, MouseEventArgs e)
+        private void PB3_MouseMove(object sender, MouseEventArgs e)
         {
-            //This makes the picture box move together with the mouse pointer.
-            if (_moving)
-            {
-                PB8.Left += e.Location.X - _startLocation.X;
-                PB8.Top += e.Location.Y - _startLocation.Y;
-            }
+            MouseMoveEventHandler(PB3);
+        }
+
+        private void PB4_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB4);
+        }
+
+        private void PB5_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB5);
+        }
+
+        private void PB6_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB6);
+        }
+
+        private void PB7_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB7);
+        }
+
+        private void PB9_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB9);
+        }
+
+        private void PB1Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB2Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB3Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB4Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB5Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB6Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB7Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB9Test_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB1Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB1Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB1Test);
+        }
+
+        private void PB2Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB2Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB2Test);
+        }
+
+        private void PB3Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB3Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB3Test);
+        }
+
+        private void PB4Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB4Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB4Test);
+        }
+
+        private void PB5Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB5Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB5Test);
+        }
+
+        private void PB6Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB6Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB6Test);
+        }
+
+        private void PB7Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB7Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB7Test);
+        }
+
+        private void PB9Test_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB9Test and all box pieces(PB1 - PB9)
+            DragDropEvent(DoDragDropSourcePB, PB9Test);
+        }
+
+        private void PB1Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveEventHandler(PB1Test);
         }
     }
 }
