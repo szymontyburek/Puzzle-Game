@@ -24,6 +24,8 @@ namespace Darth_Vader_Puzzle
         private int _yPos;
         private bool _dragging;
 
+        //counter variable for the highlighting of picturebox's
+        private int highlightCounter = 0;
         //variable to represent the character chosen on the previous form
         public string characterChosen;
         //so the code related to this variable only has to written once and not every time it needs to be used
@@ -32,17 +34,17 @@ namespace Darth_Vader_Puzzle
         int[] shufflePuzzlePieces = new int[9];
         private void PB6_Click(object sender, EventArgs e)
         {
-            highlightPB(PB6);
+            
         }
 
         private void PB7_Click(object sender, EventArgs e)
         {
-            highlightPB(PB7);
+            
         }
 
         private void PB8_Click(object sender, EventArgs e)
         {
-            highlightPB(PB8);
+            
         }
         private void mouseClickAndDrag(PictureBox PB)
         {
@@ -74,64 +76,48 @@ namespace Darth_Vader_Puzzle
 
         private void PB1Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB1Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB2Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB2Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB3Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB3Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB4Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB4Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB5Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB5Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB6Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB6Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB7Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB7Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB8Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB8Test);
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
@@ -272,57 +258,49 @@ namespace Darth_Vader_Puzzle
 
         private void PB9Test_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB9Test);
+
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB9_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB9);
+
         }
 
         private void PB5_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB5);
+
         }
 
         private void PB4_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB4);
+
         }
 
         private void PB3_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB3);
+
         }
         private void PB2_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight this picturebox depending on whether the borderStyle is none or fixed3D
-            highlightPB(PB2);
+
         }
         private void highlightPB(PictureBox PB)
-        {
+        {          
             if (PB.BorderStyle == BorderStyle.None)
             {
+                //to ensure that only one PB can be highlighted at a time
+                UnhighlightAllBorders();
                 //hightlight the border
                 PB.BorderStyle = BorderStyle.Fixed3D;
-            }
-            else if (PB.BorderStyle == BorderStyle.Fixed3D)
-            {
-                //unhighlight the border
-                PB.BorderStyle = BorderStyle.None;
             }
         }
         private void PB1_Click(object sender, EventArgs e)
         {
-            //highlight or unhighlight the PB depending on the Borderstyle
-            highlightPB(PB1);
+
+
+            //WORK OUT BUGS, SUCH AS HAVING TO CLICK TWICE TO DRAG AND DROP, BEING ABLE TO HIGHLIGHT MULTIPLE PB'S AT ONCE, ETC..
         }
         public gamePage()
         {
@@ -790,11 +768,10 @@ namespace Darth_Vader_Puzzle
         }
         private void MouseMoveEventHandler(PictureBox PB)
         {
-            if (PB.BorderStyle == BorderStyle.Fixed3D)
-            {
-                //for use under DragDrop event handler
-                DoDragDropSourcePB = DoDragDrop(PB);
-            }
+            //highlight the PB
+            highlightPB(PB);
+            //for use under DragDrop event handler
+            DoDragDropSourcePB = DoDragDrop(PB);
         }
         private void PB8Test_DragEnter(object sender, DragEventArgs e)
         {
@@ -947,50 +924,19 @@ namespace Darth_Vader_Puzzle
             //use the DragDropEvent method between PB9Test and all box pieces(PB1 - PB9)
             DragDropEvent(DoDragDropSourcePB, PB9Test);
         }
-
-        private void PB1Test_MouseMove(object sender, MouseEventArgs e)
+        private void PB8_MouseHover(object sender, EventArgs e)
         {
-            MouseMoveEventHandler(PB1Test);
+            
         }
 
-        private void PB2Test_MouseMove(object sender, MouseEventArgs e)
+        private void PB8_MouseDown(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB2Test);
+            
         }
 
-        private void PB3Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB3Test);
-        }
-
-        private void PB4Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB4Test);
-        }
-
-        private void PB5Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB5Test);
-        }
-
-        private void PB6Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB6Test);
-        }
-
-        private void PB7Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB7Test);
-        }
-
-        private void PB8Test_MouseMove(object sender, MouseEventArgs e)
+        private void PB8Test_MouseDown(object sender, MouseEventArgs e)
         {
             MouseMoveEventHandler(PB8Test);
-        }
-
-        private void PB9Test_MouseMove(object sender, MouseEventArgs e)
-        {
-            MouseMoveEventHandler(PB9Test);
         }
     }
 }
