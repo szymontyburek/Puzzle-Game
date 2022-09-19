@@ -24,8 +24,6 @@ namespace Darth_Vader_Puzzle
         private int _yPos;
         private bool _dragging;
 
-        //counter variable for the highlighting of picturebox's
-        private int highlightCounter = 0;
         //variable to represent the character chosen on the previous form
         public string characterChosen;
         //so the code related to this variable only has to written once and not every time it needs to be used
@@ -286,21 +284,9 @@ namespace Darth_Vader_Puzzle
         {
 
         }
-        private void highlightPB(PictureBox PB)
-        {          
-            if (PB.BorderStyle == BorderStyle.None)
-            {
-                //to ensure that only one PB can be highlighted at a time
-                UnhighlightAllBorders();
-                //hightlight the border
-                PB.BorderStyle = BorderStyle.Fixed3D;
-            }
-        }
         private void PB1_Click(object sender, EventArgs e)
         {
 
-
-            //WORK OUT BUGS, SUCH AS HAVING TO CLICK TWICE TO DRAG AND DROP, BEING ABLE TO HIGHLIGHT MULTIPLE PB'S AT ONCE, ETC..
         }
         public gamePage()
         {
@@ -741,12 +727,6 @@ namespace Darth_Vader_Puzzle
 
 
         }
-        private PictureBox DoDragDrop(PictureBox PB)
-        {
-            //this event will occur, when you perform drag operation
-            PB.DoDragDrop(PB, DragDropEffects.Copy);
-            return PB;
-        }
         private void DragDropEvent(PictureBox sourcePB, PictureBox targetPB)
         {
             //this event will fire when you leave the mouse button, after you drag over it
@@ -766,12 +746,22 @@ namespace Darth_Vader_Puzzle
                 sourcePB.BorderStyle = BorderStyle.None;
             }
         }
-        private void MouseMoveEventHandler(PictureBox PB)
+        private void mouseDownProcedure(PictureBox PB)
         {
-            //highlight the PB
-            highlightPB(PB);
-            //for use under DragDrop event handler
-            DoDragDropSourcePB = DoDragDrop(PB);
+            //this event will occur, when you perform drag operation
+            PB.DoDragDrop(PB, DragDropEffects.Copy);
+        }
+        private PictureBox mouseMoveProcedure(PictureBox PB)
+        {
+            if (PB.BorderStyle == BorderStyle.None)
+            {
+                //to ensure that only one PB can be highlighted at a time
+                UnhighlightAllBorders();
+                //hightlight the border
+                PB.BorderStyle = BorderStyle.Fixed3D;
+            }
+            //return value of PB to use with the DoDragDropSourcePB field variable and mouseDownProcedure method
+            return PB;
         }
         private void PB8Test_DragEnter(object sender, DragEventArgs e)
         {
@@ -786,47 +776,47 @@ namespace Darth_Vader_Puzzle
         }
         private void PB8_MouseMove_1(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB8);
+            DoDragDropSourcePB = mouseMoveProcedure(PB8);
         }
 
         private void PB1_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB1);
+            DoDragDropSourcePB = mouseMoveProcedure(PB1);
         }
 
         private void PB2_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB2);
+            DoDragDropSourcePB = mouseMoveProcedure(PB2);
         }
 
         private void PB3_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB3);
+            DoDragDropSourcePB = mouseMoveProcedure(PB3);
         }
 
         private void PB4_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB4);
+            DoDragDropSourcePB = mouseMoveProcedure(PB4);
         }
 
         private void PB5_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB5);
+            DoDragDropSourcePB = mouseMoveProcedure(PB5);
         }
 
         private void PB6_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB6);
+            DoDragDropSourcePB = mouseMoveProcedure(PB6);
         }
 
         private void PB7_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB7);
+            DoDragDropSourcePB = mouseMoveProcedure(PB7);
         }
 
         private void PB9_MouseMove(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB9);
+            DoDragDropSourcePB = mouseMoveProcedure(PB9);
         }
 
         private void PB1Test_DragEnter(object sender, DragEventArgs e)
@@ -924,19 +914,198 @@ namespace Darth_Vader_Puzzle
             //use the DragDropEvent method between PB9Test and all box pieces(PB1 - PB9)
             DragDropEvent(DoDragDropSourcePB, PB9Test);
         }
-        private void PB8_MouseHover(object sender, EventArgs e)
+        private void PB1_MouseDown(object sender, MouseEventArgs e)
         {
-            
+            mouseDownProcedure(PB1);
         }
 
-        private void PB8_MouseDown(object sender, MouseEventArgs e)
+        private void PB2_MouseDown(object sender, MouseEventArgs e)
         {
-            
+            mouseDownProcedure(PB2);
+        }
+
+        private void PB3_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB3);
+        }
+
+        private void PB4_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB4);
+        }
+
+        private void PB5_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB5);
+        }
+
+        private void PB6_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB6);
+        }
+
+        private void PB7_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB7);
+        }
+        private void PB8_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB8);
+        }
+
+        private void PB9_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB9);
+        }
+
+        private void PB1Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB1Test);
+        }
+
+        private void PB2Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB2Test);
+        }
+
+        private void PB3Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB3Test);
+        }
+
+        private void PB4Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB4Test);
+        }
+
+        private void PB5Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB5Test);
+        }
+
+        private void PB6Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB6Test);
+        }
+
+        private void PB7Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB7Test);
         }
 
         private void PB8Test_MouseDown(object sender, MouseEventArgs e)
         {
-            MouseMoveEventHandler(PB8Test);
+            mouseDownProcedure(PB8Test);
+        }
+
+        private void PB9Test_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownProcedure(PB9Test);
+        }
+
+        private void PB1Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB1Test);
+        }
+
+        private void PB2Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB2Test);
+        }
+
+        private void PB3Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB3Test);
+        }
+
+        private void PB4Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB4Test);
+        }
+
+        private void PB5Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB5Test);
+        }
+
+        private void PB6Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB6Test);
+        }
+
+        private void PB7Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB7Test);
+        }
+
+        private void PB8Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB8Test);
+        }
+
+        private void PB9Test_MouseMove(object sender, MouseEventArgs e)
+        {
+            DoDragDropSourcePB = mouseMoveProcedure(PB9Test);
+        }
+
+        private void PB1_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB2_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB3_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB4_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB5_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB6_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB7_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB8_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB9_DragEnter(object sender, DragEventArgs e)
+        {
+            //this event will fire when you drag the mouse over this picturebox
+            e.Effect = e.AllowedEffect;
+        }
+
+        private void PB1_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB1 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB1);
         }
     }
 }
