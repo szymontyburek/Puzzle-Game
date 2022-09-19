@@ -32,17 +32,20 @@ namespace Darth_Vader_Puzzle
         int[] shufflePuzzlePieces = new int[9];
         private void PB6_Click(object sender, EventArgs e)
         {
-            
+            //highlight the border
+            PB6.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void PB7_Click(object sender, EventArgs e)
         {
-            
+            //highlight the border
+            PB7.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void PB8_Click(object sender, EventArgs e)
         {
-            
+            //highlight the border
+            PB8.BorderStyle = BorderStyle.Fixed3D;
         }
         private void mouseClickAndDrag(PictureBox PB)
         {
@@ -74,48 +77,64 @@ namespace Darth_Vader_Puzzle
 
         private void PB1Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB1Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB2Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB2Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB3Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB3Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB4Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB4Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB5Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB5Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB6Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB6Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB7Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB7Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB8Test_Click(object sender, EventArgs e)
         {
+            //highlight the border
+            PB8Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
@@ -256,37 +275,44 @@ namespace Darth_Vader_Puzzle
 
         private void PB9Test_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB1Test.BorderStyle = BorderStyle.Fixed3D;
             //in case this is the last piece required to finish the puzzle
             determinePuzzleProgress();
         }
 
         private void PB9_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB9.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void PB5_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB5.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void PB4_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB4.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void PB3_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB3.BorderStyle = BorderStyle.Fixed3D;
         }
         private void PB2_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB2.BorderStyle = BorderStyle.Fixed3D;
         }
         private void PB1_Click(object sender, EventArgs e)
         {
-
+            //highlight the border
+            PB1.BorderStyle = BorderStyle.Fixed3D;
         }
         public gamePage()
         {
