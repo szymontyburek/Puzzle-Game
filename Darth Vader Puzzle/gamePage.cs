@@ -40,6 +40,8 @@ namespace Darth_Vader_Puzzle
         {
             //highlight the border
             PB7.BorderStyle = BorderStyle.Fixed3D;
+            //test out using a double click event instead of the rotation button!!!!!!
+            //NEED TO FIGURE OUT HOW TO MOVE PIECES IN THE BOX!!!!!!!
         }
 
         private void PB8_Click(object sender, EventArgs e)
@@ -247,28 +249,6 @@ namespace Darth_Vader_Puzzle
 
         private void rotationButton_Click(object sender, EventArgs e)
         {
-            //so the rotationButton will work for the box pieces
-            clockwiseRotation(PB1);
-            clockwiseRotation(PB2);
-            clockwiseRotation(PB3);
-            clockwiseRotation(PB4);
-            clockwiseRotation(PB5);
-            clockwiseRotation(PB6);
-            clockwiseRotation(PB7);
-            clockwiseRotation(PB8);
-            clockwiseRotation(PB9);
-            //so the rotationButton will work for the boarc pieces
-            clockwiseRotation(PB1Test);
-            clockwiseRotation(PB2Test);
-            clockwiseRotation(PB3Test);
-            clockwiseRotation(PB4Test);
-            clockwiseRotation(PB5Test);
-            clockwiseRotation(PB6Test);
-            clockwiseRotation(PB7Test);
-            clockwiseRotation(PB8Test);
-            clockwiseRotation(PB9Test);
-
-
             //in case the last piece is finished by rotating it when it's already on the board
             determinePuzzleProgress();
         }
@@ -301,18 +281,15 @@ namespace Darth_Vader_Puzzle
 
         private void PB3_Click(object sender, EventArgs e)
         {
-            //highlight the border
-            PB3.BorderStyle = BorderStyle.Fixed3D;
+            
         }
         private void PB2_Click(object sender, EventArgs e)
         {
-            //highlight the border
-            PB2.BorderStyle = BorderStyle.Fixed3D;
+            
         }
         private void PB1_Click(object sender, EventArgs e)
         {
-            //highlight the border
-            PB1.BorderStyle = BorderStyle.Fixed3D;
+
         }
         public gamePage()
         {
@@ -942,91 +919,253 @@ namespace Darth_Vader_Puzzle
         }
         private void PB1_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB1);
+            //if a double click happens
+            if(e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB1);
+            }
+            else
+            {
+                mouseDownProcedure(PB1);
+            }
         }
 
         private void PB2_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB2);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB2);
+            }
+            else
+            {
+                mouseDownProcedure(PB2);
+            }
         }
 
         private void PB3_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB3);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB3);
+            }
+            else
+            {
+                mouseDownProcedure(PB3);
+            }
         }
 
         private void PB4_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB4);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB4);
+            }
+            else
+            {
+                mouseDownProcedure(PB4);
+            }
         }
 
         private void PB5_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB5);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB5);
+            }
+            else
+            {
+                mouseDownProcedure(PB5);
+            }
         }
 
         private void PB6_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB6);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB6);
+            }
+            else
+            {
+                mouseDownProcedure(PB6);
+            }
         }
 
         private void PB7_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB7);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB7);
+            }
+            else
+            {
+                mouseDownProcedure(PB7);
+            }
         }
         private void PB8_MouseDown_1(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB8);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB8);
+            }
+            else
+            {
+                mouseDownProcedure(PB8);
+            }
         }
 
         private void PB9_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB9);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB9);
+            }
+            else
+            {
+                mouseDownProcedure(PB9);
+            }
         }
 
         private void PB1Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB1Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB1Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB1Test);
+            }
         }
 
         private void PB2Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB2Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB2Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB2Test);
+            }
         }
 
         private void PB3Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB3Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB3Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB3Test);
+            }
         }
 
         private void PB4Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB4Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB4Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB4Test);
+            }
         }
 
         private void PB5Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB5Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB5Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB5Test);
+            }
         }
 
         private void PB6Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB6Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB6Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB6Test);
+            }
         }
 
         private void PB7Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB7Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB7Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB7Test);
+            }
         }
 
         private void PB8Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB8Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB8Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB8Test);
+            }
         }
 
         private void PB9Test_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDownProcedure(PB9Test);
+            //if a double click happens
+            if (e.Clicks == 2)
+            {
+                //rotate PB
+                clockwiseRotation(PB9Test);
+            }
+            else
+            {
+                mouseDownProcedure(PB9Test);
+            }
         }
 
         private void PB1Test_MouseMove(object sender, MouseEventArgs e)

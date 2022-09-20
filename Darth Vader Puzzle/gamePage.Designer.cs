@@ -48,7 +48,6 @@
             this.PB1Test = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.rotationButton = new System.Windows.Forms.Button();
             this.boxLabel = new System.Windows.Forms.Label();
             this.boardLabel = new System.Windows.Forms.Label();
             this.needHelpLL = new System.Windows.Forms.LinkLabel();
@@ -323,17 +322,6 @@
             this.label2.TabIndex = 104;
             this.label2.Text = "label2";
             // 
-            // rotationButton
-            // 
-            this.rotationButton.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.clockwiseButton2;
-            this.rotationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.rotationButton.Location = new System.Drawing.Point(701, 867);
-            this.rotationButton.Name = "rotationButton";
-            this.rotationButton.Size = new System.Drawing.Size(112, 91);
-            this.rotationButton.TabIndex = 108;
-            this.rotationButton.UseVisualStyleBackColor = true;
-            this.rotationButton.Click += new System.EventHandler(this.rotationButton_Click);
-            // 
             // boxLabel
             // 
             this.boxLabel.AutoSize = true;
@@ -404,7 +392,6 @@
             this.Controls.Add(this.needHelpLL);
             this.Controls.Add(this.boardLabel);
             this.Controls.Add(this.boxLabel);
-            this.Controls.Add(this.rotationButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PB1Test);
@@ -473,7 +460,6 @@
         private PictureBox PB1Test;
         private Label label1;
         private Label label2;
-        private Button rotationButton;
         private Label boxLabel;
         private Label boardLabel;
         private LinkLabel needHelpLL;
