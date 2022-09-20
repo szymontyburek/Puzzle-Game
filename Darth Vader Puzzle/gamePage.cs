@@ -40,7 +40,6 @@ namespace Darth_Vader_Puzzle
         {
             //highlight the border
             PB7.BorderStyle = BorderStyle.Fixed3D;
-            //test out using a double click event instead of the rotation button!!!!!!
             //NEED TO FIGURE OUT HOW TO MOVE PIECES IN THE BOX!!!!!!!
         }
 
@@ -74,71 +73,6 @@ namespace Darth_Vader_Puzzle
                 c.Top = args.Y + c.Top - _yPos;
                 c.Left = args.X + c.Left - _xPos;
             };
-        }
-       
-
-        private void PB1Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB1Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB2Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB2Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB3Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB3Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB4Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB4Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB5Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB5Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB6Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB6Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB7Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB7Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB8Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB8Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
         }
         private void backButtonModule(Label PBTestBorder, PictureBox PBTest, PictureBox PB)
         {
@@ -251,45 +185,6 @@ namespace Darth_Vader_Puzzle
         {
             //in case the last piece is finished by rotating it when it's already on the board
             determinePuzzleProgress();
-        }
-
-        private void PB9Test_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB1Test.BorderStyle = BorderStyle.Fixed3D;
-            //in case this is the last piece required to finish the puzzle
-            determinePuzzleProgress();
-        }
-
-        private void PB9_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB9.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void PB5_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB5.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void PB4_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB4.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void PB3_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void PB2_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void PB1_Click(object sender, EventArgs e)
-        {
-
         }
         public gamePage()
         {
@@ -1171,46 +1066,55 @@ namespace Darth_Vader_Puzzle
         private void PB1Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB1Test);
+            determinePuzzleProgress();
         }
 
         private void PB2Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB2Test);
+            determinePuzzleProgress();
         }
 
         private void PB3Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB3Test);
+            determinePuzzleProgress();
         }
 
         private void PB4Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB4Test);
+            determinePuzzleProgress();
         }
 
         private void PB5Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB5Test);
+            determinePuzzleProgress();
         }
 
         private void PB6Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB6Test);
+            determinePuzzleProgress();
         }
 
         private void PB7Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB7Test);
+            determinePuzzleProgress();
         }
 
         private void PB8Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB8Test);
+            determinePuzzleProgress();
         }
 
         private void PB9Test_MouseMove(object sender, MouseEventArgs e)
         {
             DoDragDropSourcePB = mouseMoveProcedure(PB9Test);
+            determinePuzzleProgress();
         }
 
         private void PB1_DragEnter(object sender, DragEventArgs e)
