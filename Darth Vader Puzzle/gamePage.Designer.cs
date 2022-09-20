@@ -113,6 +113,7 @@
             this.PB6.TabIndex = 5;
             this.PB6.TabStop = false;
             this.PB6.Click += new System.EventHandler(this.PB6_Click);
+            this.PB6.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB6_DragDrop);
             this.PB6.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB6_DragEnter);
             this.PB6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB6_MouseDown);
             this.PB6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB6_MouseMove);
@@ -124,6 +125,7 @@
             this.PB5.Size = new System.Drawing.Size(209, 191);
             this.PB5.TabIndex = 6;
             this.PB5.TabStop = false;
+            this.PB5.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB5_DragDrop);
             this.PB5.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB5_DragEnter);
             this.PB5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB5_MouseDown);
             this.PB5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB5_MouseMove);
@@ -135,6 +137,7 @@
             this.PB4.Size = new System.Drawing.Size(209, 191);
             this.PB4.TabIndex = 7;
             this.PB4.TabStop = false;
+            this.PB4.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB4_DragDrop);
             this.PB4.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB4_DragEnter);
             this.PB4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB4_MouseDown);
             this.PB4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB4_MouseMove);
@@ -146,6 +149,7 @@
             this.PB9.Size = new System.Drawing.Size(209, 191);
             this.PB9.TabIndex = 8;
             this.PB9.TabStop = false;
+            this.PB9.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB9_DragDrop);
             this.PB9.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB9_DragEnter);
             this.PB9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB9_MouseDown);
             this.PB9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB9_MouseMove);
@@ -158,6 +162,7 @@
             this.PB8.TabIndex = 9;
             this.PB8.TabStop = false;
             this.PB8.Click += new System.EventHandler(this.PB8_Click);
+            this.PB8.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB8_DragDrop);
             this.PB8.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB8_DragEnter);
             this.PB8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseDown_1);
             this.PB8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseMove_1);
@@ -169,6 +174,7 @@
             this.PB2.Size = new System.Drawing.Size(209, 191);
             this.PB2.TabIndex = 11;
             this.PB2.TabStop = false;
+            this.PB2.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB2_DragDrop);
             this.PB2.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB2_DragEnter);
             this.PB2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB2_MouseDown);
             this.PB2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB2_MouseMove);
@@ -352,6 +358,7 @@
             this.PB7.Size = new System.Drawing.Size(209, 191);
             this.PB7.TabIndex = 114;
             this.PB7.TabStop = false;
+            this.PB7.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB7_DragDrop);
             this.PB7.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB7_DragEnter);
             this.PB7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB7_MouseDown);
             this.PB7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB7_MouseMove);
@@ -363,6 +370,7 @@
             this.PB3.Size = new System.Drawing.Size(209, 191);
             this.PB3.TabIndex = 115;
             this.PB3.TabStop = false;
+            this.PB3.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB3_DragDrop);
             this.PB3.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB3_DragEnter);
             this.PB3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB3_MouseDown);
             this.PB3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PB3_MouseMove);

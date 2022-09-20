@@ -40,7 +40,6 @@ namespace Darth_Vader_Puzzle
         {
             //highlight the border
             PB7.BorderStyle = BorderStyle.Fixed3D;
-            //NEED TO FIGURE OUT HOW TO MOVE PIECES IN THE BOX!!!!!!!
         }
 
         private void PB8_Click(object sender, EventArgs e)
@@ -621,8 +620,15 @@ namespace Darth_Vader_Puzzle
             PB8Test.AllowDrop = true;
             PB9Test.AllowDrop = true;
 
+            PB1.AllowDrop = true;
+            PB2.AllowDrop = true;
+            PB3.AllowDrop = true;
+            PB4.AllowDrop = true;
+            PB5.AllowDrop = true;
+            PB6.AllowDrop = true;
+            PB7.AllowDrop = true;
             PB8.AllowDrop = true;
-
+            PB9.AllowDrop = true;
 
         }
         private void DragDropEvent(PictureBox sourcePB, PictureBox targetPB)
@@ -1175,6 +1181,54 @@ namespace Darth_Vader_Puzzle
         {
             //use the DragDropEvent method between PB1 and all board pieces(PB1Test - PB9Test)
             DragDropEvent(DoDragDropSourcePB, PB1);
+        }
+
+        private void PB2_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB2 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB2);
+        }
+
+        private void PB3_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB3 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB3);
+        }
+
+        private void PB4_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB4 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB4);
+        }
+
+        private void PB5_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB5 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB5);
+        }
+
+        private void PB6_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB6 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB6);
+        }
+
+        private void PB7_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB7 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB7);
+        }
+
+        private void PB8_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB8 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB8);
+        }
+
+        private void PB9_DragDrop(object sender, DragEventArgs e)
+        {
+            //use the DragDropEvent method between PB9 and all board pieces(PB1Test - PB9Test)
+            DragDropEvent(DoDragDropSourcePB, PB9);
         }
     }
 }
