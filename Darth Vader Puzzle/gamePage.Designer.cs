@@ -112,7 +112,6 @@
             this.PB6.Size = new System.Drawing.Size(209, 191);
             this.PB6.TabIndex = 5;
             this.PB6.TabStop = false;
-            this.PB6.Click += new System.EventHandler(this.PB6_Click);
             this.PB6.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB6_DragDrop);
             this.PB6.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB6_DragEnter);
             this.PB6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB6_MouseDown);
@@ -161,7 +160,6 @@
             this.PB8.Size = new System.Drawing.Size(209, 191);
             this.PB8.TabIndex = 9;
             this.PB8.TabStop = false;
-            this.PB8.Click += new System.EventHandler(this.PB8_Click);
             this.PB8.DragDrop += new System.Windows.Forms.DragEventHandler(this.PB8_DragDrop);
             this.PB8.DragEnter += new System.Windows.Forms.DragEventHandler(this.PB8_DragEnter);
             this.PB8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PB8_MouseDown_1);

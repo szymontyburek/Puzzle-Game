@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -127,28 +128,11 @@ namespace Darth_Vader_Puzzle
 
         private void chooseImageForm_Load(object sender, EventArgs e)
         {
-            gamePage game = new gamePage();
-            game.characterChosen = "flash";
-            game.ShowDialog();
-
             //delete any added file paths from previous plays of the program
             deleteAllAddedFilePaths("batman");
             deleteAllAddedFilePaths("darthVader");
             deleteAllAddedFilePaths("flash");
             deleteAllAddedFilePaths("spiderman");
-        }
-        private void hightlightPB(PictureBox PB)
-        {
-            if (PB.BorderStyle == BorderStyle.None)
-            {
-                //hightlight the border of spidermanPB
-                PB.BorderStyle = BorderStyle.Fixed3D;
-            }
-            else if (PB.BorderStyle == BorderStyle.Fixed3D)
-            {
-                //unhighlight the border of spidermanPB
-                PB.BorderStyle = BorderStyle.None;
-            }
         }
         private void spidermanRB_CheckedChanged(object sender, EventArgs e)
         {
@@ -176,69 +160,7 @@ namespace Darth_Vader_Puzzle
             batmanPB.BorderStyle = BorderStyle.None;
             darthVaderPB.BorderStyle = BorderStyle.None;
         }
- 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //if no other picturebox's are highlighted
-            if(spidermanPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
-            {
-                hightlightPB(darthVaderPB);
-            }
-            else
-            {
-                unhighlightAllPBs();
-                hightlightPB(darthVaderPB);
-            }
-            
-        }
 
-        private void spidermanCB_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void spidermanPB_Click(object sender, EventArgs e)
-        {
-            //if no other picturebox's are highlighted
-            if (darthVaderPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
-            {
-                hightlightPB(spidermanPB);
-            }
-            else
-            {
-                unhighlightAllPBs();
-                hightlightPB(spidermanPB);
-            }
-            
-        }
-
-        private void batmanPB_Click(object sender, EventArgs e)
-        {
-            //if no other picturebox's are highlighted
-            if (spidermanPB.BorderStyle == BorderStyle.None && flashPB.BorderStyle == BorderStyle.None && darthVaderPB.BorderStyle == BorderStyle.None)
-            {
-                hightlightPB(batmanPB);
-            }
-            else
-            {
-                unhighlightAllPBs();
-                hightlightPB(batmanPB);
-            }
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            //if no other picturebox's are highlighted
-            if (spidermanPB.BorderStyle == BorderStyle.None && darthVaderPB.BorderStyle == BorderStyle.None && batmanPB.BorderStyle == BorderStyle.None)
-            {
-                hightlightPB(flashPB);
-            }
-            else
-            {
-                unhighlightAllPBs();
-                hightlightPB(flashPB);
-            }
-        }
         private void confirmButton_Click(object sender, EventArgs e)
         {
             //open gamePage form and make the characterChosen variable on that form equal the character chosen on this form
@@ -258,6 +180,59 @@ namespace Darth_Vader_Puzzle
             {
                 openGamePage("spiderman");
             }
+        }
+        private void mouseMoveProcedure(PictureBox PB, string character)
+        {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            string newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+        }
+        private void mouseClickProcedure(PictureBox PB, string character)
+        {
+            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
+            //retrive current directory
+            string currentDirectory = Environment.CurrentDirectory;
+            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
+            string newDirectory = currentDirectory.Replace("\\", "/");
+            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+
+
+            //so only one PB can be highlighted at a time
+            unhighlightAllPBs();
+            //highlight the PB this module has been called under
+            PB.BorderStyle = BorderStyle.Fixed3D;
+            //play soundtrack for the character that has been chosen
+            SoundPlayer play = new SoundPlayer(newDirectory + character + "GameTrack.wav");
+            play.PlayLooping();
+            //create an instance of gamePage
+            gamePage game = new gamePage();
+            //define characterChosen variable on gamePage form
+            game.characterChosen = character;
+            //set the puzzle image of the character chosen for the user to look at as a reference
+            game.puzzleImageDisplayPB.SizeMode = PictureBoxSizeMode.StretchImage;
+            game.puzzleImageDisplayPB.ImageLocation = newDirectory + character + ".jpg";
+        }
+        private void darthVaderPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            mouseClickProcedure(darthVaderPB, "darthVader");
+        }
+
+        private void spidermanPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            mouseClickProcedure(spidermanPB, "spiderman");
+        }
+
+        private void batmanPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            mouseClickProcedure(batmanPB, "batman");
+        }
+
+        private void flashPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            mouseClickProcedure(flashPB, "flash");
         }
     }
 }

@@ -65,7 +65,7 @@
             this.darthVaderPB.Size = new System.Drawing.Size(440, 382);
             this.darthVaderPB.TabIndex = 13;
             this.darthVaderPB.TabStop = false;
-            this.darthVaderPB.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.darthVaderPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.darthVaderPB_MouseClick);
             // 
             // spidermanPB
             // 
@@ -76,7 +76,7 @@
             this.spidermanPB.Size = new System.Drawing.Size(440, 382);
             this.spidermanPB.TabIndex = 14;
             this.spidermanPB.TabStop = false;
-            this.spidermanPB.Click += new System.EventHandler(this.spidermanPB_Click);
+            this.spidermanPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.spidermanPB_MouseClick);
             // 
             // batmanPB
             // 
@@ -87,7 +87,7 @@
             this.batmanPB.Size = new System.Drawing.Size(440, 382);
             this.batmanPB.TabIndex = 15;
             this.batmanPB.TabStop = false;
-            this.batmanPB.Click += new System.EventHandler(this.batmanPB_Click);
+            this.batmanPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.batmanPB_MouseClick);
             // 
             // flashPB
             // 
@@ -98,7 +98,7 @@
             this.flashPB.Size = new System.Drawing.Size(440, 382);
             this.flashPB.TabIndex = 16;
             this.flashPB.TabStop = false;
-            this.flashPB.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.flashPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flashPB_MouseClick);
             // 
             // confirmButton
             // 

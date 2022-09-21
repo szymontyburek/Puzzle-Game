@@ -30,23 +30,6 @@ namespace Darth_Vader_Puzzle
         string newDirectory;
         //create an integer array that determines the placement of the puzzle pieces
         int[] shufflePuzzlePieces = new int[9];
-        private void PB6_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB6.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void PB7_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB7.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void PB8_Click(object sender, EventArgs e)
-        {
-            //highlight the border
-            PB8.BorderStyle = BorderStyle.Fixed3D;
-        }
         private void mouseClickAndDrag(PictureBox PB)
         {
             // Register mouse events
@@ -564,8 +547,6 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
-            //to prevent flickering when PB's are moved with the mouse
-            this.DoubleBuffered = true;
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
             string currentDirectory = Environment.CurrentDirectory;
@@ -579,7 +560,7 @@ namespace Darth_Vader_Puzzle
             //play Soundtrack depending on what characterChosen equals
             if(characterChosen == "darthVader")
             {
-                SoundPlayer ROTS = new SoundPlayer(newDirectory + "gamePageWAVTrack.wav");
+                SoundPlayer ROTS = new SoundPlayer(newDirectory +  characterChosen + "GameTrack.wav");
                 ROTS.PlayLooping();
             }
             else if(characterChosen == "spiderman")
