@@ -98,7 +98,6 @@
             this.flashPB.Size = new System.Drawing.Size(440, 382);
             this.flashPB.TabIndex = 16;
             this.flashPB.TabStop = false;
-            this.flashPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flashPB_MouseClick);
             // 
             // confirmButton
             // 

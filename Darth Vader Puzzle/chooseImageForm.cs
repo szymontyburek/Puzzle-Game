@@ -20,10 +20,6 @@ namespace Darth_Vader_Puzzle
             InitializeComponent();
         }
 
-        private void browseButton_Click(object sender, EventArgs e)
-        {
-
-        }
         private void openGamePage(string character)
         {
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
@@ -44,10 +40,6 @@ namespace Darth_Vader_Puzzle
             this.Hide();
             //open gamePage
             game.ShowDialog();
-        }
-        private void darthVaderRB_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
         private void deleteAllAddedFilePaths(string character)
         {
@@ -134,25 +126,6 @@ namespace Darth_Vader_Puzzle
             deleteAllAddedFilePaths("flash");
             deleteAllAddedFilePaths("spiderman");
         }
-        private void spidermanRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void batmanRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flashRB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void darthVaderCB_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         private void unhighlightAllPBs()
         {
             spidermanPB.BorderStyle = BorderStyle.None;
@@ -160,35 +133,40 @@ namespace Darth_Vader_Puzzle
             batmanPB.BorderStyle = BorderStyle.None;
             darthVaderPB.BorderStyle = BorderStyle.None;
         }
-
+        private void confirmButtonProcedure(string characterChosen)
+        {            
+            //create instance of gamePage form
+            gamePage game = new gamePage();
+            //define character variable on next form
+            game.characterChosen = characterChosen;
+            //hide this form and open next form
+            this.Hide();
+            game.ShowDialog();
+        }
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            //open gamePage form and make the characterChosen variable on that form equal the character chosen on this form
             if(darthVaderPB.BorderStyle == BorderStyle.Fixed3D)
             {
-                openGamePage("darthVader");
+                confirmButtonProcedure("darthVader");
+
             }
             else if(batmanPB.BorderStyle == BorderStyle.Fixed3D)
             {
-                openGamePage("batman");
-            }
-            else if(flashPB.BorderStyle == BorderStyle.Fixed3D)
-            {
-                openGamePage("flash");
+                confirmButtonProcedure("batman");
             }
             else if(spidermanPB.BorderStyle == BorderStyle.Fixed3D)
             {
-                openGamePage("spiderman");
+                confirmButtonProcedure("spiderman");
             }
-        }
-        private void mouseMoveProcedure(PictureBox PB, string character)
-        {
-            //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
-            //retrive current directory
-            string currentDirectory = Environment.CurrentDirectory;
-            //make it so that the newDirectory deletes everything past the first 'Darth Vader Puzzle'
-            string newDirectory = currentDirectory.Replace("\\", "/");
-            newDirectory = newDirectory.Replace("Darth Vader Puzzle/bin/Debug/net6.0-windows", "");
+            else if(flashPB.BorderStyle == BorderStyle.Fixed3D)
+            {
+                confirmButtonProcedure("flash");
+            }
+            //if no PB has been chosen but the confirmButton has been clicked
+            else
+            {
+                MessageBox.Show("An image must be selected to continue");
+            }
         }
         private void mouseClickProcedure(PictureBox PB, string character)
         {
@@ -209,9 +187,7 @@ namespace Darth_Vader_Puzzle
             play.PlayLooping();
             //create an instance of gamePage
             gamePage game = new gamePage();
-            //define characterChosen variable on gamePage form
-            game.characterChosen = character;
-            //set the puzzle image of the character chosen for the user to look at as a reference
+            //set the puzzle image of the character chosen for the user to look at as a reference on the next form
             game.puzzleImageDisplayPB.SizeMode = PictureBoxSizeMode.StretchImage;
             game.puzzleImageDisplayPB.ImageLocation = newDirectory + character + ".jpg";
         }
@@ -228,12 +204,6 @@ namespace Darth_Vader_Puzzle
         private void batmanPB_MouseClick(object sender, MouseEventArgs e)
         {
             mouseClickProcedure(batmanPB, "batman");
-        }
-
-        private void flashPB_MouseClick(object sender, MouseEventArgs e)
-        {
-            mouseClickProcedure(flashPB, "flash");
-            //MOVED ALL WAV FILES TO DESKTOP, CAN'T GIT PUSH WITH THEM IN FOLDER FOR SOME REASON
         }
     }
 }
