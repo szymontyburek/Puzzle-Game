@@ -233,6 +233,7 @@ namespace Darth_Vader_Puzzle
         private void flashPB_MouseClick(object sender, MouseEventArgs e)
         {
             mouseClickProcedure(flashPB, "flash");
+            //MOVED ALL WAV FILES TO DESKTOP, CAN'T GIT PUSH WITH THEM IN FOLDER FOR SOME REASON
         }
     }
 }
