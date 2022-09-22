@@ -123,6 +123,16 @@ namespace Darth_Vader_Puzzle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flash1 {
+            get {
+                object obj = ResourceManager.GetObject("flash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap greenDownArrow {
             get {
                 object obj = ResourceManager.GetObject("greenDownArrow", resourceCulture);
@@ -216,6 +226,16 @@ namespace Darth_Vader_Puzzle.Properties {
         internal static System.Drawing.Bitmap spiderman4 {
             get {
                 object obj = ResourceManager.GetObject("spiderman4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spiderman5 {
+            get {
+                object obj = ResourceManager.GetObject("spiderman5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

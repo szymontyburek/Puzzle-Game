@@ -353,6 +353,7 @@
             this.Controls.Add(this.buttonsLabel);
             this.Controls.Add(this.instructionsLabel);
             this.Name = "controlsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "controlsForm";
             this.Load += new System.EventHandler(this.controlsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

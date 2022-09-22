@@ -134,10 +134,10 @@ namespace Darth_Vader_Puzzle
             darthVaderPB.BorderStyle = BorderStyle.None;
         }
         private void confirmButtonProcedure(string characterChosen)
-        {            
+        {           
             //create instance of gamePage form
             gamePage game = new gamePage();
-            //define character variable on next form
+            //define character variable on next form and congragulationsForm
             game.characterChosen = characterChosen;
             //hide this form and open next form
             this.Hide();
@@ -204,6 +204,11 @@ namespace Darth_Vader_Puzzle
         private void batmanPB_MouseClick(object sender, MouseEventArgs e)
         {
             mouseClickProcedure(batmanPB, "batman");
+        }
+
+        private void flashPB_MouseClick(object sender, MouseEventArgs e)
+        {
+            mouseClickProcedure(flashPB, "flash");
         }
     }
 }

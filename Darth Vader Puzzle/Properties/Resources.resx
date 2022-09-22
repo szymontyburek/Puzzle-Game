@@ -121,6 +121,12 @@
   <data name="batman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\batman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spiderman3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spiderman3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spiderman5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spiderman5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="greenDownArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\greenDownArrow.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,8 +154,11 @@
   <data name="instructionsPic1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instructionsPic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clockwiseButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clockwiseButton2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spiderman4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spiderman4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menuButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menuButton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +166,10 @@
   <data name="instructionsPic3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\instructionsPic3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menuButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menuButton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clockwiseButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clockwiseButton2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spiderman3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spiderman3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spiderman4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spiderman4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flash1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

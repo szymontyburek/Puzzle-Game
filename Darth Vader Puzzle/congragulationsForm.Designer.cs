@@ -92,6 +92,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dvGifPB);
             this.Name = "congragulationsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "congragulationsForm";
             this.Load += new System.EventHandler(this.congragulationsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvGifPB)).EndInit();

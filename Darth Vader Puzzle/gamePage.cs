@@ -16,46 +16,12 @@ namespace Darth_Vader_Puzzle
     {
         //variable for return method DoDragDrop
         PictureBox DoDragDropSourcePB;
-        //variables for moving picturebox's with the click and drag of the mouse
-        private bool _moving;
-        private Point _startLocation;
-        //variables for moving picturebox's with the click and drag of the mouse
-        private int _xPos;
-        private int _yPos;
-        private bool _dragging;
-
         //variable to represent the character chosen on the previous form
         public string characterChosen;
         //so the code related to this variable only has to written once and not every time it needs to be used
         string newDirectory;
         //create an integer array that determines the placement of the puzzle pieces
         int[] shufflePuzzlePieces = new int[9];
-        private void mouseClickAndDrag(PictureBox PB)
-        {
-            // Register mouse events
-            PB.MouseUp += (sender, args) =>
-            {
-                var c = sender as PictureBox;
-                if (null == c) return;
-                _dragging = false;
-            };
-
-            PB.MouseDown += (sender, args) =>
-            {
-                if (args.Button != MouseButtons.Left) return;
-                _dragging = true;
-                _xPos = args.X;
-                _yPos = args.Y;
-            };
-
-            PB.MouseMove += (sender, args) =>
-            {
-                var c = sender as PictureBox;
-                if (!_dragging || null == c) return;
-                c.Top = args.Y + c.Top - _yPos;
-                c.Left = args.X + c.Left - _xPos;
-            };
-        }
         private void backButtonModule(Label PBTestBorder, PictureBox PBTest, PictureBox PB)
         {
             //if a board piece is selected and it has an image on it
@@ -102,7 +68,9 @@ namespace Darth_Vader_Puzzle
                                                 //hide this form
                                                 this.Hide();
                                                 //open congragulations form
-                                                congragulationsForm congrats = new congragulationsForm();  
+                                                congragulationsForm congrats = new congragulationsForm();
+                                                //define characterChosen variable on next form
+                                                congrats.characterChosen = characterChosen;
                                                 congrats.ShowDialog();
                                             }
                                         }
@@ -114,11 +82,6 @@ namespace Darth_Vader_Puzzle
                 }
             }
         }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-        }
-
         private void clockwiseRotation(PictureBox PB)
         {
             //if any picturebox is highlighted
@@ -557,24 +520,6 @@ namespace Darth_Vader_Puzzle
             //to cut the image into 9 pieces, and rotated by 90, 180, and 270 degrees and saving all of it to folder
             setImagesAfterCuttingAndRotating();
 
-            //play Soundtrack depending on what characterChosen equals
-            if(characterChosen == "darthVader")
-            {
-                SoundPlayer ROTS = new SoundPlayer(newDirectory +  characterChosen + "GameTrack.wav");
-                ROTS.PlayLooping();
-            }
-            else if(characterChosen == "spiderman")
-            {
-
-            }
-            else if (characterChosen == "batman")
-            {
-
-            }
-            else if (characterChosen == "flash")
-            {
-
-            }
             //make all the picturebox borders invisible
             UnhighlightAllBorders();
             //to shuffle the box pieces

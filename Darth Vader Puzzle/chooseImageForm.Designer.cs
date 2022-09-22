@@ -69,7 +69,7 @@
             // 
             // spidermanPB
             // 
-            this.spidermanPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.spiderman4;
+            this.spidermanPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.spiderman5;
             this.spidermanPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.spidermanPB.Location = new System.Drawing.Point(556, 104);
             this.spidermanPB.Name = "spidermanPB";
@@ -91,13 +91,14 @@
             // 
             // flashPB
             // 
-            this.flashPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.flash;
+            this.flashPB.BackgroundImage = global::Darth_Vader_Puzzle.Properties.Resources.flash1;
             this.flashPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flashPB.Location = new System.Drawing.Point(556, 556);
             this.flashPB.Name = "flashPB";
             this.flashPB.Size = new System.Drawing.Size(440, 382);
             this.flashPB.TabIndex = 16;
             this.flashPB.TabStop = false;
+            this.flashPB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flashPB_MouseClick);
             // 
             // confirmButton
             // 
@@ -125,6 +126,7 @@
             this.Controls.Add(this.darthVaderPB);
             this.Controls.Add(this.choosePuzzleImageLabel);
             this.Name = "chooseImageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "chooseImageForm";
             this.Load += new System.EventHandler(this.chooseImageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.darthVaderPB)).EndInit();

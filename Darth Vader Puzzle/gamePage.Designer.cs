@@ -406,6 +406,7 @@
             this.Controls.Add(this.puzzleImageDisplayPB);
             this.DoubleBuffered = true;
             this.Name = "gamePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gamePage";
             this.Load += new System.EventHandler(this.gamePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.puzzleImageDisplayPB)).EndInit();
