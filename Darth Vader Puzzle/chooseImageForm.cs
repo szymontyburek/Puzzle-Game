@@ -14,7 +14,9 @@ namespace Darth_Vader_Puzzle
     public partial class chooseImageForm : Form
     { 
         //for characterChosen variable on gamePage form
-        private string character;
+        public string character;
+        //variable to determine the next form to be shown
+        public bool firstPlay = true;
         public chooseImageForm()
         {
             InitializeComponent();
@@ -135,13 +137,26 @@ namespace Darth_Vader_Puzzle
         }
         private void confirmButtonProcedure(string characterChosen)
         {           
-            //create instance of gamePage form
-            gamePage game = new gamePage();
-            //define character variable on next form and congragulationsForm
-            game.characterChosen = characterChosen;
-            //hide this form and open next form
             this.Hide();
-            game.ShowDialog();
+            //if this is the first play after opening the app, open controls form(determined by the value of firstPlay variable on congragulations form)
+            congragulationsForm congrats = new congragulationsForm();
+            if (firstPlay)
+            {
+                //create instance of controlsForm
+                controlsForm controls = new controlsForm();
+                //define character variable on that form
+                controls.character = characterChosen;
+                controls.ShowDialog();
+            }
+           else if (!firstPlay)
+            {
+                //create instance of gamePage form
+                gamePage game = new gamePage();
+                //define character variable on next form and congragulationsForm
+                game.characterChosen = characterChosen;
+                //open next controls form
+                game.ShowDialog();
+            }
         }
         private void confirmButton_Click(object sender, EventArgs e)
         {

@@ -120,10 +120,13 @@ namespace Darth_Vader_Puzzle
             SoundPlayer soundPlayer = new SoundPlayer(newDirectory + characterChosen + "gameTrack.wav");
             soundPlayer.Stop();
 
+            //set the firstPlay variable on the chooseImageForm to false
+            chooseImageForm choose = new chooseImageForm();
+            choose.firstPlay = false;
+
             //hide this form
             this.Hide();
             //open chooseImage form
-            chooseImageForm choose = new chooseImageForm();
             choose.ShowDialog();
         }
 

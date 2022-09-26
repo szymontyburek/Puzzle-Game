@@ -120,16 +120,10 @@ namespace Darth_Vader_Puzzle
         {
             //create an instance of controlsForm
             controlsForm controls = new controlsForm();
-            //make the startedAGame bool variable on the controlsForm false
-            controls.startedAGame = true;
+            //set bool variable on controls form to true
+            controls.needHelp = true;
             //open controlsForm
             controls.ShowDialog();
-        }
-
-        private void rotationButton_Click(object sender, EventArgs e)
-        {
-            //in case the last piece is finished by rotating it when it's already on the board
-            determinePuzzleProgress();
         }
         public gamePage()
         {
