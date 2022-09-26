@@ -18,7 +18,7 @@ namespace Darth_Vader_Puzzle
         PictureBox DoDragDropSourcePB;
         //variable to represent the character chosen on the previous form
         public string characterChosen;
-        //so the code related to this variable only has to written once and not every time it needs to be used
+        //so the code related to this variable has to be written only once and not every time it needs to be used
         string newDirectory;
         //create an integer array that determines the placement of the puzzle pieces
         int[] shufflePuzzlePieces = new int[9];
