@@ -37,7 +37,7 @@ namespace Darth_Vader_Puzzle
                     PB.Visible = true;
                     //make the board piece image blank
                     PBTest.ImageLocation = null;
-                    //make the border invisible
+                    //make border invisible
                     UnhighlightAllBorders();
                 }
             }
