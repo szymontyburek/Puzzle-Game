@@ -122,6 +122,7 @@ namespace Darth_Vader_Puzzle
 
         private void chooseImageForm_Load(object sender, EventArgs e)
         {
+            this.AutoScroll = true;
             //delete any added file paths from previous plays of the program
             deleteAllAddedFilePaths("batman");
             deleteAllAddedFilePaths("darthVader");

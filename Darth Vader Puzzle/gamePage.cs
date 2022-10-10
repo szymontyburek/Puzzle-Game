@@ -504,6 +504,7 @@ namespace Darth_Vader_Puzzle
         }
         private void gamePage_Load(object sender, EventArgs e)
         {
+            this.AutoScroll = true;
             //THIS CODE ALLOWS THE DIRECTORY TO BE CORRECT REGARDLESS OF THE COMPUTER OR USER
             //retrive current directory
             string currentDirectory = Environment.CurrentDirectory;
